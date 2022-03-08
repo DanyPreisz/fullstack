@@ -27,3 +27,74 @@ header{
 	float: right;
 	align-content: center;
 }
+
+
+/* menu */
+/* selectores generales*/
+nav {
+	background:#000;
+}
+nav ul{
+	list-style: none;
+}
+nav a{
+	text-decoration: none;
+	color: #bbb;
+	font-size: 12px;
+	font-family: Arial Black;
+	padding: 15px;
+	line-height: 50px;
+}
+
+nav a:hover{
+	background: blue;
+}
+nav li{
+	position: relative;
+}
+nav li ul{
+	position: absolute;
+
+}
+nav li ul{
+	display: none;
+}
+nav li:hover ul{
+	display: block;
+}
+
+
+
+/* selectores nivel uno*/
+nav ul li{
+	float: left;
+}
+nav ul{
+	display: table;
+}
+nav  ul  li  a:hover{
+	padding: 20px 17px 20px 17px;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a7cfdf+0,23538a+100;Blue+3d+%238 */
+	background: rgb(167,207,223); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
+
+}
+/* selectores nivel dos*/
+nav ul li ul li{
+	background: #000;
+	width: 120px;
+	
+}
+/* selectores nivel tres*/
+nav ul li ul li ul li{
+	background: #000;
+	width: 120px;
+}
+nav ul ul ul{
+	left: 100%;
+	top: 0%;
+}
+
