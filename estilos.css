@@ -85,13 +85,13 @@ nav  ul  li  a:hover{
 /* selectores nivel dos*/
 nav ul li ul li{
 	background: #000;
-	width: 300px;
+	width: 250px;
 	
 }
 /* selectores nivel tres*/
 nav ul li ul li ul li{
 	background: #000;
-	width: 300px;
+	width: 250px;
 }
 nav ul ul ul{
 	left: 100%;
