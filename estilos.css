@@ -107,7 +107,7 @@ nav ul ul ul{
 
 #banner-slider ul{
 	display: flex;
-	width: 200%;
+	width: 400%;
 
 	animation: slider 15s infinite alternate;
 }
@@ -123,9 +123,14 @@ nav ul ul ul{
 }
 @keyframes slider {
 	0%{margin-left: 0}
-	50%{margin-left: 0}
+	25%{margin-left: 0}
 
+	25%{margin-left: -100%}
 	50%{margin-left: -100%}
-	100%{margin-left: -200%}
 
+	50%{margin-left: -200%}
+	75%{margin-left: -200%}
+
+	75%{margin-left: -300%}
+	100%{margin-left: -300%}
 }
