@@ -100,7 +100,7 @@ nav ul ul ul{
 
 /*BANNER SLIDER */
 #banner-slider{
-	width: 750px;
+	width: auto;
 	height: 300px;
 	overflow: hidden;
 }
