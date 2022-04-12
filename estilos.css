@@ -107,7 +107,7 @@ nav ul ul ul{
 
 #banner-slider ul{
 	display: flex;
-	width: 400%;
+	width: 200%;
 
 	animation: slider 15s infinite alternate;
 }
