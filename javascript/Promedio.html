@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>PROMEDIO</TITLE>
+	</HEAD>
+	<BODY onload="promedio();">
+		<SCRIPT type="text/javascript">
+			//Este codigo ha sido generado por el modulo psexport 20180802-w32 de PSeInt.
+			//Es posible que el codigo generado no sea completamente correcto. Si encuentra
+			//errores por favor reportelos en el foro (http://pseint.sourceforge.net).
+
+			function promedio() {
+				var nota1 = new Number();
+				var nota2 = new Number();
+				var nota3 = new Number();
+				var sumanota = new Number();
+				var promedionotas = new Number();
+				document.write("Promedio de notas",'<BR/>');
+				document.write("Ingrese Nota 1",'<BR/>');
+				nota1 = Number(prompt());
+				document.write("Ingrese Nota 2",'<BR/>');
+				nota2 = Number(prompt());
+				document.write("Ingrese Nota 3",'<BR/>');
+				nota3 = Number(prompt());
+				sumanota = nota1+nota2+nota3;
+				promedionotas = sumanota/3;
+				document.write("El promedio de las notas es: ",promedionotas,'<BR/>');
+			}
+			
+		</SCRIPT>
+	</BODY>
+</HTML>

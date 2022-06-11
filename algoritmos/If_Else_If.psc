@@ -4,17 +4,20 @@ Algoritmo If_Else_If
 	Escribir "Ingrese un número";
 	Leer a;
 	Escribir "Ingrese un número";
-	Leer b;	
-	resultado = "Sin datos"
+	Leer b;		
 	
 	Si a > b entonces
-		resultado= "La condición se cumplió";			
-	FinSi
-	Escribir "El resultado de la evaluación if es: ", resultado;	
-	Si c > d entonces
-		resultado= "La condición se cumplió";		
+		resultado= "La primera condición se cumplió";			
 	SiNo
-		resultado= "La condición no se cumplió";	
-	FinSi	
-	Escribir "El resultado de la evaluación if-Else es: ", resultado;
+		si a==b Entonces
+			resultado= "La segunda condición se cumplió";
+		SiNo
+			si a<b
+				resultado= "La tercera condición se cumplió";
+			SiNo
+				resultado= "No se cumple ninguna condición.";
+			FinSi			
+		FinSi
+	FinSi
+	Escribir "El resultado de la evaluación if-Else-If: ", resultado;
 FinAlgoritmo
