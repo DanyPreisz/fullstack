@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>TWO_SUM</TITLE>
+	</HEAD>
+	<BODY onload="two_sum();">
+		<SCRIPT type="text/javascript">
+			//Este codigo ha sido generado por el modulo psexport 20180802-w32 de PSeInt.
+			//Es posible que el codigo generado no sea completamente correcto. Si encuentra
+			//errores por favor reportelos en el foro (http://pseint.sourceforge.net).
+
+			function two_sum() {
+				var i, j;
+				var dato = new Number();
+				var tamano = new Number();
+				var target = new Number();
+				document.write("Ingrese la suma de dos números.",'<BR/>');
+				target = Number(prompt());
+				document.write("Ingrese la cantidad de números.",'<BR/>');
+				tamano = Number(prompt());
+				document.write("Ingrese los ",tamano," números.",'<BR/>');
+				var dimnumeros = new Array(tamano);
+				for (i=0;i<=tamano-1;i++) {
+					dato = Number(prompt());
+					dimnumeros[i] = dato;
+				}
+				for (i=0;i<=tamano-1;i++) {
+					document.write("Índice ",i," contiene: ",dimnumeros[i],'<BR/>');
+				}
+				for (i=0;i<=tamano-1;i++) {
+					for (j=i+1;j<=tamano-2;j++) {
+						if ((dimnumeros[i])+(dimnumeros[j])==(target)) {
+							document.write("El par de números es [",dimnumeros[i],",",dimnumeros[j],"]",'<BR/>');
+							document.write("El par de índices es [",i,",",j,"]",'<BR/>');
+						}
+					}
+				}
+			}
+			
+		</SCRIPT>
+	</BODY>
+</HTML>
