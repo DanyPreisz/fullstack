@@ -13,8 +13,8 @@ Algoritmo Two_Sum
 	Para i<-0 Hasta tamaño-1 Con Paso 1
 		Escribir "Índice ",i," contiene: ",dimNumeros[i]
 	FinPara	
-	Para i=0 Hasta tamaño-1 Con Paso 1	
-		Para j<-i+1 Hasta tamaño-2 Con Paso 1						
+	Para i=0 Hasta tamaño Con Paso 1	
+		Para j<-i+1 Hasta tamaño-1 Con Paso 1						
 			Si (dimNumeros[i])+(dimNumeros[j])=(target) Entonces
 				Escribir  "El par de números es [", dimNumeros[i], "," dimNumeros[j],"]"
 				Escribir "El par de índices es [", i, "," j,"]"

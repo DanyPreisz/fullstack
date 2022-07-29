@@ -1,42 +1,80 @@
 <!DOCTYPE html>
-<HTML>
-	<HEAD>
-		<TITLE>TWO_SUM</TITLE>
-	</HEAD>
-	<BODY onload="two_sum();">
-		<SCRIPT type="text/javascript">
-			//Este codigo ha sido generado por el modulo psexport 20180802-w32 de PSeInt.
-			//Es posible que el codigo generado no sea completamente correcto. Si encuentra
-			//errores por favor reportelos en el foro (http://pseint.sourceforge.net).
+<html lang="en">
 
-			function two_sum() {
-				var i, j;
-				var dato = new Number();
-				var tamano = new Number();
-				var target = new Number();
-				document.write("Ingrese la suma de dos n鷐eros.",'<BR/>');
-				target = Number(prompt());
-				document.write("Ingrese la cantidad de n鷐eros.",'<BR/>');
-				tamano = Number(prompt());
-				document.write("Ingrese los ",tamano," n鷐eros.",'<BR/>');
-				var dimnumeros = new Array(tamano);
-				for (i=0;i<=tamano-1;i++) {
-					dato = Number(prompt());
-					dimnumeros[i] = dato;
-				}
-				for (i=0;i<=tamano-1;i++) {
-					document.write("蚽dice ",i," contiene: ",dimnumeros[i],'<BR/>');
-				}
-				for (i=0;i<=tamano-1;i++) {
-					for (j=i+1;j<=tamano-2;j++) {
-						if ((dimnumeros[i])+(dimnumeros[j])==(target)) {
-							document.write("El par de n鷐eros es [",dimnumeros[i],",",dimnumeros[j],"]",'<BR/>');
-							document.write("El par de 韓dices es [",i,",",j,"]",'<BR/>');
-						}
-					}
-				}
-			}
-			
-		</SCRIPT>
-	</BODY>
-</HTML>
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script | LeetCode: 1. Two Sum</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <style>   
+    p {
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section>
+      <center><img src="../imagenes/js.jpg" width="900px" height="200px">
+      </center>
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html" target="blank">INICIO</a></li>
+      <li><a href="indicejavascript.html" target="blank">Ejemplos
+          de Java Script</a></li>
+    </ul>
+  </nav>
+  <main>
+    <aside id="izquierdo">
+    </aside>
+    <article>
+      <center>
+        <br>
+        <h1>LeetCode: 1. Two Sum</h1>
+          <h3>Comprobar si existe un par de n煤meros con una suma dada en un array</h3>
+        <p>
+<strong>Declaraci贸n del problema:</strong> Dado un array de enteros nums[] y un entero objetivo o target, retornar los 铆ndices de dos n煤meros tales que su suma es igual al target.</p>
+<p><strong>Nota:</strong> Asumir que existe una sola soluci贸n, y que no se puede utilizar el mismo elemento dos veces. <strong>Ejemplo:</strong> Si target es igual a 6 y nums[1] = 3, entonces nums[1] + nums[1] = target no es una soluci贸n.</p>
+
+        <br>
+        <h3>Brute Force Solution</h3>
+        
+        
+        <h3>C贸digo</h3>
+        <br>
+<p class="codepen" data-height="800" data-default-tab="html,result" data-slug-hash="Yzaxjqr" data-user="danypreisz" style="height: 800px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/danypreisz/pen/Yzaxjqr">
+  TwoSum</a> by DanyPreisz (<a href="https://codepen.io/danypreisz">@danypreisz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>        <iframe
+          src='https://docs.google.com/spreadsheets/d/1R-XZVHKRxHNmK21mEdxv3n-hm75aex7fytq-eRE0za0/edit?usp=sharing'
+          width='100%' height='700px' frameborder='0'> </iframe>
+      </center>
+      <br>
+      <p>
+      </p>
+      <br>
+      <center>
+      </center>
+
+
+      <br>
+
+
+
+    </article>
+    <aside id="derecho">
+    </aside>
+  </main>
+  <footer>
+
+    <center>
+      <p>No Copyright 漏 por <b>Dany Preisz</b></p>
+    </center>
+  </footer>
+</body>
+
+</html>

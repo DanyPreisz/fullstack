@@ -71,3 +71,11 @@ a{
     text-align: center;
 }
 
+#navbar ul li a.current, 
+#navbar ul li a:hover{
+    color: #fda94f; 
+}
+/* Showcase */
+.showcase{
+    background: url("../hotelzito/img/showcase.jpg")
+}
