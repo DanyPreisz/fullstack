@@ -41,7 +41,7 @@ body {
 .container>.header,
 .container>.footer{
     grid-column: 1/6;
-    background-color: #1e272e;
+    background-color: #e8bb87;
     color: #ffffff;
 }
 .container>.content{
