@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript | Suma de impares en un array usando reduce</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="../codemirror/theme/dracula.css">
+<script src="../codemirror/lib/codemirror.js"></script>
+<script src="../codemirror/mode/xml/xml.js"></script>
+<script src="../codemirror/addon/edit/closetag.js"></script>  
+</head>
+<body>
+  <header>
+    <section>
+      <center><img src="../imagenes/js.jpg" width="900px" height="200px">
+      </center>
+    </section>
+  </header>
+  <nav>
+    <ul>
+    <li><a href="../index.html" target="blank">INICIO</a></li>
+    <li><a href="../javascript/indicejavascript.html" target="blank">Ejemplos de JavaScript</a></li>
+    </ul>
+  </nav>
+  <main>
+    <aside id="izquierdo">
+    </aside>
+    <article>      
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+<center> <h1>Suma de impares en un array usando reduce</h1></center>      <br>
+<p>El método reduce necesita un array y un valor inicial y con cada ejecución opera con el valor que va acumulando con cada elemento del array. Tras operar con todos los elementos del array obtenemos un único valor como resultado. Se reduce el array original a un único valor.</p> 
+<p>Puede usarse reduce para obtener un único valor a partir de un array. En este caso sería la suma de todos los números impares existentes en el array.</p>
+<p>La función <code>sumaTodosImpares</code> recibe como argumento un array de enteros y devuelve la suma de todos los enteros impares.</p>
+<p><code>sumaTodosImpares([1,5,2,9,6,4]);</code> devuelve 1 + 5 + 9 = 15</p>
+<p>Lo que tenemos que escribir nosotros es la función reductora, que es la función encargada de ir actualizando el valor del acumulador con cada elemento del array.</p><br>                
+<textarea id="editor">
+function sumaTodosImpares(array){
+  return array.reduce((acumulador,numero)=>(numero % 2 !== 0? acumulador + numero : acumulador),0)
+}
+</textarea>
+        <script>
+        var editor = CodeMirror.fromTextArea (document.getElementById('editor'),{
+            mode:"xml",
+            theme: "dracula",
+            lineNumbers: true,
+            autoCloseTags: true
+        })          
+        ;  
+            editor.setSize("100%","100");
+        </script>
+
+    
+    
+    
+
+    </article>
+    <aside id="derecho">
+    </aside>
+    </main>
+  <footer>
+
+    <center>
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+<div class="fb-comments" data-href="https://fullstackdevelopment.tk/cssbattle/carrom.html" data-width="" data-numposts="100"></div>     
+      <p>No Copyright © por <b>Dany Preisz</b></p>
+    </center>
+  </footer>
+</body>
+
+</html>
