@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java | Curso de Java</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+   
+   <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="../codemirror/theme/dracula.css">
+<script src="../codemirror/lib/codemirror.js"></script>
+<script src="../codemirror/mode/xml/xml.js"></script>
+<script src="../codemirror/addon/edit/closetag.js"></script>
+    <style> img,iframe, h3{ display: block; margin: 0px auto;} </style>
+  </head>
+<body>
+  <header>
+    <section>
+      <img src="java.png" width="500" height="200px">      
+    </section>
+  </header>
+  <nav>
+    <ul>
+    <li><a href="../index.html" target="blank">INICIO</a></li>
+    <li><a href="../java/indicejava.html" target="blank">Curso de Java</a></li>
+    </ul>
+  </nav>
+  <main>
+    <aside id="izquierdo">
+    </aside>
+    <article>      
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+<center> <h1>Primer programa: "Hola Mundo"</h1></center><br>
+<p>Como iniciación, vamos a escribir un programa "Hola mundo" muy sencillo. Con esto conseguiremos familiarizarnos con algunas de las características del lenguaje Java y vamos a lograr nuestro primer programa funcional. Vamos a escribir nuestro código en un editor de textos, como el Bloc de notas. Es muy importante que no usemos un procesador de textos porque este añade imformación que el compilador de Java no será capaz de interpretar.</p>
+<p>Todo el código de Java debe de estar encapsulado dentro de una clase. En nuestro caso, nuestra clase se llama <strong><code>HolaMundo</code></strong>. Por convención, el nombre del archivo que aloja el código fuente debe de ser el mismo que el nombre de la clase principal contenida en ese archivo. La extensión de ese archivo debe de ser .java, por lo que vamos a guardar como <strong><code>HolaMundo.java</code></strong>.</p>  
+<p>Los programas Java necesitan un método main para que el intérprete de Java sepa por dónde tiene que comenzar a ejecutar el código. El método main es la puerta de entrada a nuestro código.</p><br> 
+<textarea id="editor">
+/******************************************************************************
+Hola Mundo
+*******************************************************************************/
+public class HolaMundo
+{
+// Un programa Java necesita un método main por el que empezar
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}
+</textarea> 
+<script>
+        var editor = CodeMirror.fromTextArea (document.getElementById('editor'),{
+            mode:"xml",
+            theme: "dracula",
+            lineNumbers: true,
+            autoCloseTags: true
+        })          
+        ;  
+            editor.setSize("100%","210");
+        </script><br>
+<h3>Compilación</h3>            
+<p>Ahora que ya tenemos el archivo con nuestra clase <strong><code>HolaMundo</code></strong>, que contiene un método main, ya podemos compilarlo. Vamos a compilarlo por línea de comandos usando las herramientas del kit de desarrollo de Java, el JDK, que debemos tener instalado. El compilador de Java se llama <strong>javac</strong>. Para compilar nuestro programa, vamos a un terminal a la ruta donde tenemos guardado nuestro archivo. Para ello, lo más fácil es, en el gestor de archivos, pulsar en el path y escribir cmd, pulsar Enter, y se abre el terminal. Para compilar por línea de comandos, escribimos <strong>javac</strong> y el nombre de nuestro archivo, <strong><code>HolaMundo.java</code></strong>. Pulsamos Enter y, ahora, lo que ha ocurrido es que se nos ha creado el archivo <strong><code>HolaMundo.class</code></strong>. Ese archivo contiene el bytecode que ejecutará la máquina virtual de Java.</p><br> 
+<h3>Ejecución</h3>
+<p>Para ejecutar el programa, debemos usar el intérprete de Java con el comando <strong>java</strong>. Vamos de nuevo a la consola y escribimos <strong><code>java HolaMundo</code></strong>, que es el nombre de nuestra clase con un método main. Vemos que lo que nos ha hecho este método es escribir por pantalla Hola Mundo. En cada archivo .java puede haber más de una clase. Si en el archivo <strong><code>HolaMundo.java</code></strong> hubieran habido más clases, al compilar se habría generado un archivo .class para cada una de ellas. Al intérprete de Java debemos pasarle el nombre de la clase que queremos que ejecute, en este caso, <strong><code>HolaMundo</code></strong>. Y esta clase debe tener un método main para que el intérprete sepa por dónde comenzar a ejecutar.</p><br>
+<h3>Comentarios</h3> 
+<p>Son líneas que el compilador va a ignorar, y son informativos para el programador.</p> 
+<p>Java soporta tres tipos de comentarios:</p>
+<ul>
+    <li><strong>Comentarios de una línea</strong>, como el que dice: <strong><code>// Un programa Java necesita un método main por el que empezar</code></strong>. Comienzan con dos barras.</li>
+    <li><strong>Comentarios de varias líneas</strong>, como el que podemos ver al inicio del programa. Comienzan por barra/asterisco, y terminan por asterisco/barra. 
+     </li>
+    <li><strong>Comentarios de documentación</strong>, que son como los comentarios multilínea, pero tienen dos asteriscos al inicio. Sirven para la herramienta Javadoc para que pueda generar documentación automáticamente. 
+    </li>    
+</ul><br>    
+<h3>Análisis del código de nuestro primer programa:</h3> 
+<ul>
+    <li><strong>Declaración de la clase</strong>. Todo el código de Java debe de estar encapsulado dentro de clases. Usamos la palabra clave class para declarar la clase, y tras ella, ponemos el nombre de la clase, en este caso, HolaMundo. Por convención, los nombres de clases en Java comienzan con letra mayúscula.</li>
+    <li><strong>Definición de la clase</strong>. Todos los miembros de la clase irán dentro de  corchetes.</li>
+    <li>La <strong>palabra clave public</strong> es un modificador de acceso, y esto quiere decir que esta clase es accesible desde cualquier otra clase.</li>
+    <li>El <strong>método main</strong>. Todos los programas Java necesitan uno y será el lugar donde comience a ejecutarse el programa.</li>
+    <li>La <strong>palabra clave static</strong> permite que el método main se llame sin necesidad de que un objeto de esta clase haya sido creado.</li>
+    <li>La <strong>palabra clave void</strong> quiere decir que este método no devuelve nada.</li>
+    <li>Toda la información que queremos pasarle a un método tiene que ir en parámetros dentro de los paréntesis que van tras su nombre. En nuestro programa se le pasa al método main una serie de secuencias de caracteres que pueden ser introducidas en el momento de ejecución por la línea de comandos. En este caso, no estamos haciendo uso de ellos.</li>
+    <li>El <strong>método println del flujo de salida out de la clase System</strong>. System es una clase que ya viene predefinida en Java. Lo que hace println es sacar por out, que es la salida conectada a la consola, el parámetro que le indiquemos entre paréntesis, en este caso, el string Hola Mundo. Esta línea es la única sentencia que tenemos en el programa. Es la única orden que estamos dando, la única acción que se está produciendo. Las sentencias terminan con un punto y coma.</li>
+</ul><br>
+<p>Generalmente, ningún desarrollador escribe, compila y ejecuta el código de este modo, por consola, sino que se ayudan de un IDE, que son las siglas en inglés de entorno integral de desarrollo, y son programas que tienen muchas herramientas para facilitarnos el desarrollo, pero está muy bien saber el modo básico de hacerlo.</p>
+    </article>
+    <aside id="derecho">
+    </aside>
+    </main>
+<footer>
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+     <center><p>No Copyright © por <b>Dany Preisz</b></p></center>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
