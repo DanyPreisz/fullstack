@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java | Curso de Java</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">   
+   <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="../codemirror/theme/dracula.css">
+<script src="../codemirror/lib/codemirror.js"></script>
+<script src="../codemirror/mode/xml/xml.js"></script>
+<script src="../codemirror/addon/edit/closetag.js"></script>
+    <style> img,iframe{ display: block; margin: 0px auto;} </style>
+  </head>
+<body>
+  <header>
+    <section>
+      <img src="java.png" width="500" height="200px">      
+    </section>
+  </header>
+  <nav>
+    <ul>
+    <li><a href="../index.html" target="blank">INICIO</a></li>
+    <li><a href="../java/indicejava.html" target="blank">Curso de Java</a></li>
+    </ul>
+  </nav>
+  <main>
+    <aside id="izquierdo">
+    </aside>
+    <article>      
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=900x90' style='width:900px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe><br>
+<center> <h1>Segundo programa: "Mayor que"</h1></center><br>
+<h3>Análisis del código</h3><br>
+<p>Java es un lenguaje bastante sencillo y resulta bastante natural.
+</p><br>
+<textarea id="editor">
+public class MayorQue {
+    public static void main(String[] args) {
+        int variable1 = 5;
+        int variable2 = 10;
+        if (variable1 > variable2) {
+            System.out.println("variable1 es mayor que variable2");
+        } else {
+            System.out.println("variable2 es mayor que variable1");
+        }
+    }
+}
+</textarea> 
+<script>
+        var editor = CodeMirror.fromTextArea (document.getElementById('editor'),{
+            mode:"xml",
+            theme: "dracula",
+            lineNumbers: true,
+            autoCloseTags: true
+        })          
+        ;  
+            editor.setSize("100%","210");
+        </script><br>
+<ul>
+    <li>Creamos la <strong>clase MayorQue</strong> y le añadimos el <strong>método main()</strong>.</li>
+    <li>Creamos dos variables de tipo entero y les asignamos un valor.</li>
+    <li>Si <strong>variable1</strong> es mayor que <strong>variable2</strong> se ejecutan las instrucciones dentro de las primeras llaves.</li>
+    <li>Si no es mayor se ejecuta el código que está dentro de las segundas llaves.</li>
+    <li>Al ejecutar el programa aparece una ventana que nos muestra el mensaje <strong>"variable2 es mayor que variable1"</strong>. Como <strong>variable1</strong>, que contiene el valor 5, no es mayor que <strong>variable2</strong>, que contiene el valor 10, no se ha ejecutado el código que viene tras el <strong>If</strong>, sino el que viene tras el <strong>Else</strong>.</li>
+</ul><br>
+<h3>Normas de estilo</h3>
+<p>En la estructura hay diferentes líneas con diferentes indentaciones o sangrías. Java no necesita estos espacios para entender nuestro programa, sino que se ponen para que luego sea más fácil de leer o interpretar por otra persona o por ti mismo. Es una convención a la que se ha llegado a lo largo de muchos años y que siguen también otros lenguajes de programación. Como norma general, añadiremos un sangrado extra en la siguiente línea a la apertura de una llave. Las llaves de apertura se escriben acompañando a la primera línea, mientras que las llaves de cierre se escriben solas en una línea aparte. Conviene conocer las normas de estilo para mantener un lenguaje universal.</p><br>
+<center><h1>Identificadores y palabras claves</h1></center>
+<p>Un <strong>identificador</strong> es una secuencia de caracteres que el desarrollador elige para identificar diferentes elementos creados por él. Un identificador es el nombre que le damos a las variables, a los métodos, a las clases, a los paquetes y a los interfaces.</p> 
+<p>Para que sea válido para Java, un identificador debe comenzar con una letra, un guion bajo o un carácter de moneda. Si esto no se cumple, nuestro programa no compilará. Si no estamos seguros de si un carácter en particular es válido para usarse para comenzar un identificador podemos usar el método <strong><code>isJavaIdentifierStart</code></strong>, de la <strong>clase Character</strong>, que nos devolverá verdadero o falso.</p> 
+<p>Un identificador puede contener letras, números, caracteres de moneda o caracteres de conexión. No es obligatorio que contenga todos estos tipos, pero todos los caracteres deben ser de estos tipos. Si no estamos seguros de si un carácter en particular es válido para usarse para formar un identificador, para comprobarlo tenemos el método <strong><code>isJavaIdentifierPart</code></strong>, de la <strong>clase Character</strong>, que nos devolverá también true o false.</p> 
+<p>La longitud mínima de un identificador es de un carácter y no tiene longitud máxima.</p><p>No puede utilizar ninguna palabra clave, pero sí puede contenerla.</p><p>Los identificadores son <strong>case-sensitive</strong>; se diferencia entre mayúsculas y minúsculas.</p>
+<p>Las convenciones son una serie de reglas universales no obligatorias que ayudan a la legibilidad de nuestro programa.</p> 
+<p>Para las clases interfaces, se usa el formato <strong>UpperCamelCase</strong>. Esto quiere decir que se comienza con mayúscula y también son mayúsculas la primera letra de cada palabra interna. Se recomienda usar palabras completas, no abreviaciones ni acrónimos, a no ser que los acrónimos sean ampliamente usados. Si vamos a usar acrónimos, solo la primera letra estará en mayúsculas.</p>  
+<p>Para los métodos, usamos el formato <strong>lowerCamelCase</strong>. Se comienza en minúscula, pero se escribe en mayúscula la primera letra de cada palabra interna. Los identificadores deberán representar acciones mediante verbos en infinitivo o imperativo. En inglés no existe el problema porque el imperativo y el infinitivo son iguales.</p>
+<p>Para las variables, igual que para los métodos, usamos <strong>lowerCamelCase</strong>, por lo tanto, comienzan con minúscula, pero será mayúscula la primera letra de cada palabra interna. Debemos elegir nombres descriptivos. No importa que sean largos, porque los IDE ofrecen ayuda de autocompletado. No conviene usar nombres de un solo carácter, excepto para variables temporales. Ejemplos de nombres de variables: clienteActual, velocidad o numeroDePedido. Podemos usar acentos para nuestros identificadores pero, por hacerlos más universales, en ocasiones se decide no usarlos.</p> 
+<p>Para las constantes, usamos todo mayúsculas, con las palabras separadas por guion bajo. Por ejemplo, PI o NUMERO_DE_SEMANAS_ANUALES. 
+<p>Las <strong>palabras clave</strong> están reservadas por Java y no pueden ser usadas para nuestros identificadores. Las palabras true, false y null, que no son palabras clave, sino que son literales, tampoco pueden ser usadas como identificadores.
+</p>    
+    </article>
+    <aside id="derecho">
+    </aside>
+    </main>
+<footer>
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=900x90' style='width:900px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+     <center><p>No Copyright © por <b>Dany Preisz</b></p></center>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

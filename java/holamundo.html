@@ -11,7 +11,7 @@
 <script src="../codemirror/lib/codemirror.js"></script>
 <script src="../codemirror/mode/xml/xml.js"></script>
 <script src="../codemirror/addon/edit/closetag.js"></script>
-    <style> img,iframe, h3{ display: block; margin: 0px auto;} </style>
+    <style> img,iframe{ display: block; margin: 0px auto;} </style>
   </head>
 <body>
   <header>
@@ -29,7 +29,7 @@
     <aside id="izquierdo">
     </aside>
     <article>      
-<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=900x90' style='width:900px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe><br>
 <center> <h1>Primer programa: "Hola Mundo"</h1></center><br>
 <p>Como iniciación, vamos a escribir un programa "Hola mundo" muy sencillo. Con esto conseguiremos familiarizarnos con algunas de las características del lenguaje Java y vamos a lograr nuestro primer programa funcional. Vamos a escribir nuestro código en un editor de textos, como el Bloc de notas. Es muy importante que no usemos un procesador de textos porque este añade imformación que el compilador de Java no será capaz de interpretar.</p>
 <p>Todo el código de Java debe de estar encapsulado dentro de una clase. En nuestro caso, nuestra clase se llama <strong><code>HolaMundo</code></strong>. Por convención, el nombre del archivo que aloja el código fuente debe de ser el mismo que el nombre de la clase principal contenida en ese archivo. La extensión de ese archivo debe de ser .java, por lo que vamos a guardar como <strong><code>HolaMundo.java</code></strong>.</p>  
@@ -45,6 +45,12 @@ public class HolaMundo
 		System.out.println("Hello World");
 	}
 }
+/**
+* Texto con alguna descripción (posibilidad de usar HTML)
+*
+* Etiquetas javadoc (comienzan por @)
+*
+*/
 </textarea> 
 <script>
         var editor = CodeMirror.fromTextArea (document.getElementById('editor'),{
@@ -54,7 +60,7 @@ public class HolaMundo
             autoCloseTags: true
         })          
         ;  
-            editor.setSize("100%","210");
+            editor.setSize("100%","300");
         </script><br>
 <h3>Compilación</h3>            
 <p>Ahora que ya tenemos el archivo con nuestra clase <strong><code>HolaMundo</code></strong>, que contiene un método main, ya podemos compilarlo. Vamos a compilarlo por línea de comandos usando las herramientas del kit de desarrollo de Java, el JDK, que debemos tener instalado. El compilador de Java se llama <strong>javac</strong>. Para compilar nuestro programa, vamos a un terminal a la ruta donde tenemos guardado nuestro archivo. Para ello, lo más fácil es, en el gestor de archivos, pulsar en el path y escribir cmd, pulsar Enter, y se abre el terminal. Para compilar por línea de comandos, escribimos <strong>javac</strong> y el nombre de nuestro archivo, <strong><code>HolaMundo.java</code></strong>. Pulsamos Enter y, ahora, lo que ha ocurrido es que se nos ha creado el archivo <strong><code>HolaMundo.class</code></strong>. Ese archivo contiene el bytecode que ejecutará la máquina virtual de Java.</p><br> 
@@ -87,7 +93,7 @@ public class HolaMundo
     </aside>
     </main>
 <footer>
-<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=900x90' style='width:900px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
      <center><p>No Copyright © por <b>Dany Preisz</b></p></center>
   </footer>
 </body>
