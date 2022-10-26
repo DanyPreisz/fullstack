@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java | Curso de Java</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">   
+   <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="../codemirror/theme/dracula.css">
+<script src="../codemirror/lib/codemirror.js"></script>
+<script src="../codemirror/mode/xml/xml.js"></script>
+<script src="../codemirror/addon/edit/closetag.js"></script>
+    <style> img,iframe{ display: block; margin: 0px auto;} </style>
+  </head>
+<body>
+  <header>
+    <section>
+      <img src="java.png" width="500" height="200px">      
+    </section>
+  </header>
+  <nav>
+    <ul>
+    <li><a href="../index.html" target="blank">INICIO</a></li>
+    <li><a href="../java/indicejava.html" target="blank">Curso de Java</a></li>
+    </ul>
+  </nav>
+  <main>
+    <aside id="izquierdo">
+    </aside>
+    <article>      
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=970x90' style='width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe><br>
+<center> <h1>"Interacción por teclado con el usuario"</h1></center><br>
+<p>Podemos recoger la entrada de teclado y usarla como variable para nuestro programa. La mayor parte de las aplicaciones del mundo real no interactúan con el usuario así, sino por medio de interfaces gráficas, pero escanear la entrada por teclado es una manera muy sencilla de conseguir interacción y nos será muy útil para probar nuestros programas.</p>
+<br>
+<textarea id="editor">
+import java.util.Scanner;
+
+public class IntroduccionCaracteresPorTeclado {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("¿Cómo te llamas?");
+        String nombre = scanner.nextLine();
+        System.out.println("Hola " + nombre + " ¡Bienvenido!");
+        System.out.println("Introduce tu edad:");
+        int edad = scanner.nextInt();
+        System.out.println("Tienes " + edad + " años.");
+    }
+}
+</textarea> 
+<script>
+        var editor = CodeMirror.fromTextArea (document.getElementById('editor'),{
+            mode:"xml",
+            theme: "dracula",
+            lineNumbers: true,
+            autoCloseTags: true
+        })          
+        ;  
+            editor.setSize("100%","260");
+        </script><br>
+<h3>Análisis del código</h3><br>
+<p>Se crea una nueva clase denominada <strong><code>IntroducciónCaracteresPorTeclado</code></strong>.</p> 
+<p>Añadimos el <strong>método main</strong>.</p> 
+<p>Para leer caracteres introducidos por teclado, usamos <strong>System.in</strong>.</p> <p><strong>System.out</strong> representa la consola de salida y <strong>System.in</strong> representa la entrada, en este caso el teclado.</p> 
+<p>Usamos la <strong>clase Scanner</strong> que nos ayuda a leer cadenas de caracteres.</p> 
+<p>Creamos un nuevo <strong>Scanner</strong> con la línea: <strong><code>Scanner scanner = newScanner (System.in)</code></strong>;.</p> 
+<p>El <strong>operador New</strong> nos sirve para crear nuevos objetos. En este caso estamos creando un nuevo <strong>objeto de tipo Scanner</strong>.</p> <p>Preguntamos al usuario por su nombre: <strong><code>System.out.println ("¿Cómo te llamas?");</code></strong>.</p>  <p>Escaneamos lo que el usuario introduce: <strong><code>String nombre = scanner.nextLine();</code></strong>. Esta instrucción hará que el programa se quede a la espera de que el usuario introduzca una cadena de caracteres por teclado. Al pulsar la tecla Enter, escaneará la línea introducida y lo asignará a una <strong>variable nombre</strong>, de <strong>tipo String</strong>. Una <strong>String</strong> es una cadena de caracteres que en Java es un <strong>objeto</strong>.</p> <p></p><p>Ahora que sabemos el nombre del usuario, vamos a usarlo para darle la bienvenida: <strong><code>System.out.println ("hola" + nombre + "¡Bienvenido!");</code></strong>. Hemos usado el <strong>método nextLine</strong> del <strong>objeto Scanner</strong>. Esto le indica que estamos esperando una cadena de caracteres.</p> 
+<p>También podemos indicarle al <STRONG>Scanner</STRONG> otro tipo de dato que esperamos del usuario, por ejemplo, un entero. Pedimos al usuario que introduzca su edad: <strong><CODE>System.out.println ("Introduce tu edad")</CODE></strong> y la escaneamos: <strong><code>int edad = scanner.nextInt()</code></strong>. Usamos el <strong>método nextInt()</strong> para indicarle al escáner que estamos esperando un entero. Estamos escaneando el número introducido, y lo almacenamos en la <strong>variable edad de tipo int</strong>.</p>  
+<p>Vamos a devolver una respuesta al usuario con su edad: <strong><code>System.out.println ("Tienes" + edad + "años")</code></strong>.</p> 
+    </article>
+    <aside id="derecho">
+    </aside>
+    </main>
+<footer>
+<iframe data-aa='2057915' src='//ad.a-ads.com/2057915?size=970x90' style='width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+     <center><p>No Copyright © por <b>Dany Preisz</b></p></center>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
