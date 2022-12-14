@@ -28,88 +28,49 @@ hr{background: #fda94f;height: 20px;border: none;}
 .box h4{padding-bottom: 20px;text-transform: uppercase;}
 .clr{clear: both;}
 /*Navbar*/
-#navbar .logo{
-    float: left;
-    font-size: 2.3rem; 
-    color: #fda94f;
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-#navbar ul {
-    float:right;
-    list-style: none;
-}
-#navbar ul li{
-    float: left;
-}
-
-#navbar ul li a{
-    display: block;
-    padding: 20px;
-    text-align: center;
-}
-
-#navbar ul li a.current, 
-#navbar ul li a:hover{
-    color: #fda94f; 
-}
+#navbar .logo{float: left; font-size: 2.3rem; 
+    color: #fda94f; padding-top: 10px;
+    padding-bottom: 30px;}
+#navbar ul {float:right;list-style: none;}
+#navbar ul li{float: left;}
+#navbar ul li a{display: block;padding: 20px; text-align: center;}
+#navbar ul li a.current, #navbar ul li a:hover{color: #fda94f;}
 /* Showcase */
 .showcase{
     background: url("../hotelzito/img/showcase.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    padding: 190px 60px;
-    text-align: center;
-}
-.showcase h1,p{
-    padding-bottom: 20px;
-}
+    background-size: cover; background-position: center;
+    height: 600px; padding: 190px 60px;text-align: center;}
+.showcase h1,p{padding-bottom: 20px;}
 /*Reservation*/
-#reservation {
-    margin-bottom: 20px;
-}
-#reservation h3{
-    float: left;
-    margin-left: 200px;
-    margin-top: 10px;
-    font-weight: lighter;
-    color: #4d4d4d;
-}
-#reservation a{
-    float: right;
-    margin-right: 120px;
-}
+#reservation {margin-bottom: 20px;}
+#reservation h3{float: left;margin-left: 200px;
+    margin-top: 10px;font-weight: lighter; color: #4d4d4d;}
+#reservation a{float: right;margin-right: 120px;}
 /*Features*/
-#features .features1{
-    background: url("../hotelzito/img/feature-1.jpg");
+#features .features1{ background: url("../hotelzito/img/feature-1.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#features .features2{
-    background: url("../hotelzito/img/feature-2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#features .features3{
-    background: url("../hotelzito/img/feature-3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+    background-size: cover; background-position: center;}
+#features .features2{background: url("../hotelzito/img/feature-2.jpg");
+    background-repeat: no-repeat; background-size: cover;
+    background-position: center;}
+#features .features3{background: url("../hotelzito/img/feature-3.jpg");
+    background-repeat: no-repeat;    background-size: cover;
+    background-position: center;}
 /*About*/
-#about{
-    background: #fda94f;
-}
-
-
-
-
-
-
+#about{background: #fda94f;}
+#about .about-content{float: left;width: 50%;padding-right: 20px}
+#about .about-content h1{font-weight: lighter;padding-bottom: 20px}
+#about .about-img{float: right;width: 50%}
+#about .about-img img{width: 100%}
+/*Testimonials*/
+#testimonial{background: url("../hotelzito/img/testimonials.jpg");
+    background-repeat: no-repeat; background-size: cover;
+    background-position: center;text-align: center;height: 450px}
+#testimonial h2{font-weight: lighter;padding-bottom: 20px}
+.testimonial-content{background: rgb(77,77,77,0.8);padding: 20px;
+margin-bottom: 20px;border-radius: 5px}
+.testimonial-content img{float: left;height: 50px;border-radius: 50%}
 
 
 
