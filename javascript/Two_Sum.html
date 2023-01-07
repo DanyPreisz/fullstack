@@ -6,16 +6,21 @@
   <title>Java Script | LeetCode: 1. Two Sum</title>
   <link rel="stylesheet" type="text/css" href="../estilos.css">
   <style>   
-    p {
+    p,  {
       text-align: justify;
     }
   </style>
+<link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="../codemirror/theme/dracula.css">
+<script src="../codemirror/lib/codemirror.js"></script>
+<script src="../codemirror/mode/xml/xml.js"></script>
+<script src="../codemirror/addon/edit/closetag.js"></script>    
 </head>
 
 <body>
   <header>
     <section>
-      <center><img src="../imagenes/js.jpg" width="900px" height="200px">
+      <center><img src="../imagenes/js.jpg" width=100% height="200px">
       </center>
     </section>
   </header>
@@ -30,7 +35,7 @@
     <aside id="izquierdo">
     </aside>
     <article>
-      <center>
+
         <br>
         <h1>LeetCode: 1. Two Sum</h1>
           <h3>Comprobar si existe un par de números con una suma dada en un array</h3>
@@ -40,19 +45,50 @@
 
         <br>
         <h3>Brute Force Solution</h3>
-        
-        
-        <h3>Código</h3>
-        <br>
+                <h3>Código</h3><br>
+<textarea id="editor" >
+var twoSum = function(nums, target) {
+    for (let i=0;i<nums.length;i++){
+        for (let j=i+1; j<nums.length; j++)
+            if(nums[i]+nums[j]===target) return [i,j]
+    }
+};
+</textarea>
+        <script>
+        var editor = CodeMirror.fromTextArea (document.getElementById('editor'),{
+            mode:"java",
+            theme: "dracula",
+            lineNumbers: true,
+            autoCloseTags: true
+        })          
+        ;  
+            editor.setSize("100%","120");
+        </script><br>
+<p> La función twoSum() se utiliza para encontrar dos números en un arreglo que sumen un valor específico (llamado <strong>"target"</strong>). La función toma dos parámetros: un arreglo de números llamado <strong>"nums"</strong> y un entero llamado <strong>"target"</strong>. La función devuelve un arreglo con los índices de los dos números que suman <strong>"target"</strong>, o <strong>"undefined"</strong> si no se encuentra ningún par que cumpla esta condición. </p><p>La función comienza con un ciclo que itera sobre los elementos del arreglo <strong>"nums"</strong> (línea 2). Dentro de este ciclo, se utiliza otro ciclo para iterar sobre todos los elementos del arreglo <strong>"nums"</strong> que se encuentran a la derecha del elemento actual (línea 3). Si se encuentra un par de elementos que sumen <strong>"target"</strong>, se devuelve un arreglo con sus índices y se sale de la función (línea 4). Si se terminan los ciclos sin encontrar ningún par que cumpla esta condición, se devuelve <strong>"undefined"</strong>.</p>
+<p>Este código tiene una <strong>complejidad temporal de O(N^2)</strong>, ya que utiliza dos ciclos anidados para iterar sobre todos los pares posibles de números en el arreglo. Esto significa que el tiempo de ejecución del código crece de manera cuadrática con la cantidad de números en el arreglo. Por lo tanto, este código no es muy eficiente para arreglos grandes.</p><br>
+<h3>Pseudocódigo</h3><br>
+<p>El siguiente algoritmo implementa la solución del problema <strong>"Two Sum"</strong> en un lenguaje de programación orientado a procedimientos.
+Este algoritmo busca parejas de números en un arreglo de enteros que, al sumarse, den como resultado un valor determinado <strong>(target)</strong>. El algoritmo comienza pidiendo al usuario que ingrese el valor de target y la cantidad de números que se van a evaluar. Luego, se piden al usuario que ingrese los números uno por uno y se almacenan en el arreglo <strong>"nums"</strong>.
+Luego, el algoritmo itera sobre cada elemento del arreglo <strong>"nums"</strong> y muestra en pantalla su índice y su valor. Después, se itera nuevamente sobre cada elemento del arreglo <strong>"nums"</strong>, comparando cada elemento con todos los demás elementos que vienen después de él en el arreglo. Si se encuentra una pareja de elementos que, al sumarse, den como resultado el valor de <strong>target</strong>, se muestra en pantalla el valor de la pareja de elementos y sus índices en el arreglo.
+Este algoritmo utiliza dos ciclos anidados (un "Para" dentro de otro "Para") para recorrer todos los elementos del arreglo y compararlos entre sí. Esta es una técnica conocida como <strong>búsqueda de fuerza bruta</strong>, ya que compara todas las posibles parejas de elementos para encontrar la solución. En general, este tipo de algoritmos son eficientes para problemas pequeños, pero pueden tardar mucho tiempo en resolver problemas más grandes. 
+</p><br>
+<script src="https://gist.github.com/DanyPreisz/0e8893fc401c7c84ae79d4ae91a33b1d.js"></script>        
+                        <br>
+               
+<h3>Código embebido en HTML</h3><br>
 <p class="codepen" data-height="800" data-default-tab="html,result" data-slug-hash="Yzaxjqr" data-user="danypreisz" style="height: 800px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/danypreisz/pen/Yzaxjqr">
   TwoSum</a> by DanyPreisz (<a href="https://codepen.io/danypreisz">@danypreisz</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>        <iframe
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> 
+<br><p>La función <strong><code>two_sum()</code></strong> se utiliza para encontrar dos números en un arreglo que sumen un valor específico (llamado <strong>"target"</strong>). La función comienza leyendo el valor de <strong>"target"</strong> y la cantidad de números en el arreglo a través de dos prompts. Luego se pide al usuario que ingrese los números del arreglo a través de una serie de prompts.</p>
+<p>Una vez que se han leído los números del arreglo, se utiliza un ciclo para imprimir el contenido de cada índice del arreglo. Luego, se utiliza otro ciclo anidado para iterar sobre todos los pares posibles de números en el arreglo. Si se encuentra un par que sume <strong>"target"</strong>, se imprimen los valores del par y sus índices en el arreglo.</p>
+<br>              
+               <iframe
           src='https://docs.google.com/spreadsheets/d/1R-XZVHKRxHNmK21mEdxv3n-hm75aex7fytq-eRE0za0/edit?usp=sharing'
           width='100%' height='700px' frameborder='0'> </iframe>
-      </center>
+
       <br>
       <p>
       </p>
