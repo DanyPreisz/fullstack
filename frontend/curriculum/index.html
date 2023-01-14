@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos.css">     
-    <title>Curriculum</title>
+    <title>Curriculum</title>    
+    <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
+    <script src="scripts.js"></script>
 </head>
-<body>
+<body >
     <!---Menú Encabezado-->
     <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href=""></a>
-            </div>
+        <header>          
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()"></a>INICIO</li>
                     <li><a href="#sobremi" onclick="seleccionar()"></a>SOBRE MÍ</li>
                     <li><a href="#skills" onclick="seleccionar()"></a>SKILLS</li>
-                    <li><a href="#curriculum" onclick="seleccionar()"></a>CURRICULUM</li>
-                    <li><a href="#portfolio" onclick="seleccionar()"></a>PORTFOLIO</li>
+                    <li><a href="#curriculum" onclick="seleccionar()"></a>EXPERIENCIA LABORAL</li>
                     <li><a href="#contacto" onclick="seleccionar()"></a>CONTACTO</li>
                 </ul>
             </nav>
@@ -30,7 +28,144 @@
             </div>
         </header>
     </div>
-    
-    
+    <!-- Sección Inicio --> 
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="" alt="" id="foto">    
+                <h1><span id='nombre'></span>&nbsp;<span id='apellido'></span></h1>            
+            </div>            
+            <h2>Full Stack Developer</h2>
+            <div class="redes">
+                <a href="" ><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="" ><i class="fa-brands fa-twitter"></i></a>
+                <a href="" ><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="" ><i class="fa-solid fa-rss"></i></a>
+                <a href="" ><i class="fa-brands fa-skype"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Sobre Mi -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque quos ad quaerat ex repudiandae soluta dolorem, eaque autem impedit optio saepe incidunt excepturi, explicabo officiis deserunt commodi ipsam aperiam!</p>
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Fecha de Nacimiento:</strong>
+                            <span id="nacimiento"></span>
+                        </li>
+                        <li>
+                            <strong>Edad:</strong>
+                            <span id="edad"></span>
+                        </li>
+                        <li>
+                            <strong>Teléfono:</strong>
+                            <span id="telefono"> </span>
+                        </li>
+                        <li>
+                            <strong>Email:</strong>
+                            <span id="email"></span>
+                        </li>
+                        <li>
+                            <strong>Dirección:</strong>
+                            <span id="calle"></span>&nbsp;<span id="numero"></span>&#44;&nbsp;<span id="ciudad"></span>&#44;&nbsp;<span id="estado"></span>&#44;&nbsp;<span id="pais"></span>
+                        </li>
+                        <li>
+                            <strong>Trabajo:</strong>
+                            <span>Freelance</span>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical skills -->
+                <div class="skill">
+                    <span>HTML y CSS</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>89%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Experiencia -->
+    <section id="curriculum" class="curriculum">
+    <div class="contenido-seccion">
+        <h2>Experiencia Laboral</h2>
+        <div class="col izquierda"></div>
+        <h3>Front End Developer</h3>
+        <div class="item izq">
+            <span class="casa">Empresa X</span>
+            <span class="fecha">2020 - 2021</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum neque, reprehenderit dolores eius, aliquid eligendi, incidunt tenetur necessitatibus odio assumenda architecto illo nulla id iusto! Quia distinctio aliquam, quibusdam obcaecati.</p>
+            <div class="conectori">
+                <div class="circuloi"></div>
+            </div>
+        </div>
+        <div class="col derecha">
+            <h3>Back End Developer</h3>
+            <div class="item der">
+                <span class="casa">Empresa X</span>
+            <span class="fecha">2020 - 2022</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum neque, reprehenderit dolores eius, aliquid eligendi, incidunt tenetur necessitatibus odio assumenda architecto illo nulla id iusto! Quia distinctio aliquam, quibusdam obcaecati.</p>
+            <div class="conectord">
+                <div class="circulod"></div>
+            </div>
+            </div>
+        </div>
+    </div>    
+    </section>
+    <section id="contacto" class="contacto">        
+    <div class="contenido-seccion">
+        <h2>Contacto</h2>
+        <div class="fila">
+            <!-- Formulario -->
+            <div class="col">
+                <input type="text" placeholder="Tu nombre">
+                <input type="text" placeholder="Teléfono">
+                <input type="text" placeholder="Correo Electrónico">
+                <input type="text" placeholder="Tema">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>  
+                <button>
+                    Enviar mensaje <i class="fa-solid fa-paper-plane"></i>
+                    <span class="overlay"></span>
+                </button> 
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>        
 </body>
 </html>
