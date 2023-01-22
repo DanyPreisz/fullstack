@@ -22,11 +22,11 @@
       <label for="btn-menu"><img src="./img/icons8-bars-stroke-zen-outlined-32.png" alt=""></label>
       <nav class="menu">
         <ul>
-          <li><a href="https://fullstackdevelopment.tk/frontend/curriculum/index.html#inicio"></a>INICIO</li>
-          <li><a href="https://fullstackdevelopment.tk/frontend/curriculum/index.html#sobremi"></a>SOBRE MÍ</li>
-          <li><a href="https://fullstackdevelopment.tk/frontend/curriculum/index.html#skills"></a>SKILLS</li>
-          <li><a href="https://fullstackdevelopment.tk/frontend/curriculum/index.html#curriculum"></a>EXPERIENCIA</li>
-          <li><a href="https://fullstackdevelopment.tk/frontend/curriculum/index.html#contacto"></a>CONTACTO</li>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#sobremi">SOBRE MÍ</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#curriculum">EXPERIENCIA</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
         </ul>
       </nav>
     </header>
@@ -51,7 +51,7 @@
   <!-- Sección Sobre Mi -->
   <section id="sobremi" class="sobremi">
     <div class="contenido-seccion">
-      <h2>Sobre Mí</h2>
+      <br><br><h2>Sobre Mí</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque quos ad quaerat ex repudiandae
         soluta dolorem, eaque autem impedit optio saepe incidunt excepturi, explicabo officiis deserunt commodi ipsam
         aperiam!</p>
@@ -90,7 +90,7 @@
       </div>
     </div>
   </section>
-  <h1 class="titulo">Skills</h1>
+  <h1 id="skills" class="titulo">Skills</h1>
   <section class="column column--right">
     <article class="card">
       <h2 class="card__title">Front End</h2>
@@ -197,19 +197,24 @@
       <h2>Contacto</h2>
       <div class="fila">
         <!-- Formulario -->
-        <div class="col">
-          <input type="text" placeholder="Tu nombre">
-          <input type="text" placeholder="Teléfono">
-          <input type="text" placeholder="Correo Electrónico">
-          <input type="text" placeholder="Tema">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+        <form class="col">
+          <label for="name">Nombre:</label>
+          <input id="name" type="text" placeholder="Tu nombre" required>
+          <label for="tel">Teléfono:</label>
+          <input id="tel" type="text" placeholder="Teléfono" required>
+          <label for="mail">Correo Electrónico:</label>
+          <input id="mail" type="email" placeholder="Correo Electrónico" required>
+          <label for="tema">Tema:</label>
+          <input id="tema" type="text" placeholder="Tema" required>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
           <button>
             Enviar mensaje <i class="fa-solid fa-paper-plane"></i>
             <span class="overlay"></span>
-          </button>
+          </button>              
+          </form>
         </div>
-      </div>
-    </div>
+      </div>    
   </section>
   <!-- footer -->
   <footer>
@@ -225,5 +230,4 @@
     </div>
   </footer>
 </body>
-
 </html>

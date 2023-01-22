@@ -35,7 +35,7 @@ header {
 .menu li:hover {
   background: rgba(0, 0, 0, 0.3);
 }
-.menu li {
+.menu li a{
   color: #fff;
   padding: 15px 20px;
   text-decoration: none;
@@ -276,8 +276,10 @@ header {
   padding: 50px 0;
 }
 .contacto .contenido-seccion {
-  max-width: 1100px;
+  max-width: auto;
   margin: auto;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 .contacto h2 {
   font-size: 48px;
@@ -289,7 +291,7 @@ header {
   display: flex;
 }
 .contacto .col {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   position: relative;
 }
