@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script | Variables</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+
+  <style>
+    footer,
+    h1,
+    h3 {
+      text-align: center;
+    }
+
+    p,
+    ul,
+    h3,
+    h1 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section>
+      <img src="../imagenes/js.jpg" width="970px" height="200px">
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Curso de Java Script</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <br>
+      <h1>Variables en JavaScript</h1>
+      <p>En JavaScript, las variables se utilizan para almacenar diferentes tipos de datos, como números, cadenas de
+        texto, booleanos, objetos, etc. y se pueden declarar utilizando las palabras clave var, let y const.</p>
+      <p>
+        La <b>palabra clave var</b> se usaba antes para declarar variables en JavaScript, pero a partir de ES6, se
+        recomienda
+        utilizar let y const.</p>
+      <p>
+        La <b>palabra clave let</b> se utiliza para declarar variables mutables, que pueden cambiar de valor más tarde
+        en el
+        código.
+      </p>
+      <p>
+        La <b>palabra clave const</b> se utiliza para declarar variables inmutables, que no pueden cambiar de valor
+        después de
+        ser
+        inicializadas.</p>
+      <textarea id="editor">
+// Declarando una variable con var
+var x = 10;
+// Declarando una variable con let
+let y = 5;
+// Declarando una variable con const
+const z = 3.14;
+// Cambiando el valor de una variable mutable
+y = 7;
+// Esto dará un error, ya que no se puede cambiar el valor de una variable inmutable
+// z = 2.71;
+
+// Se pueden declarar múltiples variables en una sola línea separándolas con comas.
+let a = 1, b = 2, c = 3;
+        </textarea>
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+          mode: "xml",
+          theme: "dracula",
+          lineNumbers: true,
+          autoCloseTags: true
+        })
+          ;
+        editor.setSize("100%", "280");
+      </script>
+
+      En JavaScript, existen ciertas convenciones para nombrar variables que pueden ayudar a que el código sea más
+      legible y
+      fácil de entender. Aquí hay algunas reglas generales para nombrar variables en JavaScript:
+
+      Las variables deben comenzar con una letra, un guión bajo (_) o un signo de dólar ($).
+      Los nombres de las variables pueden contener letras, números, guiones bajos o signos de dólar.
+      Es una buena práctica utilizar nombres descriptivos para las variables que sean fáciles de entender.
+      Los nombres de las variables deben ser sensibles a las mayúsculas y minúsculas. Esto significa que "miVariable" y
+      "mivariable" son dos variables diferentes.
+      Evite utilizar palabras reservadas de JavaScript como nombres de variables. Estas palabras reservadas son aquellas
+      que
+      el lenguaje utiliza para realizar acciones específicas y no se pueden utilizar como nombres de variables. Por
+      ejemplo,
+      "if", "else", "function", etc.
+      Utilice una convención de nomenclatura coherente en todo el código. Por ejemplo, puede utilizar la convención
+      "camelCase" para nombrar variables, donde la primera palabra se escribe en minúscula y cada palabra adicional se
+      escribe
+      con la primera letra en mayúscula, como "miVariableEjemplo".
+      En resumen, al nombrar variables en JavaScript, es importante utilizar nombres descriptivos y coherentes que sean
+      fáciles de entender y seguir las convenciones de nomenclatura establecidas para el lenguaje.
+
+
+      <img src="./imagenes/alert_script.jpg" width="100%" height="350px">
+
+    </article>
+  </main>
+  <footer>
+    <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
+  </footer>
+</body>
+
+</html>

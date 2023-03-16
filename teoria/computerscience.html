@@ -5,105 +5,178 @@
   <meta charset="UTF-8">
   <title>Teoría | Computer Science</title>
   <link rel="stylesheet" type="text/css" href="../estilos.css">
-    <style> img,iframe{ display: block; margin: 0px auto;} </style>
-  </head>
+  <style>
+    img,
+    iframe {
+      display: block;
+      margin: 0px auto;
+    }
+  </style>
+</head>
+
 <body>
   <header>
     <section>
-      <img src="desarrolloweb.jpg" width="500" height="200px">      
+      <img src="desarrolloweb.jpg" width="500" height="200px">
     </section>
   </header>
   <nav>
     <ul>
-    <li><a href="../index.html" target="blank">INICIO</a></li>
-    <li><a href="../javascript/indicejavascript.html" target="blank">Teoría del Desarrollo Web</a></li>
+      <li><a href="../index.html" target="blank">INICIO</a></li>
+      <li><a href="../javascript/indicejavascript.html" target="blank">Teoría del Desarrollo Web</a></li>
     </ul>
   </nav>
   <main>
     <aside id="izquierdo">
     </aside>
-    <article>      
-<iframe data-aa='2097927' loading='lazy' src='//ad.a-ads.com/2097927?size=970x90' style='width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe><br>  
-<center> <h1>Computer Science o Informática</h1></center>      <br>
-<p>Las <strong>ciencias de la computación</strong> o <strong>ciencias de la informática</strong> son las ciencias formales que abarcan las bases teóricas de la información y la computación, así como su aplicación en sistemas computacionales. La <strong>informática</strong> es el estudio de las computadoras, incluida la teoría computacional, el diseño de hardware y software, los algoritmos y la forma en que los humanos interactúan con la tecnología.</p>
-<p>El cuerpo de conocimiento de las <strong>ciencias de la computación</strong> es el estudio sistemático de los procesos algorítmicos que describen y transforman información: su teoría, análisis, diseño, eficiencia, implementación, algoritmos sistematizados y aplicación. Se trata del estudio sistemático de la factibilidad, estructura, expresión y mecanización de procedimientos metódicos (o algoritmos) que subyacen en la adquisición, representación, procesamiento, almacenamiento, comunicación y acceso a la información. La información puede estar codificada en forma de bits en una memoria de computadora, o en algún otro objeto, como los genes y proteínas en una célula biológica.
-</p>
-<p>Existen diversas ramas o disciplinas dentro de las <strong>ciencias de la computación</strong>; algunos resaltan los resultados específicos del cómputo (como los gráficos por computadora), mientras que otros (como la teoría de la complejidad computacional) se relacionan con propiedades de los algoritmos usados al realizar cómputo; y otros se enfocan en los problemas que requieren la implementación de sistemas computacionales. Por ejemplo, los estudios de la teoría de lenguajes de programación describen un cómputo, mientras que la programación de computadoras aplica lenguajes de programación específicos para desarrollar una solución a un problema computacional específico.
-La cuestión fundamental en que se basa la <strong>ciencia de la computación</strong> es en todo lo que puede ser eficientemente automatizado.</p>
-<p>Los científicos informáticos son solucionadores de problemas. Cuando un informático recibe un problema, recopila información y se comunica con computadoras utilizando lenguajes de programación y lógica. Crean un conjunto de reglas o instrucciones para que la computadora ejecute y resuelva el problema.</p>
-<center><h3>Principales áreas de estudio</h3></center>
-<h3>Teoria Computacional</h3>
-<p>Aprendizaje y análisis de algoritmos. Un algoritmo es una sucesión de pasos ordenados que al repetirse de forma sistemática logra resolver un problema. 
-Los algoritmos traen consigo el concepto de la complejidad. También incluye la teoría de grafos, criptografía, hardware y las estructuras de datos usadas para organizar los datos de forma eficiente para su posterior uso.</p>
-<h3>Aplicaciones</h3>
-Inteligencia artificial, robótica, machine learning, procesamiento de imágenes, procesamiento de lenguaje natural, realidad aumentada, big data, hacking ético, entre otras.
-<h3>Ingeniería Computacional</h3>
-<p>Ingeniería de software, conocimiento y desarrollo de diversos lenguajes de programación, arquitectura de computadoras, compiladores de código.</p><br>
-<center><h3>Conceptos básicos de Computer Science</h3></center>  
-<h3>Circuitos Eléctricos</h3>
-<p>Para poder entender el funcionamiento de una computadora y sus orígenes, antes tenemos que conocer qué es y cómo funciona un circuito eléctrico.
-Un circuito eléctrico es una interconexión de componentes eléctricos que transporta corriente eléctrica a través de una trayectoria cerrada. Imaginemos una batería, ahora pensemos que dicha batería está conectada a través de cables a una lámpara, si deseamos prender la lámpara necesitamos que reciba corriente, Podemos tener un interruptor el cual, al cerrarlo prenda la lámpara.
-</p>
-<img src="and.png" class="imagen">
-<p>Para poder prender la lámpara necesitamos cerrar tanto A como B. Esto se debe a que si cierro A pero no B, la energía de la batería logra llegar hasta el interruptor B, pero dado que el interruptor B está abierto, la energía se pierde y por lo tanto no llega al otro extremo derecho, no llega a la lámpara.
-Si A está abierto, pero B cerrado, la energía no llega al interruptor B, y por consiguiente, la lámpara no podría prenderse.
-En el caso de que tanto el interruptor A como el interruptor B estén cerrados, la energía logra fluir hasta llegar a la lámpara y lograr prenderla.
-Una alternativa, sería colocar dos interruptores de forma paralela de forma tal que si cierro uno, pero mantengo el otro abierto, la energía tiene un camino alternativo por donde pasar.</p>
-<img src="or.png">
-<p>En este caso, si cierro el interruptor A pero mantengo el interruptor B abierto, la lámpara se prende igual. Esto se debe a que la energía de la batería pasa por el camino cerrado hasta alcanzar la lámpara. Análogo es el caso en el que el interruptor A está abierto y el interruptor B cerrado.
-Si buscamos asociar lo ya mencionado a lógica, podríamos considerar que cuando el interruptor está abierto su valor es 0 y cuando el interruptor está cerrado su valor es 1. Y la lámpara encendida es 1. Por lo tanto, en el primer caso, para poder prender la lámpara necesitamos que tanto el interruptor A como el interruptor B estén cerrados, es decir que ambos valores estén en 1. En el segundo caso, con que uno esté abierto ya es suficiente, por lo tanto podríamos tener A con un valor 0 y B con un valor 1 o viceversa, o ambos con valor 1.
-El uso de interruptores en serie (primer caso) representa un AND, y el uso de interruptores en paralelo (segundo caso) representa un OR. A partir de diversas combinaciones podremos lograr cada uno de los conectores lógicos.</p><br>
-<h3>Conectores Lógicos</h3>
-<h3>Tablas de verdad para los conectores lógicos NOT, AND, OR, XOR
-</h3>
-<img src="tablasverdad.jpg" height=80% width=80%>
-<h3>Half Adder</h3>
-<p>Combinando puertas lógicas podemos lograr diversas operaciones, como sumar números. Nosotros sumamos con números decimales pero las computadoras en su interior trabajan con un sistema binario de unos y ceros.
-Por ejemplo, si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43.
-En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND mientras que el XOR efectúa la suma.</p><br>
-<img src="halfadder.jpg"width=50% height=50%>
-<h3>Sistemas de Numeración</h3>
-<h3>Sistema Unario</h3>
-Es el sistema de numeración más simple, posee un único símbolo para representar todos los números existentes. Si el símbolo elegido es “I”, el número 3 del sistema decimal sería: “III”. Su principal desventaja es que no nos permite simbolizar de forma cómoda y rápida un conjunto con muchos elementos.<br>
-<h3>Números Romanos</h3>
-<p>En este caso existen 7 símbolos o signos para representar todos los números posibles. El orden de estos símbolos importa, se basa en un sistema aditivo, cada signo representa un valor que se va sumando al anterior. La numeración romana luego evolucionó a un sistema sustractivo, en el cual algunos signos en lugar de sumar, restan. Si el valor a la izquierda es menor, entonces resta.<br>
-Por ejemplo:<br>
-CXVII = cien + diez + cinco + uno + uno<br>
-MCMV = mil  + (mil - cien) + cinco</p><br>
-<h3>Sistemas Posicionales</h3>
-<p>Un sistema posicional es aquel en donde cada dígito posee un valor que depende de su posición relativa, la cual está determinada por la base, número de dígitos necesarios para escribir cualquier número. En el caso de un sistema decimal, base 10, ya que el número de dígitos es 10, de 0 a 9.
-Por lo tanto, además del número de unidades que representa, considerado aisladamente, tiene un significado o peso distinto según la posición que ocupa en el grupo de caracteres del que forma parte.</p><br>
-<h3>De binario a decimal y viceversa</h3>
-<h3>De binario a decimal usando notación posicional</h3>
-<p>1. Escribir el número binario y listar las potencias de 2 de derecha a izquierda</p><br>
-<img src="binarioadecimal1.jpg" width=40% height=40%><br>
-<p>2. Escribir los dígitos del número binario debajo de sus potencias correspondientes.</p>
-<p>3. Conectar los dígitos del número binario con sus potencias correspondientes.</p>
-<p>4. Escribir el valor final de cada potencia de dos.</p>
-<p>5. Sumar los valores finales.</p><br>
-<img src="binarioadecimal2.jpg"width=40% height=40%><br>
-<h3>De decimal a binario dividiendo por dos y usando el residuo</h3>
-<p>Dividir hasta que el resultado sea cero y escribir el número binario obtenido, empezando desde el último residuo hacia arriba hasta llegar al primero.</p><br>
-<img src="decimalabinario.jpg"width=50% height=50%><br>
-<h3>Lenguaje de Máquina</h3>
-Las computadoras solo entienden ceros y unos. Nosotros No.
-Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje maquina, lenguaje interpretable por la computadora. La "traducción" se denomina compilación.
-<img src="compilation.png" width=75% height=75%>
+    <article>
+      <iframe data-aa='2097927' loading='lazy' src='//ad.a-ads.com/2097927?size=970x90'
+        style='width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe><br>
+      <center>
+        <h1>Computer Science o Informática</h1>
+      </center> <br>
+      <p>Las <strong>ciencias de la computación</strong> o <strong>ciencias de la informática</strong> son las ciencias
+        formales que abarcan las bases teóricas de la información y la computación, así como su aplicación en sistemas
+        computacionales. La <strong>informática</strong> es el estudio de las computadoras, incluida la teoría
+        computacional, el diseño de hardware y software, los algoritmos y la forma en que los humanos interactúan con la
+        tecnología.</p>
+      <p>El cuerpo de conocimiento de las <strong>ciencias de la computación</strong> es el estudio sistemático de los
+        procesos algorítmicos que describen y transforman información: su teoría, análisis, diseño, eficiencia,
+        implementación, algoritmos sistematizados y aplicación. Se trata del estudio sistemático de la factibilidad,
+        estructura, expresión y mecanización de procedimientos metódicos (o algoritmos) que subyacen en la adquisición,
+        representación, procesamiento, almacenamiento, comunicación y acceso a la información. La información puede
+        estar codificada en forma de bits en una memoria de computadora, o en algún otro objeto, como los genes y
+        proteínas en una célula biológica.
+      </p>
+      <p>Existen diversas ramas o disciplinas dentro de las <strong>ciencias de la computación</strong>; algunos
+        resaltan los resultados específicos del cómputo (como los gráficos por computadora), mientras que otros (como la
+        teoría de la complejidad computacional) se relacionan con propiedades de los algoritmos usados al realizar
+        cómputo; y otros se enfocan en los problemas que requieren la implementación de sistemas computacionales. Por
+        ejemplo, los estudios de la teoría de lenguajes de programación describen un cómputo, mientras que la
+        programación de computadoras aplica lenguajes de programación específicos para desarrollar una solución a un
+        problema computacional específico.
+        La cuestión fundamental en que se basa la <strong>ciencia de la computación</strong> es en todo lo que puede ser
+        eficientemente automatizado.</p>
+      <h3>Solución de problemas</h3>
+      <p>Básicamente, las Ciencias de la Computación se dedican a la resolución de problemas. Pero sería arrogante
+        pensar que tienen el
+        monopolio de "resolver problemas". Es difícil encontrar alguna disciplina en la que la resolución de problemas
+        no sea un aspecto o motivación sustancial, si no integral. Como las Ciencias de la Computación son el estudio de
+        las computadoras y la computación, implican estudiar y comprender los procesos computacionales y el desarrollo
+        de algoritmos y técnicas y cómo se aplican a la resolución de problemas.</p>
+      <p>Los científicos informáticos son solucionadores de problemas. Cuando un informático recibe un problema,
+        recopila información y se comunica con computadoras utilizando lenguajes de programación y lógica. Crean un
+        conjunto de reglas o instrucciones para que la computadora ejecute y resuelva el problema.</p>
+      <p>Las habilidades para resolver problemas no son algo que se pueda reducir a un único proceso paso a paso. Cada
+        área y cada problema tienen sus propios desafíos y consideraciones únicas. Se pueden identificar, estudiar y
+        enseñar técnicas generales de resolución de problemas, pero las habilidades para resolver problemas se adquieren
+        con la experiencia, el trabajo duro y, lo más importante, el fracaso. La resolución de problemas es parte
+        integrante de la experiencia humana.</p>
+
+      <h3>Principales áreas de estudio</h3>
+      <h3>Teoria Computacional</h3>
+      <p>Aprendizaje y análisis de algoritmos. Un algoritmo es una sucesión de pasos ordenados que al repetirse de forma
+        sistemática logra resolver un problema.
+        Los algoritmos traen consigo el concepto de la complejidad. También incluye la teoría de grafos, criptografía,
+        hardware y las estructuras de datos usadas para organizar los datos de forma eficiente para su posterior uso.
+      </p>
+      <h3>Aplicaciones</h3>
+      Inteligencia artificial, robótica, machine learning, procesamiento de imágenes, procesamiento de lenguaje natural,
+      realidad aumentada, big data, hacking ético, entre otras.
+      <h3>Ingeniería Computacional</h3>
+      <p>Ingeniería de software, conocimiento y desarrollo de diversos lenguajes de programación, arquitectura de
+        computadoras, compiladores de código.</p><br>
+      <h3>Conceptos básicos de Computer Science</h3>
+      <h3>Circuitos Eléctricos</h3>
+      <p>Para poder entender el funcionamiento de una computadora y sus orígenes, antes tenemos que conocer qué es y
+        cómo funciona un circuito eléctrico.
+        Un circuito eléctrico es una interconexión de componentes eléctricos que transporta corriente eléctrica a través
+        de una trayectoria cerrada. Imaginemos una batería, ahora pensemos que dicha batería está conectada a través de
+        cables a una lámpara, si deseamos prender la lámpara necesitamos que reciba corriente, Podemos tener un
+        interruptor el cual, al cerrarlo prenda la lámpara.
+      </p>
+      <img src="and.png" class="imagen">
+      <p>Para poder prender la lámpara necesitamos cerrar tanto A como B. Esto se debe a que si cierro A pero no B, la
+        energía de la batería logra llegar hasta el interruptor B, pero dado que el interruptor B está abierto, la
+        energía se pierde y por lo tanto no llega al otro extremo derecho, no llega a la lámpara.
+        Si A está abierto, pero B cerrado, la energía no llega al interruptor B, y por consiguiente, la lámpara no
+        podría prenderse.
+        En el caso de que tanto el interruptor A como el interruptor B estén cerrados, la energía logra fluir hasta
+        llegar a la lámpara y lograr prenderla.
+        Una alternativa, sería colocar dos interruptores de forma paralela de forma tal que si cierro uno, pero mantengo
+        el otro abierto, la energía tiene un camino alternativo por donde pasar.</p>
+      <img src="or.png">
+      <p>En este caso, si cierro el interruptor A pero mantengo el interruptor B abierto, la lámpara se prende igual.
+        Esto se debe a que la energía de la batería pasa por el camino cerrado hasta alcanzar la lámpara. Análogo es el
+        caso en el que el interruptor A está abierto y el interruptor B cerrado.
+        Si buscamos asociar lo ya mencionado a lógica, podríamos considerar que cuando el interruptor está abierto su
+        valor es 0 y cuando el interruptor está cerrado su valor es 1. Y la lámpara encendida es 1. Por lo tanto, en el
+        primer caso, para poder prender la lámpara necesitamos que tanto el interruptor A como el interruptor B estén
+        cerrados, es decir que ambos valores estén en 1. En el segundo caso, con que uno esté abierto ya es suficiente,
+        por lo tanto podríamos tener A con un valor 0 y B con un valor 1 o viceversa, o ambos con valor 1.
+        El uso de interruptores en serie (primer caso) representa un AND, y el uso de interruptores en paralelo (segundo
+        caso) representa un OR. A partir de diversas combinaciones podremos lograr cada uno de los conectores lógicos.
+      </p><br>
+      <h3>Conectores Lógicos</h3>
+      <h3>Tablas de verdad para los conectores lógicos NOT, AND, OR, XOR
+      </h3>
+      <img src="tablasverdad.jpg" height=80% width=80%>
+      <h3>Half Adder</h3>
+      <p>Combinando puertas lógicas podemos lograr diversas operaciones, como sumar números. Nosotros sumamos con
+        números decimales pero las computadoras en su interior trabajan con un sistema binario de unos y ceros.
+        Por ejemplo, si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en
+        la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4.
+        Obteniendo como resultado final 43.
+        En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND mientras que el XOR efectúa la suma.</p><br>
+      <img src="halfadder.jpg" width=50% height=50%>
+      <h3>Sistemas de Numeración</h3>
+      <h3>Sistema Unario</h3>
+      Es el sistema de numeración más simple, posee un único símbolo para representar todos los números existentes. Si
+      el símbolo elegido es “I”, el número 3 del sistema decimal sería: “III”. Su principal desventaja es que no nos
+      permite simbolizar de forma cómoda y rápida un conjunto con muchos elementos.<br>
+      <h3>Números Romanos</h3>
+      <p>En este caso existen 7 símbolos o signos para representar todos los números posibles. El orden de estos
+        símbolos importa, se basa en un sistema aditivo, cada signo representa un valor que se va sumando al anterior.
+        La numeración romana luego evolucionó a un sistema sustractivo, en el cual algunos signos en lugar de sumar,
+        restan. Si el valor a la izquierda es menor, entonces resta.<br>
+        Por ejemplo:<br>
+        CXVII = cien + diez + cinco + uno + uno<br>
+        MCMV = mil + (mil - cien) + cinco</p><br>
+      <h3>Sistemas Posicionales</h3>
+      <p>Un sistema posicional es aquel en donde cada dígito posee un valor que depende de su posición relativa, la cual
+        está determinada por la base, número de dígitos necesarios para escribir cualquier número. En el caso de un
+        sistema decimal, base 10, ya que el número de dígitos es 10, de 0 a 9.
+        Por lo tanto, además del número de unidades que representa, considerado aisladamente, tiene un significado o
+        peso distinto según la posición que ocupa en el grupo de caracteres del que forma parte.</p><br>
+      <h3>De binario a decimal y viceversa</h3>
+      <h3>De binario a decimal usando notación posicional</h3>
+      <p>1. Escribir el número binario y listar las potencias de 2 de derecha a izquierda</p><br>
+      <img src="binarioadecimal1.jpg" width=40% height=40%><br>
+      <p>2. Escribir los dígitos del número binario debajo de sus potencias correspondientes.</p>
+      <p>3. Conectar los dígitos del número binario con sus potencias correspondientes.</p>
+      <p>4. Escribir el valor final de cada potencia de dos.</p>
+      <p>5. Sumar los valores finales.</p><br>
+      <img src="binarioadecimal2.jpg" width=40% height=40%><br>
+      <h3>De decimal a binario dividiendo por dos y usando el residuo</h3>
+      <p>Dividir hasta que el resultado sea cero y escribir el número binario obtenido, empezando desde el último
+        residuo hacia arriba hasta llegar al primero.</p><br>
+      <img src="decimalabinario.jpg" width=50% height=50%><br>
+      <h3>Lenguaje de Máquina</h3>
+      Las computadoras solo entienden ceros y unos. Nosotros No.
+      Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje maquina, lenguaje interpretable
+      por la computadora. La "traducción" se denomina compilación.
+      <img src="compilation.png" width=75% height=75%>
     </article>
     <aside id="derecho">
     </aside>
-    </main>
-<footer>
-<iframe data-aa='2097927' loading='lazy' src='//ad.a-ads.com/2097927?size=970x90' style='width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>  
-     <center><p>No Copyright © por <b>Dany Preisz</b></p></center>
+  </main>
+  <footer>
+    <iframe data-aa='2097927' loading='lazy' src='//ad.a-ads.com/2097927?size=970x90'
+      style='width:970px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    <center>
+      <p>No Copyright © por <b>Dany Preisz</b></p>
+    </center>
   </footer>
 </body>
 
 </html>
-
-
-
-
-
-
-
