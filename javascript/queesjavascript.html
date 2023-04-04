@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="../estilos.css">
   <style>
     p,
+    ol,
     ul,
     h5,
     h1,
@@ -21,12 +22,27 @@
       text-align: center;
     }
 
+    ol,
+    ul {
+      margin-left: 20px;
+    }
+
     img {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
   </style>
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+  <script>
+    function myFunction() {
+      document.getElementById("hola").innerHTML = "Hola Mundo!";
+    }
+  </script>
 </head>
 
 <body>
@@ -45,108 +61,154 @@
     <article>
       <br>
       <h1>¿Qué es JavaScript?</h1>
-      <p><strong>JavaScript</strong> es un lenguaje de programación que usamos para que una página web sea más
-        interactiva, para programar aplicaciones móviles y aplicaciones para PC. Fue creado para programar y darle vida
-        a las páginas web. Permite realizar mapas interactivos, animaciones, aplicaciones que se actualizan
-        constantemente, etc. Es responsable de una revolución completa en las páginas web. Sin
-        <strong>JavaScript</strong>, cada vez que presionáramos un "Me gusta" o hiciéramos una búsqueda en Google
-        tendríamos que esperar que toda la página vuelva a cargarse nuevamente para ver el resultado de la operación
-        ejecutada.
+      <p><b>JavaScript es un lenguaje de programación informático</b>, por lo tanto, es una serie de instrucciones
+        que le indican a la computadora
+        qué hacer. Esa acción puede ser una amplia variedad de cosas, como mostrar texto, mover una imagen o solicitar
+        información al usuario. Normalmente, las instrucciones, o lo que se llama código, se procesan desde la línea
+        superior
+        hacia abajo. Esto simplemente significa que la computadora examina el código que has escrito, determina qué
+        acción
+        quieres que realice y luego toma esa acción. El acto de procesar el código se llama ejecutarlo o correrlo.</p>
+      <p>Estas son las instrucciones o código para hacer una taza de café instantáneo:
       </p>
-      <p>Internet no sería tan útil ni divertido sin <strong>JavaScript</strong>. Con el tiempo se ha extendido el uso
-        de JavaScript a otras áreas además del desarrollo del FrontEnd. También se usa como lenguaje de BackEnd para
-        plataformas web con conexión a bases de datos, en aplicaciones de teléfonos, computadoras, drones y aplicaciones
-        de realidad aumentada y de realidad virtual. Es uno de los lenguajes con más demanda laboral y es de los más
-        populares porque puede usarse en cualquier escenario. Permite desarrollar páginas interactivas, plataformas web
-        como redes sociales, apps para IOS y Android, software para Windows, Mac o Linux, etc.</p>
-      <p>Existen dos tipos de lenguajes: interpretados o compilados. El lenguaje interpretado no necesita ser compilado.
-        Es una especie de guión o "script" que un intérprete, en este caso el navegador, va ejecutando línea por línea.
-        En cambio, en un lenguaje compilado, el programa desarrollado debe pasar por un punto intermedio donde se
-        "compila" o traduce desde el lenguaje utilizado para escribirlo a un lenguaje que la máquina pueda ejecutar.</p>
+      <ol>
+        <li>Poner café en la taza.</li>
+        <li>Poner a calentar el agua.</li>
+        <li>¿Ya ha hervido el agua? Si es así, entonces verter el agua en la taza; de lo contrario, seguir esperando.
+        </li>
+        <li>Beber el café.</li>
+      </ol>
+      <p>Se ejecuta el código desde la primera línea (instrucción 1), y luego se continúa con la siguiente (instrucción
+        2), luego la siguiente y así sucesivamente hasta llegar al final. Así funcionan la mayoría de los lenguajes
+        de programación, incluido <b>JavaScript</b>. Sin embargo, según las circunstancias se puede cambiar el
+        flujo de ejecución o incluso saltar parte del código.
+      </p>
 
-      <p>JavaScript es un lenguaje de programación dinámico. Permite realizar modificaciones en tiempo de ejecución,
-        mientras se está ejecutando el programa. Esto se debe a que JavaScript es un lenguaje interpretado.
-        Características que hacen de JavaScript un lenguaje dinámico:
+      <p><b>Existen dos tipos de lenguajes: interpretados o compilados.</b></p>
+      <p><b>JavaScript es un lenguaje interpretado</b>. La computadora no entiende
+        JavaScript. Necesita algo para interpretar el código y convertirlo en algo que entienda; por lo tanto, es un
+        lenguaje interpretado. Las computadoras entienden solo el código de máquina, que es esencialmente una cadena de
+        números binarios (es decir, una cadena de ceros y unos). El código en JavaScript es una especie de guión o
+        "script" que un intérprete, en este caso el navegador, va ejecutando línea por línea. A medida que el navegador
+        recorre el JavaScript, lo pasa a un programa especial llamado intérprete, que convierte el JavaScript en el
+        código de máquina que la computadora comprende. Es como tener un traductor que traduce en el momento del inglés
+        al español,
+        por ejemplo. Lo importante a tener en cuenta es que la conversión del JavaScript ocurre en el momento en que se
+        ejecuta el código; debe repetirse cada vez que esto sucede. JavaScript no es el único lenguaje interpretado;
+        existen otros como PHP y Ruby.
+      </p>
+      <p> En cambio, en un <b>lenguaje compilado</b>, el programa desarrollado debe pasar por un punto intermedio donde
+        se
+        "compila" o traduce desde el lenguaje utilizado para escribirlo a un lenguaje que la máquina pueda ejecutar. El
+        código del programa se convierte a código de máquina antes de ejecutarse, y esta conversión sólo se hace una
+        vez. El programador utiliza un compilador para convertir el código que escribió a código de máquina, y este
+        código de
+        máquina es ejecutado por el usuario del programa. Los lenguajes C#, Java y muchos otros son compilados. Es como
+        traducir al inglés lo que dice un documento en español. A menos que se cambie el original,
+        el
+        documento traducido se puede seguir usando sin necesidad de volver a traducirlo.
+        <b>JavaScript no necesita ser compilado</b>. Para evitar una posible confusión, es bueno aclarar que
+        JavaScript no es la versión script del lenguaje Java. Aunque comparten el nombre no comparten nada más.
+        JavaScript es mucho más fácil de aprender y usar que Java, pero aún así es sorprendentemente poderoso.
+      </p>
+      <p><b>JavaScript es un lenguaje de programación dinámico</b>. Permite realizar modificaciones en tiempo de
+        ejecución,
+        mientras se está ejecutando el programa. Esto se debe a que JavaScript es un lenguaje interpretado.</p>
+      <p>Características que hacen de JavaScript un lenguaje dinámico:</p>
       <ul>
-        <li>Tipado débil: JavaScript no requiere que se declare el tipo de dato de una variable antes de utilizarla. El
+        <li><b>Tipado débil:</b> JavaScript no requiere que se declare el tipo de dato de una variable antes de
+          utilizarla. El
           tipo de dato de una variable puede cambiar en cualquier momento durante la ejecución del programa.</li>
-        <li>Permite crear objetos y funciones en tiempo de ejecución: no es necesario definirlos antes de la ejecución
+        <li><b>Permite crear objetos y funciones en tiempo de ejecución:</b> no es necesario definirlos antes de la
+          ejecución
           del programa.</li>
-        <li>Modificación del DOM: JavaScript es utilizado para manipular el Document Object Model (DOM), que es la
-          estructura del documento HTML. Esto permite modificar el contenido y la apariencia de una página web en tiempo
+        <li><b>Modificación del DOM:</b> JavaScript es utilizado para manipular el <b>Document Object Model (DOM)</b>,
+          que es
+          la estructura del documento HTML. Esto permite modificar el contenido y la apariencia de una página web en
+          tiempo
           real, en respuesta a la interacción del usuario.</li>
       </ul>
-      La dinamicidad de JavaScript permite a los desarrolladores crear aplicaciones interactivas y flexibles que
-      pueden adaptarse a las necesidades del usuario en tiempo real. Sin embargo, también puede hacer que el código sea
-      más difícil de mantener y depurar si no se tiene cuidado al realizar modificaciones en tiempo de ejecución.</p>
-      <p>Los programas en <strong>JavaScript</strong> se llaman <strong>"scripts"</strong>, que pueden escribirse
-        directamente en el HTML de una página web y ejecutarse automáticamente a medida que se carga la página.</p>
-      <p>Con <strong>JavaScript</strong> la compilación no es necesaria porque el código es directamente interpretado
-        por el navegador. Los scripts se proporcionan y ejecutan como texto sin formato. No necesitan preparación o
-        compilación especial para ejecutarse. Otra cosa son los frameworks de programación basados en JavaScript como
-        Angular, React, o Vue que si son necesariamente compilados para que el navegador pueda interpretarlos.</p>
-      <p><strong>JavaScript</strong> se creó inicialmente para funcionar en un navegador, para que el usuario pudiera
-        interactuar con las páginas web. Existe una entidad llamada <a href="https://www.ecma-international.org/">Ecma
-          International</a>, que es una organización internacional basada en membresías de estándares para la
-        comunicación y la información. Adquirió el nombre <strong>Ecma International</strong> en 1994, cuando la
-        <strong>ECMA (European Computer Manufacturers Association)</strong> cambió su nombre para expresar su alcance
-        internacional. Ecma se encarga de estandarizar <strong>JavaScript</strong>, mediante
-        <strong>ECMAScript</strong>, para que todos los navegadores usen la misma versión y pueda ejecutarse
-        correctamente.
+      <p><b>JavaScript</b> es muy fácil de implementar porque está integrado con HTML. Está diseñado para crear
+        aplicaciones
+        centradas en la red. <b>Es abierto y multiplataforma</b>. La <b>dinamicidad de JavaScript</b> permite a los
+        desarrolladores
+        crear aplicaciones interactivas y flexibles que
+        pueden adaptarse a las necesidades del usuario en tiempo real. Sin embargo, también puede hacer que el código
+        sea
+        más difícil de mantener y depurar si no se tiene cuidado al realizar modificaciones en tiempo de ejecución.</p>
+      <p>Los programas en <b>JavaScript</b> se llaman <b>"scripts"</b>, tienen la extensión .js y pueden llamarse desde
+        el HTML o puede escribirse directamente el código en el HTML y
+        ejecutarse automáticamente a medida que se carga la página. Los <b>scripts</b> se crean y ejecutan como texto
+        sin
+        formato. No necesitan preparación o compilación especial para
+        ejecutarse. Otra cosa son los <b>frameworks de programación basados en JavaScript</b> como <b>Angular, React, o
+          Vue</b> que si son necesariamente compilados para que el navegador pueda interpretarlos.
       </p>
-      <p>JavaScript es el lenguaje de programación que permite crear aplicaciones web y móviles a lo largo de múltiples
-        tipos de dispositivos y navegadores web. Es un lenguaje que sigue la especificación ECMAscript y que es, junto a
-        HTML y CSS, una de las tres tecnologías elementales en el mundo de la web. La mejor forma de entender JavaScript
-        es viéndolo en acción. Se lo encuentra en cualquier web. Y, aunque el alcance de este lenguaje llega también a
-        dispositivos móviles y otro tipo de "hardware", la web siempre es el punto clave de partida. Lo que ves en una
-        página web es la combinación de este tridente de tecnologías: HTML, CSS y JavaScript, interpretados por el
-        navegador web. La primera capa es HTML, la cual solo da estructura y significado al contenido que se muestre.
-        Este, al ser un lenguaje estrictamente de marcado, carece de ciertas características de vista e interactividad.
-        Para cuestiones de vista, existe la segunda capa en una página web, la cual es cubierta por CSS y, aunque
-        también puede disponer de algunas opciones de interactividad, se enfoca principalmente en cómo se verá el
-        contenido, es decir, en su presentación. Ya estructurado y bien presentado el contenido, entonces entra en
-        acción la tercera capa, que es cubierta por JavaScript, un lenguaje interpretado que se ejecuta en el navegador
-        e interactua perfectamente con las capas de HTML y CSS manipulando e interactuando con el contenido. Desde el
-        más básico clic de un botón hasta una sofisticada animación o la invocación de datos y servicios remotos.</p>
-      <img src="./imagenes/trescapas.jpg" width="50%" height="50%">
-      <h5>HTML determina la estructura, CSS la presentación y JavaScript el comportamiento, lo que hace la página.
-      </h5>
-      <p>JavaScript se ha vuelto la piedra angular en el desarrollo web contemporáneo.
-        Hay dos razones principales por las que JavaScript se ha vuelto tan popular en el desarrollo web: su capacidad
-        para
-        renderizar contenido dinámico y su capacidad para realizar tareas asincrónicas.</p>
-      <h3>Contenido web estático vs dinámico</h3>
-      <p>Uno de los primeros beneficios de JavaScript fue su capacidad para manejar contenido dinámico. En los primeros
-        días de
-        la web, todas las páginas web eran estáticas, lo que significa que los datos mostrados en la página eran
-        cargados por el
-        navegador de antemano, y la página tenía que ser recargada para mostrar cualquier actualización. Los sitios web
-        son
-        dinámicos cuando son capaces de renderizar nuevos datos sin tener que recargar la página, y este es el tipo de
-        comportamiento que JavaScript fue diseñado para hacer. Por ejemplo, gracias a JavaScript, podemos ver nuevos
-        mensajes
-        aparecer en un feed de redes sociales sin tener que actualizar la página.</p>
-      <h3>Realización de tareas asincrónicas</h3>
-      <p> Para que el usuario tenga una experiencia fluida al trabajar con un sitio web dinámico, éste debe ser capaz de
-        realizar
-        tareas de manera asincrónica. Muchos lenguajes de programación operan de manera sincrónica, lo que significa que
-        una
-        operación debe ser completada antes de que la siguiente operación comience.
-      </p>
-      <h3>Evolución</h3>
-      <p>La evolución de la tecnología ha
-        llevado a extender su uso más allá de un navegador, en el Escritorio y hacia otros dispositivos, garantizando
-        así su forma de trabajo y ejecución. Siguiendo el orden de las capas que hemos mencionado, se estructura primero
-        el contenido con HTML, después se dispone de presentación con las reglas expuestas con CSS y, finalmente, se le
-        da vida con la interactividad de la que dispone JavaScript. Este lenguaje ha evolucionado maravillosamente desde
-        que fue creado en diciembre de 1995 por Brendan Eich, agregando y mejorando características y elementos que
-        hacen que sea cada vez más fácil y sencillo programar con JavaScript. No hay que confundir JavaScript con Java,
-        que, si bien ambos son lenguajes de programación, tienen entornos y contextos muy distintos; aunque ahora la
-        sintaxis en ambos tenga muchas similitudes. Lo que sí es muy cierto: el alcance y poder de JavaScript es muy
-        amplio, por lo cual existen ya muchas plataformas y tecnologías donde este lenguaje es su base fundamental, como
-        el caso de Node o algunos "frameworks" muy poderosos e importantes como Angular, React, o Vue, y algunas
-        tecnologías móviles como Native JavaScript o Ionic, entre otras.</p>
+
     </article>
+    <h3>¡Hola Mundo!</h3><br>
+    <div id="demo">
+      <script>
+        document.getElementById("demo").innerHTML = "My First JavaScript", document.getElementById("demo").style.color = "red";        
+      </script>
+      <p id="hola"></p>
+      <button type="button" onclick="myFunction()">Try it</button>
+    </div><br>
+    <p>Para escribir código de JavaScript puede usarse un simple editor de textos como el <a
+        href="https://apps.microsoft.com/store/detail/windows-notepad/9MSMLRH6LZF3?hl=en-us&gl=us">Bloc de Notas</a> o
+      software de
+      uso profesional como <a href="https://code.visualstudio.com/">Visual Studio Code</a> o <a
+        href="https://www.sublimetext.com/">Sublime Text</a>.</p>
+    <textarea id="editor">
+//Ejemplo 1: Escribir el código de JavaScript dentro del código HTML.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <script>
+    alert('Hello, World!');
+  </script>
+</body>
+</html>
+
+//Ejemplo 2: Escribir el código de JavaScript en un archivo externo.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  //Como buena práctica es recomendable incluir los scripts al final del body. 
+  <script src="HelloWorld.js">
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+</textarea>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+        mode: "java",
+        theme: "dracula",
+        lineNumbers: true,
+        autoCloseTags: true
+      })
+        ;
+      editor.setSize("100%", "1000");
+    </script>
+    <p>Incluir los scripts al final del body es una buena práctica que ayuda a mejorar el rendimiento de la
+      página y a garantizar que los elementos visuales se carguen antes de ejecutar el código JavaScript. Garantiza que
+      el navegador primero cargue todo el contenido HTML, CSS e
+      imágenes antes de ejecutar los scripts, lo que reduce el tiempo de carga y mejora la experiencia del
+      usuario. Evita que se bloquee la carga de la página mientras se descargan y ejecutan los scripts, lo que puede
+      generar un efecto de "pantalla en blanco" y dar la impresión de que la página no está
+      funcionando correctamente. Garantiza que la página se cargue de manera rápida y efectiva.</p>
   </main>
   <footer>
     <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>

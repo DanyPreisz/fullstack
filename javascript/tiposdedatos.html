@@ -15,10 +15,28 @@
     p,
     ul,
     h3,
-    h1 {
+    h1,
+    li {
       margin-bottom: 20px;
     }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    ol {
+      margin-left: 40px;
+    }
   </style>
+
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+
+
+
 </head>
 
 <body>
@@ -37,10 +55,31 @@
     <article>
       <br>
       <h1>Tipos de datos en JavaScript</h1>
-      <h3>Tipado Débil</h3>
-      <p>En JavaScript el tipado es débil. No es necesario declarar el tipo de una variable antes de utilizarla. Sin
-        embargo, existen algunas formas de simular el tipado fuerte en JavaScript para mejorar la calidad del código y
-        prevenir errores.</p>
+      <h3>Tipado débil y tipado dinámico</h3>
+      <p>En JavaScript el tipado es débil y dinámico.
+        JavaScript es un lenguaje de programación que tiene tipado débil y dinámico, pero no tiene tipado inferido de
+        manera
+        nativa.
+      <ul><b>Ventajas</b>
+        <li>Mayor libertad para redireccionar el código en algún sentido más conveniente.</li>
+        <li>Escribir menor cantidad de código.</li>
+      </ul>
+      <ul><b>Desventaja</b>
+        <li>El intérprete no muestra los errores de asignación.</li>
+      </ul>
+
+      En JavaScript, una variable puede contener cualquier tipo de valor, y el lenguaje permite que los valores se
+      conviertan
+      implícitamente de un tipo a otro según sea necesario durante la ejecución del programa. Esto se conoce como
+      tipado
+      débil. Además, en JavaScript, los tipos de datos se determinan en tiempo de ejecución, lo que significa que una
+      variable
+      puede contener un valor de cualquier tipo en cualquier momento, lo que se conoce como tipado dinámico.
+
+      No es necesario declarar el tipo de una variable antes de
+      utilizarla. Sin
+      embargo, existen algunas formas de simular el tipado fuerte en JavaScript para mejorar la calidad del código y
+      prevenir errores.</p>
       <p>Una de las formas más comunes de simular el tipado fuerte es mediante el uso de TypeScript, que es un superset
         de
         JavaScript que permite declarar tipos de datos. TypeScript agrega una capa adicional de verificación de tipos a
@@ -58,32 +97,163 @@
         en otra, puede ser difícil mantener el control de su tipo de dato. Por lo tanto, es recomendable escribir código
         que sea
         coherente en el uso de las variables y en el tipo de datos que maneja.</p>
+
+      <p>A menudo se confunden los términos "tipado débil" y "tipado dinámico" pero en realidad son dos conceptos
+        diferentes.
+
+        El tipado débil significa que el lenguaje de programación permite la conversión implícita entre diferentes tipos
+        de
+        datos. Es decir, el lenguaje permite que un valor de un tipo de datos se convierta automáticamente a otro tipo
+        de datos,
+        incluso si esto puede provocar pérdida de información o resultados inesperados.</p>
+      <p>El tipado dinámico, por otro lado, significa que el tipo de datos de una variable se determina en tiempo de
+        ejecución, y
+        puede cambiar durante la ejecución del programa. En un lenguaje de programación con tipado dinámico, una
+        variable puede
+        contener un valor de un tipo de datos en un momento, y luego contener un valor de un tipo de datos diferente en
+        otro
+        momento.
+        En JavaScript, se puede declarar una variable y asignarle un valor de tipo numérico, y luego asignarle un
+        valor de tipo string sin necesidad de declarar el tipo de la variable.</p>
+
+      <p>El tipado débil permite la conversión implícita entre diferentes tipos de datos, mientras que el tipado
+        dinámico permite
+        que el tipo de datos de una variable se determine en tiempo de ejecución y pueda cambiar durante la ejecución
+        del
+        programa. Estos son conceptos diferentes, aunque a menudo se discuten juntos en el contexto de los lenguajes de
+        programación.</p>
       <h3>Tipado inferido</h3>
-      <p>JavaScript utiliza tipado inferido. Las variables se definen de forma general. El tipo de variable se define en
-        el momento en que se interpreta la variable. No es necesario definir el tipo de variable antes de asignarle un
-        valor.</p>
-      <ul><strong>Ventajas</strong>
-        <li>Mayor libertad para redireccionar el código en algún sentido más conveniente.</li>
-        <li>Escribir menor cantidad de código.</li>
-      </ul>
-      <ul><strong>Desventaja</strong>
-        <li>El intérprete no muestra los errores de asignación.</li>
-      </ul>
+      <p>El tipado inferido (o "inferencia de tipo") se refiere a un lenguaje de programación en el que el compilador o
+        intérprete puede determinar automáticamente el tipo de datos de una variable basándose en el contexto en el que
+        se
+        utiliza. El compilador puede inferir el tipo de datos de una variable basándose en el valor inicial que se le
+        asigna.
+      </p>
+      <p>Aunque JavaScript no tiene tipado inferido de manera nativa, algunas herramientas y bibliotecas pueden
+        proporcionar
+        inferencia de tipos en JavaScript, como TypeScript o Flow. Estas herramientas utilizan una sintaxis adicional
+        para
+        especificar el tipo de una variable de manera explícita, y luego utilizan esa información para proporcionar
+        inferencia
+        de tipos en el código.
+      </p>
       <h3>Tipos de datos</h3>
       <ul>
         <li><strong>Tipos primitivos</strong></li>
-        <ul>
-          <li><strong>Number:</strong> números.</li>
-          <li><strong>String:</strong> cadenas de caracteres.</li>
-          <li><strong>Boolean:</strong> verdadero o falso.</li>
-          <li><strong>Null:</strong> asigna a la variable un espacio vacío en memoria. No guarda nada.</li>
-          <li><strong>Undefined:</strong> la variable no está asignada a ninguna parte de memoria. Suele ocurrir por
+        <ol>
+          <li><strong>Number:</strong> se utilizan para representar valores numéricos, tanto enteros como
+            decimales. Ejemplos: 1, 2.5, -3.1416.</li>
+          <li><strong>String:</strong> se utilizan para representar secuencias o cadenas de caracteres. Las cadenas se
+            escriben entre comillas simples o dobles.
+            Ejemplos: "Hola mundo", 'JavaScript es genial'.</li>
+          <li><strong>Boolean:</strong> se utilizan para representar valores de verdad o falsedad. Solo pueden tener dos
+            valores posibles: true (verdadero) o
+            false (falso).</li>
+          <li><strong>Null:</strong> se utiliza para representar la ausencia intencional de cualquier objeto o valor.
+            Null es un tipo de dato especial que
+            tiene un solo valor: null. Asigna a la variable un espacio vacío en memoria. No guarda nada.</li>
+          <li><strong>Undefined:</strong> se utiliza para representar una variable que no tiene un valor asignado o una
+            propiedad de un objeto que no existe.
+            Undefined es un tipo de dato especial que tiene un solo valor: undefined. La variable no está asignada a
+            ninguna parte de memoria. Suele ocurrir por
             algún error en el código.</li>
-        </ul>
-        <li><strong>Objetos:</strong> pueden ser arreglos, listas, etc.</li>
+          <li><b>Symbol:</b> se utilizan para crear valores únicos que no son iguales a ningún otro valor. Los símbolos
+            se
+            utilizan principalmente como identificadores de propiedades de objetos.</li>
+        </ol>
+        <p>Los tipos de datos primitivos se almacenan por valor y no por referencia. Cuando asignamos una
+          variable de un tipo primitivo a otra variable, se copia el valor de la variable original en la nueva variable.
+          Si cambiamos el valor de la nueva variable, el valor de la variable original no se ve afectado.</p>
+        <li><b>Objetos:</b> Los objetos en JavaScript son una colección de datos y funciones. Se crean
+          utilizando llaves {} y pueden contener propiedades y métodos. Pueden ser arreglos, listas, etc.</li>
+        <p>En JavaScript, hay varios objetos asociados a los tipos de datos primitivos. Estos objetos proporcionan
+          propiedades y
+          métodos útiles para trabajar con los valores de los tipos de datos primitivos.</p>
+        <ol>
+          <li><b>Objeto String:</b> proporciona métodos para trabajar con cadenas de caracteres, como length para
+            obtener la
+            longitud de la cadena, indexOf para buscar un substring dentro de la cadena, charAt para obtener el carácter
+            en una posición determinada y muchos más.
+          </li>
+          <li><b>Objeto Number:</b> proporciona métodos para trabajar con valores numéricos, como toFixed para redondear
+            un número a un número determinado de decimales, toPrecision para redondear un número a un número determinado
+            de cifras significativas y muchos más. El objeto Number no es necesario para trabajar con números en
+            JavaScript. La mayoría de las operaciones matemáticas se
+            pueden realizar directamente con el tipo de datos number.</li>
+          <li><b>Objeto Boolean:</b> proporciona el método toString para convertir un valor booleano en una cadena de
+            caracteres.</li>
+        </ol>
+
       </ul>
+      <textarea id="editor">
+//Ejemplo de objeto: persona es un objeto que contiene tres propiedades: nombre, edad y ciudad, 
+//y un método saludar que imprime un saludo en la consola utilizando las propiedades del objeto.
+
+let persona = {
+nombre: "Juan",
+edad: 30,
+ciudad: "Buenos Aires",
+saludar: function() {
+console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años.`);
+}
+};
+
+//Ejemplo del objeto String:
+let str = "Hola, mundo!";
+console.log(str.length); // muestra la longitud de la cadena: 13
+console.log(str.indexOf("mundo")); // muestra la posición de la 
+//palabra "mundo" dentro de la cadena: 6
+console.log(str.charAt(0)); // muestra el primer carácter de la cadena: "H"
+
+//Ejemplo de objeto Number:
+let num = 3.14159265;
+let num1 = 10;
+let num2 = new Number(3.14); // utiliza el constructor Number para crear un objeto
+console.log(num.toFixed(2)); // redondea el número a dos decimales: 3.14
+console.log(num1.toFixed(2)); // redondea num1 a dos decimales y lo convierte a string: "10.00"
+console.log(num2.toPrecision(3)); // redondea num2 a tres cifras significativas y lo convierte a string: "3.14"
+console.log(Number.MAX_VALUE); // muestra el valor máximo posible para un número en JavaScript: 1.7976931348623157e+308
+console.log(Number.MIN_VALUE); // muestra el valor mínimo posible para un número en JavaScript: 5e-324
+
+//Ejemplo de objeto Boolean:
+let bool = true;
+console.log(bool.toString()); // convierte el valor booleano en una cadena de caracteres: "true"
+
+
+</textarea>
+
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+          mode: "java",
+          theme: "dracula",
+          lineNumbers: true,
+          autoCloseTags: true
+
+        })
+          ;
+        editor.setSize("100%", "650");
+      </script>
+
     </article>
+    <br>
+    <p>Es un error común decir que null es un objeto en JavaScript, pero null no es técnicamente un objeto.
+      En JavaScript, null es un valor primitivo que se utiliza para representar la ausencia intencional de cualquier
+      objeto o
+      valor. Es un valor especial que indica la falta de valor o la no existencia de un objeto. Sin embargo, cuando se
+      usa el operador typeof con un valor null, devuelve el resultado 'object'. Este
+      comportamiento es
+      una reliquia del diseño original de JavaScript y se considera un error en el lenguaje.
+      Por lo tanto, aunque null puede parecer un objeto, técnicamente no lo es. Es un valor primitivo que se utiliza
+      para
+      representar la ausencia de cualquier objeto o valor.
+    </p>
+
   </main>
+
+
+
+
+
   <footer>
     <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
   </footer>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script | ¿Qué puede hacer JavaScript?</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <style>
+    p,
+    ol,
+    ul,
+    h5,
+    h1,
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    h5,
+    h1,
+    footer,
+    h3,
+    div {
+      text-align: center;
+    }
+
+    ol,
+    ul {
+      margin-left: 20px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section>
+      <img src="../imagenes/js.jpg" width="970px" height="200px">
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Curso de Java Script</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <br>
+      <h1>¿Qué puede hacer JavaScript?</h1>
+      <h3>Aplicaciones de la programación en JavaScript</h3>
+      <ul>
+        <li><b>Validación del lado del cliente:</b> Permite validar en el <b>Front-End</b> las entradas del usuario
+          antes de enviarlas al <b>Back-End</b>.</li>
+        <li><b>Manipulación de páginas HTML:</b> Permite manipular la página HTML sobre la marcha, agregando o
+          eliminando
+          etiquetas HTML y modificando el HTML para cambiar su aspecto en función de diferentes dispositivos y
+          requisitos.</li><br>
+        <div>
+          <p id="demo">JavaScript puede cambiar contenido HTML.</p>
+          <button type="button"
+            onclick='document.getElementById("demo").innerHTML = "Hello World!", document.getElementById("demo").style.fontSize = "35px";'>Click
+            Me!</button>
+        </div><br>
+        <div>
+          <p>JavaScript puede cambiar valores de los atributos HTML</p>
+          <p>En este caso JavaScript cambia el valor del atributo src (source) de una imágen. También puede ocultar o
+            mostrar la imágen.</p>
+          <img id="myImage" src="imagenes/pic_bulboff.gif" style="width:100px"><br>
+          <button onclick="document.getElementById('myImage').src='imagenes/pic_bulbon.gif'">Turn on the light</button>
+          <button onclick="document.getElementById('myImage').src='imagenes/pic_bulboff.gif'">Turn off the
+            light</button>
+          <button onclick=document.getElementById("myImage").style.display="none">Hide bulb</button>
+          <button onclick=document.getElementById("myImage").style.display="block">Show bulb</button>
+        </div><br>
+        <li>
+          <p><b>Notificaciones de usuario:</b> Permite generar <b>ventanas emergentes dinámicas (pop-ups)</b> en las
+            páginas web para
+            mostrar mensajes a los visitantes del sitio.</p>
+          <br>
+          <div>
+            <p>JavaScript puede mostrar mensajes al usuario.</p>
+            <button type=" button" onclick='alert (" ¡Hola!")'>Click
+              Me!</button>
+          </div><br>
+        </li>
+        <li>
+          <b>Carga de datos de Back-End:</b> Proporciona la <b>biblioteca Ajax</b> que ayuda a cargar datos de <b>
+            Back-End</b> mientras se realiza algún otro procesamiento
+        </li>
+        <li><b>Presentaciones:</b> Permite crear presentaciones que brinden aspecto al sitio web.</li>
+        <li><b>Aplicaciones de servidor: Node JS</b> es una biblioteca basada en eventos que ayuda a desarrollar
+          aplicaciones
+          de servidor muy sofisticadas, incluidos servidores web. Se basa en el tiempo de ejecución de Javascript en el
+          navegador para crear aplicaciones de red rápidas y escalables.</li>
+      </ul>
+      <p><b>JavaScript</b> es un lenguaje de programación que usamos para que una página web sea más
+        interactiva, para programar aplicaciones móviles y aplicaciones para PC. Fue creado para programar y darle vida
+        a las páginas web. Permite realizar mapas interactivos, animaciones, aplicaciones que se actualizan
+        constantemente, etc. Es responsable de una revolución completa en las páginas web. Sin
+        <strong>JavaScript</strong>, cada vez que presionáramos un "Me gusta" o hiciéramos una búsqueda en Google
+        tendríamos que esperar que toda la página vuelva a cargarse nuevamente para ver el resultado de la operación
+        ejecutada.
+      </p>
+      <p>Internet no sería tan útil ni divertido sin <b>JavaScript</b>. Con el tiempo se ha extendido el uso
+        de JavaScript a otras áreas además del desarrollo del FrontEnd. También se usa como lenguaje de BackEnd para
+        plataformas web con conexión a bases de datos, en aplicaciones de teléfonos, computadoras, drones y aplicaciones
+        de realidad aumentada y de realidad virtual. Es uno de los lenguajes con más demanda laboral y es de los más
+        populares porque puede usarse en cualquier escenario. Permite desarrollar páginas interactivas, plataformas web
+        como redes sociales, apps para IOS y Android, software para Windows, Mac o Linux, etc.</p>
+    </article>
+  </main>
+  <footer>
+    <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
+  </footer>
+</body>
+
+</html>
