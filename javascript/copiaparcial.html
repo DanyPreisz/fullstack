@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script | Funciones: copia parcial</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <style>
+    p,
+    ol,
+    ul,
+    h5,
+    h1,
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    h5,
+    h1,
+    footer,
+    h3 {
+      text-align: center;
+    }
+
+    ol,
+    ul {
+      margin-left: 20px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+  <script>
+    function myFunction() {
+      document.getElementById("hola").innerHTML = "Hola mundo! (desde el head).";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <section>
+      <img src="../imagenes/js.jpg" width="970px" height="200px">
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Curso de Java Script</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <br>
+      <h1>Copia parcial de una función</h1>
+      <p>En JavaScript, una copia parcial se refiere a la creación de una nueva función que se basa en otra función
+        existente,
+        pero con algunos de sus argumentos predefinidos. Esto se logra mediante el uso de la <b>función bind()</b>.
+        La <b>función bind()</b> devuelve una nueva función que, cuando se llama, tiene su <b>contexto this</b>
+        establecido en un valor
+        específico, y algunos de sus argumentos predefinidos.</p>
+
+
+
+
+    </article>
+    <textarea id="editor">
+function multiplicar(a, b) {
+return a * b;
+}
+
+// Crear una nueva función que siempre multiplica por 2
+var multiplicarPorDos = multiplicar.bind(null, 2);
+
+// Llamando a la nueva función
+multiplicarPorDos(5); // devuelve 10
+    </textarea>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+        mode: "java",
+        theme: "dracula",
+        lineNumbers: true,
+        autoCloseTags: true
+      })
+        ;
+      editor.setSize("100%", "190");
+    </script>
+    <br>
+    <p>La <b>función multiplicarPorDos</b> es una copia parcial de la función multiplicar original. Se ha predefinido el
+      argumento (b) de multiplicar a un valor de 2, lo que significa que ahora se puede llamar a multiplicarPorDos con
+      solo un
+      argumento (a) y siempre devolverá el resultado de multiplicar ese argumento por 2.</p>
+  </main>
+  <footer>
+    <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
+  </footer>
+</body>
+
+</html>
