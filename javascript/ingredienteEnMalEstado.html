@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script | Ejemplos</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <style>
+    p,
+    ol,
+    ul,
+    h5,
+    h1,
+    h3,
+    li {
+      margin-bottom: 20px;
+    }
+
+    h5,
+    h1,
+    footer,
+    h3 {
+      text-align: center;
+    }
+
+    ol,
+    ul {
+      margin-left: 20px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+</head>
+
+<body>
+  <header>
+    <section>
+      <img src="../imagenes/js.jpg" width="970px" height="200px">
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Curso de Java Script</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <br>
+      <h1>Ingrediente en mal estado</h1>
+      <p>El ingrediente de cierta comida está en mal estado. Hay que sacar los ingredientes próximos a éste, ya que
+        deben estar contaminados también. La funcion recibe un objeto "menu" que contiene las comidas del día. "comida"
+        es un array de ingredientes. Si "ingrediente" está en el array, devolver un array con el ingrediente y los
+        elementos en un índice de diferencia.
+      </p>
+      <p>Ejemplo: let menuDelDia = {raviolesConSalsa: ["Harina", "Sal", "Huevos", "Aceite", "Peceto", "Ricota"],
+        bagnaCauda: ["Ajo", "Anchoas", "Aceite", "Crema", "Papas", "Zanahorias"],
+        tallarines: ["Harina", "Pollo", "Aceite", "Huevos", "Tomates", "Cebolla"]}</p>
+      <p>ingredienteEnMalEstado(menuDelDia, "raviolesConSalsa", "Peceto") devuelve => ["Aceite", "Peceto", "Ricota"];
+      </p>
+      <p>ingredienteEnMalEstado(menuDelDia, "tallarines", "Aceite") devuelve => ["Pollo", "Aceite", "Huevos"];
+      </p>
+      <p>En caso de no encontrarse el ingrediente en la comida, devolver "El menú está perfecto".
+        NOTA: No utilizar el método "includes".
+      </p>
+      <p>
+        La función ingredienteEnMalEstado() recibe tres parámetros: menu, comida y ingrediente. menu es un objeto que
+        contiene
+        las comidas del día y los ingredientes necesarios para preparar cada una de ellas. comida es el nombre de la
+        comida en
+        la que se ha detectado un ingrediente en mal estado, y ingrediente es el nombre del ingrediente que está en mal
+        estado.
+
+      </p>
+      <p>Primero, la función busca si el ingrediente en mal estado se encuentra en la comida especificada, utilizando un
+        bucle
+        for. Si el ingrediente se encuentra en la comida, se ejecuta la lógica para encontrar los ingredientes próximos
+        al que
+        está en mal estado.
+      </p>
+      <p>
+        Para encontrar los ingredientes próximos, se busca el índice del ingrediente en mal estado en el array de
+        ingredientes
+        de la comida, utilizando otro bucle for. Luego, se utilizan condicionales para determinar si el ingrediente en
+        mal
+        estado se encuentra al inicio, en el medio o al final del array de ingredientes. Dependiendo de la posición del
+        ingrediente en mal estado, se devolverá un array con los ingredientes próximos en uno o dos índices de
+        diferencia.
+
+      </p>
+      <p>
+        Si el ingrediente en mal estado no se encuentra en la comida especificada, la función devuelve un string que
+        indica que
+        el menú está perfecto.
+
+      </p>
+      <p>
+        La función utiliza una serie de bucles for y condicionales para realizar su lógica, y no utiliza el método
+        includes. Finalmente, la función
+        devuelve un array con los ingredientes próximos al ingrediente en mal estado, o un string que indica que el menú
+        está
+        perfecto si el ingrediente en mal estado no se encuentra en la comida.
+      </p>
+
+
+
+
+
+      <textarea id="editor">
+Solucion 1:
+function ingredienteEnMalEstado(menu = {}, comida = "", ingrediente = "") {
+//buscaremos si la comida tiene el ingrediente malogrado
+let hayIngredienteMalogrado = false;
+for (let ing of menu[comida]) {
+if (ing === ingrediente) {
+hayIngredienteMalogrado = true;
+}
+}
+if (hayIngredienteMalogrado) {
+//ejecutar la logica para el ingrediente malogrado
+
+//en que indice esta el ingrediente malogrado
+let indiceMalogrado;
+for (let i = 0; i < menu[comida].length; i++) { 
+  if (menu[comida][i]===ingrediente) { 
+    indiceMalogrado=i; 
+  }
+ } 
+
+//devolver los ingredientes malogrados, tenemos 3 casos 
+// al inicio, al medio, y al final 
+if (indiceMalogrado===0) { 
+//al inicio
+  return [menu[comida][0], menu[comida][1]]; 
+} else if (indiceMalogrado===menu[comida].length - 1) { 
+//al final 
+return [menu[comida][menu[comida].length - 2], menu[comida][menu[comida].length - 1], ]; 
+} else { 
+  //en el medio 
+  return [menu[comida][indiceMalogrado - 1], menu[comida][indiceMalogrado], menu[comida][indiceMalogrado + 1], ]; 
+} 
+} else {
+    //si no hay ingrediente malogrado 
+    return "El menú está pefecto" ; 
+  } 
+} 
+
+Solucion 2:
+function ingredienteEnMalEstado(menu, comida, ingrediente) {
+  let resultado = [];
+  let encontrada = false;
+
+  for (let i = 0; i < menu[comida].length; i++) {
+    if (menu[comida][i] === ingrediente) {
+      encontrada = true;
+      resultado.push(menu[comida][i - 1], menu[comida][i], menu[comida][i + 1]);
+      break;
+    }
+  }
+
+  if (!encontrada) {
+    return "El menú está perfecto";
+  }
+
+  return resultado;
+}
+
+// Ejemplos de uso
+let menuDelDia = {
+  raviolesConSalsa: ["Harina", "Sal", "Huevos", "Aceite", "Peceto", "Ricota"],
+  bagnaCauda: ["Ajo", "Anchoas", "Aceite", "Crema", "Papas", "Zanahorias"],
+  tallarines: ["Harina", "Pollo", "Aceite", "Huevos", "Tomates", "Cebolla"],
+};
+
+console.log(ingredienteEnMalEstado(menuDelDia, "raviolesConSalsa", "Peceto")); // ["Aceite", "Peceto", "Ricota"]
+console.log(ingredienteEnMalEstado(menuDelDia, "tallarines", "Aceite")); // ["Pollo", "Aceite", "Huevos"]
+console.log(ingredienteEnMalEstado(menuDelDia, "bagnaCauda", "Lechuga")); // "El menú está perfecto"
+
+
+
+</textarea>
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+          mode: "java",
+          theme: "dracula",
+          lineNumbers: true,
+          autoCloseTags: true
+        })
+          ;
+        editor.setSize("100%", "1000");
+      </script>
+  </main>
+  <footer>
+    <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
+  </footer>
+</body>
+
+</html>

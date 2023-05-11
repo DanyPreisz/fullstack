@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script | Ejemplos</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <style>
+    p,
+    ol,
+    ul,
+    h5,
+    h1,
+    h3,
+    li {
+      margin-bottom: 20px;
+    }
+
+    h5,
+    h1,
+    footer,
+    h3 {
+      text-align: center;
+    }
+
+    ol,
+    ul {
+      margin-left: 20px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+</head>
+
+<body>
+  <header>
+    <section>
+      <img src="../imagenes/js.jpg" width="970px" height="200px">
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Curso de Java Script</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <br>
+      <h1>Función sólo números</h1>
+      <p>La funcion llamada 'soloNumeros' recibe como argumento un arreglo de enteros y strings llamado 'array'. Debe
+        devolver un arreglo con solo los enteros.
+      </p>
+      <p>Por ejemplo: soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]</p>
+      <p>En la Solución 1, la función "soloNumeros" toma un array como parámetro y devuelve un nuevo array que contiene
+        sólo los elementos del
+        array original que son de tipo "number" (números).
+      </p>
+      <p>La función comienza creando un nuevo array vacío llamado "arrayResultante" que se utilizará para almacenar los
+        números
+        del array original.</p>
+      <p>A continuación, utiliza un bucle for para recorrer cada elemento del array original. Dentro del bucle, se
+        comprueba si
+        el tipo de dato del elemento actual es un número utilizando el operador "typeof". Si el elemento es de tipo
+        "number", se
+        agrega al array resultante utilizando el método "push".
+        Finalmente, la función devuelve el array resultante que contiene sólo los elementos del array original que son
+        números.</p>
+      <textarea id="editor">
+Solución 1:
+function soloNumeros(array) {
+var arrayResultante = [];
+for (i = 0; i < array.length; i++) { 
+  if (typeof array[i]==="number" ) { 
+    arrayResultante.push(array[i]); 
+  } 
+} 
+  return arrayResultante; 
+}
+
+Solución 2:
+function soloNumeros(array) {
+return array.filter(elemento => typeof elemento === 'number');
+}
+console.log(soloNumeros([1, 'Henry', 2])); // Output: [1, 2]
+</textarea>
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+          mode: "java",
+          theme: "dracula",
+          lineNumbers: true,
+          autoCloseTags: true
+        })
+          ;
+        editor.setSize("100%", "300");
+      </script>
+      <p>La función soloNumeros se llama con el arreglo [1, 'Henry', 2]. La función filtra solo los
+        valores
+        numéricos del arreglo y devuelve [1, 2].</p>
+      <p>En la Solución 2 se utiliza el método filter() para iterar sobre el arreglo y filtrar
+        solo los valores que son de tipo number. Luego, devolver el nuevo arreglo que contiene solo los valores
+        numéricos.</p>
+      <p>Explicación:</p>
+      <ul>
+        <li>La función soloNumeros toma un arreglo como argumento llamado array.</li>
+        <li>El método filter() se utiliza en el arreglo array y se pasa una función de devolución de llamada como
+          argumento.</li>
+        <li>La función de devolución de llamada toma un elemento como argumento y devuelve true si el elemento es un
+          número y false
+          en caso contrario.</li>
+        <li>La función filter() crea un nuevo arreglo que contiene solo los elementos que cumplen la condición en la
+          función de
+          devolución de llamada.</li>
+        <li>Finalmente, la función soloNumeros devuelve el nuevo arreglo que contiene solo los valores numéricos.</li>
+      </ul>
+  </main>
+  <footer>
+    <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
+  </footer>
+</body>
+
+</html>

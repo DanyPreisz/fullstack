@@ -32,10 +32,18 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 20px;
     }
   </style>
-
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+  <script>
+    function myFunction() {
+      document.getElementById("hola").innerHTML = "Hola mundo! (desde el head).";
+    }
+  </script>
 </head>
 
 <body>
@@ -96,7 +104,6 @@
         aplican a dos operandos (números) y producen un resultado o nuevo valor.</p>
       <p>Los operadores binarios para aritmética son suma (+), resta (-), multiplicación(*), división (/) y módulo(%).
       </p>
-      <img src="./imagenes/operaciones.jpg" alt="">
       <h3>Números Especiales</h3>
       <p>Hay tres valores especiales en JavaScript que se consideran números pero no se comportan como números normales.
         Los dos primeros son Infinity e -Infinity, que representan los infinitos positivo y negativo. Infinity - 1 sigue
@@ -105,15 +112,111 @@
         matemáticamente sólido y conducirá rápidamente al siguiente número especial: NaN, que significa "no es un
         número", aunque es un valor del tipo de número. Se obtendrá este resultado cuando, por ejemplo, se
         intente calcular 0 / 0 (cero dividido por cero), Infinity - Infinity, o alguna operación similar.</p>
-      <h3>Precedencia de Operadores</h3>
-      <p>La <b>precedencia de operadores</b> determina el orden en el cual los operadores son evaluados uno respecto del
-        otro. Los
-        operadores con mayor precedencia se convierten en los operandos de los operadores con menor precedencia.</p>
-      <h3>Operadores de Comparación</h3>
-      <p>Los operadores de comparación son: mayor que (>), menor que (<), mayor o igual (>=), menor o igual (<=),
-            igual==(se representa con doble igual) y distinto de (!=).</p>
-            <img src="./imagenes/comparaciones.jpg" alt="">
+      <ol>
+        <li>Escribir en un elemento HTML, usando <b>innerHTML</b>. Se cambia la propiedad innerHTML de un elemento HTML.
+          <p id="demo"></p>
 
+          <button type="button"
+            onclick='document.getElementById("demo").innerHTML = "Hello World!", document.getElementById("demo").style.fontSize = "35px";'>Probar
+            <b>innerHTML</b></button>
+
+        </li>
+        <li>
+          <p>Tiene limitaciones, como que no se puede utilizar después de que se haya cargado la
+            página o en el contenido de un archivo externo que se carga después del documento HTML principal. Si se usa
+            después de cargar un documento HTML, elimina todo el HTML existente:</p><button type="button"
+            onclick="document.write('Elimina todo el HTML existente')">Probar <b>document.write()</b></button>
+        </li>
+        <li>Escribir en un cuadro de alerta, usando <b>window.alert()</b>.
+          <p>El <b>objeto window</b> es de alcance global. Las variables, propiedades y métodos por defecto
+            pertenecen al objeto ventana. Esto significa que especificar la <b>palabra clave window</b> es
+            opcional.</p>
+          <button type="button" onclick='window.alert("Probando window.alert()");'>Probar
+            <b>window.alert()</b></button>
+        </li>
+        <li>Escribir en la consola del navegador, usando <b>console.log()</b>. <p>Se usa en la depuración de código para
+            mostrar resultados en la
+            consola.</p>
+
+          <button type="button" onclick='console.log("Probando console.log()");'>Probar
+            <b>console.log() - (Botón derecho -> Inspeccionar -> Consola)</b></button>
+        </li>
+        <li>Usar <b>window.print()</b>. <p>JavaScript no tiene ningún objeto de impresión o métodos de impresión. No se
+            puede acceder a dispositivos de salida desde JavaScript. La única excepción es que se puede llamar al
+            <b>método window.print()</b> en el navegador para imprimir el contenido
+            de la ventana
+            actual.
+          </p><button onclick="window.print()">Probar <b>window.print()</b></button>
+        </li>
+      </ol>
+
+
+      <textarea id="editor">
+//Ejemplo 1: Usar innerHTML.
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>My First Web Page</h1>
+  <p>My First Paragraph</p>
+  <p id="demo"></p>
+  <script>
+    document.getElementById("demo").innerHTML = 5 + 6;
+  </script>
+</body>
+</html>
+
+//Ejemplo 2: Usar document.write().
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>My First Web Page</h1>
+  <p>My first paragraph.</p>
+  <script>
+    document.write(5 + 6);
+  </script>
+</body>
+</html>
+
+//Ejemplo 3: Usar window.alert().
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>My First Web Page</h1>
+  <p>My first paragraph.</p>
+  <script>
+    window.alert(5 + 6);
+  </script>
+</body>
+</html>
+
+//Ejemplo 4: Usar console.log().
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    console.log(5 + 6);
+  </script>
+</body>
+</html>
+
+//Ejemplo 5: Usar window.print().
+<!DOCTYPE html>
+<html>
+<body>
+  <button onclick="window.print()">Print this page</button>
+</body>
+</html>
+</textarea>
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+          mode: "java",
+          theme: "dracula",
+          lineNumbers: true,
+          autoCloseTags: true
+        })
+          ;
+        editor.setSize("100%", "1000");
+      </script>
   </main>
   <footer>
     <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
