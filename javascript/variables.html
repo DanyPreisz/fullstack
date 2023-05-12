@@ -10,12 +10,15 @@
   <script src="../codemirror/lib/codemirror.js"></script>
   <script src="../codemirror/mode/xml/xml.js"></script>
   <script src="../codemirror/addon/edit/closetag.js"></script>
-
   <style>
     footer,
     h1,
     h3 {
       text-align: center;
+    }
+
+    ul {
+      margin-left: 20px
     }
 
     p,
@@ -40,6 +43,8 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v16.0" nonce="1tjYs3y9"></script>  
   <header>
     <section>
       <img src="../imagenes/js.jpg" width="970px" height="200px">
@@ -55,6 +60,10 @@
     <article>
       <br>
       <h1>Variables en JavaScript</h1>
+      <p>Las variables son contenedores que pueden tener un valor o no, para poder ser usadas luego en alguna operación.
+        Pueden cambiar su valor según vayamos modificando nuestro código. Las variables contienen valores, pero no
+        representan los valores en si. Primero debemos crearlas, lo que se denomina DECLARAR una variable. Luego de eso
+        la tenemos que INICIAR utilizando el signo =.</p>
       <p>En JavaScript, las variables se utilizan para almacenar diferentes tipos de datos, como números, cadenas de
         texto, booleanos, objetos, etc. y se pueden declarar utilizando las palabras clave var, let y const.</p>
       <p>
@@ -145,7 +154,8 @@ let a = 1, b = 2, c = 3;
 
 
   <footer>
-
+<div class="fb-comments" data-href="https://fullstackdevelopment.tk/javascript/variables.html" data-width="100%"
+  data-numposts="100000"></div>
     <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
   </footer>
 </body>
