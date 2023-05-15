@@ -32,7 +32,7 @@
     .editor-container {
       position: relative;
       width: 100%;
-      height: 400px;
+      height: 180px;
       border: 1px solid #ccc;
     }
 
@@ -98,29 +98,6 @@
       <iframe src="index.html" width="100%" height="850px"></iframe>
       <h3>Código</h3>
 
-      <div class="editor-container">
-        <div class="line-numbers">1<br>2<br></div>
-        <pre id="edit">
-
-
-          sds<br>asdasdasd<br>dasddf
-        </pre>
-
-      </div>
-
-
-
-
-      <p>
-        La <b>palabra clave let</b> se utiliza para declarar variables mutables, que pueden cambiar de valor más tarde
-        en el
-        código.
-      </p>
-      <p>
-        La <b>palabra clave const</b> se utiliza para declarar variables inmutables, que no pueden cambiar de valor
-        después de
-        ser
-        inicializadas.</p>
       <textarea id="editor">
 // Código HTML
 <!DOCTYPE html>
@@ -195,48 +172,28 @@ border-radius: 30px 25px 60px 12px;
           autoCloseTags: true
         })
           ;
-        editor.setSize("100%", "1000");
+        editor.setSize("100%", "1200");
       </script>
       <br>
-      <h3>Reglas generales para nombrar variables en JavaScript:</h3>
-      <ul>
-        <li>Las variables deben comenzar con una letra, un guión bajo (_) o un signo de dólar ($).</li>
-        <li>Los nombres de las variables pueden contener letras, números, guiones bajos o signos de dólar.</li>
-        <li>Es una buena práctica utilizar nombres descriptivos para las variables que sean fáciles de entender.</li>
-        <li>Los nombres de las variables deben ser sensibles a las mayúsculas y minúsculas. Esto significa que
-          "miVariable" y
-          "mivariable" son dos variables diferentes.</li>
-        <li>Evitar utilizar palabras reservadas de JavaScript como nombres de variables. Estas palabras reservadas son
-          aquellas que el lenguaje utiliza para realizar acciones específicas y no se pueden utilizar como nombres de
-          variables. Por ejemplo, "if", "else", "function", etc.</li>
-        <li>Utilizar una convención de nomenclatura coherente en todo el código. Se puede utilizar la convención
-          "camelCase" para nombrar variables, donde la primera palabra se escribe en minúscula y cada palabra
-          adicional
-          se
-          escribe con la primera letra en mayúscula, como "miVariableEjemplo".</li>
-      </ul>
-      <p>Al nombrar variables en JavaScript, es importante utilizar nombres descriptivos y coherentes que sean
-        fáciles de entender y seguir las convenciones de nomenclatura establecidas para el lenguaje.
+      <h3>Explicación del código:</h3>
+      <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br></div>
+        <pre id="edit">
+.canvas {
+width: 500px;
+height: 600px;
+overflow: hidden;
+filter: blur(2px);
+background-color: #4d0f00;
+}
+        </pre>
+      </div>
+      <p><b>.canvas:</b> Esta regla aplica estilos al elemento con la clase <b>.canvas</b>. Los estilos incluyen un
+        <b>ancho de
+          500px</b>, un <b>alto de
+          600px</b>, un <b>desbordamiento oculto</b> (cualquier contenido que supere el tamaño del elemento se
+        ocultará), un <b>filtro de desenfoque de 2px</b>, y un <b>color de fondo de #4d0f00</b>.
       </p>
-      <h3>Análisis de un ejemplo</h3>
-      <p>El programa muestra cuatro ventanas emergentes, una tras otra, con sus respectivos
-        valores. Un problema evidente es que estamos utilizando repetidamente los mismos números en varios lugares. Si
-        tuviéramos que realizar estas operaciones aritméticas en un conjunto diferente de números, tendríamos que
-        reemplazarlos
-        en múltiples lugares. Para evitar esta situación, debemos asignar esos números a ubicaciones de almacenamiento
-        temporales que se denominan variables.
-      </p>
-      <p> Al declarar una variable usando la <b>palabra clave var</b> seguida del nombre de esa variable, se
-        proporciona
-        implícitamente al nombre una porción de la memoria de la computadora, que utilizaremos durante la ejecución
-        del programa.
-      </p>
-
-
-
-
-
-      <img src="./imagenes/alert_script.jpg" width="100%" height="350px">
 
     </article>
   </main>
