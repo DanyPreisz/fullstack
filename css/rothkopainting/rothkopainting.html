@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS | Rothko-Painting</title>
+  <link rel="stylesheet" type="text/css" href="../../estilos.css">
+  <link rel="stylesheet" href="../../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../../codemirror/theme/dracula.css">
+  <script src="../../codemirror/lib/codemirror.js"></script>
+  <script src="../../codemirror/mode/xml/xml.js"></script>
+  <script src="../../codemirror/addon/edit/closetag.js"></script>
+
+  <style>
+    footer,
+    h1,
+    h3 {
+      text-align: center;
+    }
+
+    ul {
+      margin-left: 20px
+    }
+
+    p,
+    ul,
+    h3,
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .editor-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      border: 1px solid #ccc;
+    }
+
+    .line-numbers {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      background-color: #f7f7f7;
+      border-right: 1px solid #ccc;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #0e0e0e;
+      padding: 10px 5px;
+      box-sizing: border-box;
+    }
+
+    #edit {
+      position: absolute;
+      left: 40px;
+      top: 0;
+      width: calc(100% - 40px);
+      height: 100%;
+      border: none;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0"
+    nonce="AWRezCcB"></script>
+
+  <header>
+    <section>
+      <img src="../css.jpg" width="970px" height="200px">
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="../indicecss.html">Ejemplos de CSS</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <br>
+      <h1>Rothko Painting</h1>
+      <h3>¿Qué es una pintura Rothko?</h3>
+      <p> Los cuadros de Mark Rothko, enormes, muestran amplios campos de color rectangulares con unos límites
+        indefinidos entre ellos. Son colores borrosos, que flotan suspendidos en el lienzo, estimulando unas sensaciones
+        místicas bastante
+        interesantes.</p>
+      <iframe src="index.html" width="100%" height="850px"></iframe>
+      <h3>Código</h3>
+
+      <div class="editor-container">
+        <div class="line-numbers">1<br>2<br></div>
+        <pre id="edit">
+
+
+          sds<br>asdasdasd<br>dasddf
+        </pre>
+
+      </div>
+
+
+
+
+      <p>
+        La <b>palabra clave let</b> se utiliza para declarar variables mutables, que pueden cambiar de valor más tarde
+        en el
+        código.
+      </p>
+      <p>
+        La <b>palabra clave const</b> se utiliza para declarar variables inmutables, que no pueden cambiar de valor
+        después de
+        ser
+        inicializadas.</p>
+      <textarea id="editor">
+// Código HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rothko Painting</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="frame">
+    <div class="canvas">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
+  </div>
+</body>
+</html>
+
+//Código CSS
+.canvas {
+width: 500px;
+height: 600px;
+overflow: hidden;
+filter: blur(2px);
+background-color: #4d0f00;
+}
+.frame {
+width: 500px;
+padding: 50px;
+margin: 20px auto;
+border: 50px solid black;
+}
+.one {
+width: 425px;
+height: 150px;
+margin: 20px auto;
+border-radius: 9px;
+transform: rotate(-0.6deg);
+background-color: #efb762;
+box-shadow: 0 0 3px 3px #efb762;
+}
+.two {
+width: 475px;
+height: 200px;
+margin: 0 auto 20px;
+border-radius: 8px 10px;
+transform: rotate(0.4deg);
+background-color: #8f0401;
+box-shadow: 0 0 3px 3px #8f0401;
+}
+.one,
+.two {
+filter: blur(1px);
+}
+.three {
+width: 91%;
+height: 28%;
+margin: auto;
+filter: blur(2px);
+background-color: #b20403;
+box-shadow: 0 0 5px 5px #b20403;
+border-radius: 30px 25px 60px 12px;
+}
+      </textarea>
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+          mode: "xml",
+          theme: "dracula",
+          lineNumbers: true,
+          autoCloseTags: true
+        })
+          ;
+        editor.setSize("100%", "1000");
+      </script>
+      <br>
+      <h3>Reglas generales para nombrar variables en JavaScript:</h3>
+      <ul>
+        <li>Las variables deben comenzar con una letra, un guión bajo (_) o un signo de dólar ($).</li>
+        <li>Los nombres de las variables pueden contener letras, números, guiones bajos o signos de dólar.</li>
+        <li>Es una buena práctica utilizar nombres descriptivos para las variables que sean fáciles de entender.</li>
+        <li>Los nombres de las variables deben ser sensibles a las mayúsculas y minúsculas. Esto significa que
+          "miVariable" y
+          "mivariable" son dos variables diferentes.</li>
+        <li>Evitar utilizar palabras reservadas de JavaScript como nombres de variables. Estas palabras reservadas son
+          aquellas que el lenguaje utiliza para realizar acciones específicas y no se pueden utilizar como nombres de
+          variables. Por ejemplo, "if", "else", "function", etc.</li>
+        <li>Utilizar una convención de nomenclatura coherente en todo el código. Se puede utilizar la convención
+          "camelCase" para nombrar variables, donde la primera palabra se escribe en minúscula y cada palabra
+          adicional
+          se
+          escribe con la primera letra en mayúscula, como "miVariableEjemplo".</li>
+      </ul>
+      <p>Al nombrar variables en JavaScript, es importante utilizar nombres descriptivos y coherentes que sean
+        fáciles de entender y seguir las convenciones de nomenclatura establecidas para el lenguaje.
+      </p>
+      <h3>Análisis de un ejemplo</h3>
+      <p>El programa muestra cuatro ventanas emergentes, una tras otra, con sus respectivos
+        valores. Un problema evidente es que estamos utilizando repetidamente los mismos números en varios lugares. Si
+        tuviéramos que realizar estas operaciones aritméticas en un conjunto diferente de números, tendríamos que
+        reemplazarlos
+        en múltiples lugares. Para evitar esta situación, debemos asignar esos números a ubicaciones de almacenamiento
+        temporales que se denominan variables.
+      </p>
+      <p> Al declarar una variable usando la <b>palabra clave var</b> seguida del nombre de esa variable, se
+        proporciona
+        implícitamente al nombre una porción de la memoria de la computadora, que utilizaremos durante la ejecución
+        del programa.
+      </p>
+
+
+
+
+
+      <img src="./imagenes/alert_script.jpg" width="100%" height="350px">
+
+    </article>
+  </main>
+
+
+  <footer>
+    <div class="fb-comments" data-href="https://fullstackdevelopment.tk/css/rothkopainting/rothkopainting.html"
+      data-width="" data-numposts="100"></div>
+
+    <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
+  </footer>
+</body>
+<!-- Messenger Plugin de chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin de chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "111695451923985");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      xfbml: true,
+      version: 'v16.0'
+    });
+  };
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</html>
