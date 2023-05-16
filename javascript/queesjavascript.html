@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Java Script | ¿Qué es JavaScript?</title>
+  <title>JavaScript | ¿Qué es JavaScript?</title>
   <link rel="stylesheet" type="text/css" href="../estilos.css">
   <style>
     p,
@@ -32,6 +32,45 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .editor-container {
+      position: relative;
+      width: 100%;
+      height: 0px;
+      border: 1px solid #ccc;
+    }
+
+    .line-numbers {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      background-color: #f7f7f7;
+      border-right: 1px solid #ccc;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #0e0e0e;
+      padding: 10px 5px;
+      box-sizing: border-box;
+    }
+
+    #edit {
+      position: absolute;
+      left: 40px;
+      top: 0;
+      width: calc(100% - 40px);
+      height: 100%;
+      border: none;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
   </style>
   <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="../codemirror/theme/dracula.css">
@@ -46,6 +85,9 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0"
+    nonce="AWRezCcB"></script>
   <header>
     <section>
       <img src="../imagenes/js.jpg" width="970px" height="200px">
@@ -61,6 +103,13 @@
     <article>
       <br>
       <h1>¿Qué es JavaScript?</h1>
+      <!-- 
+      <div class="editor-container">
+        <div class="line-numbers"></div>
+        <pre id="edit">
+      </pre>
+-->
+      </div>
       <h3>¿Qué es un lenguaje de programación?</h1>
         <p>Es un lenguaje formal o artificial, es decir, un lenguaje con reglas gramaticales bien definidas,
           que le proporciona a una persona, en este caso el programador, la capacidad de escribir (o programar) una
@@ -279,8 +328,43 @@
       funcionando correctamente. Garantiza que la página se cargue de manera rápida y efectiva.</p>
   </main>
   <footer>
+
+    <div class="fb-comments" data-href="https://fullstackdevelopment.tk/css/rothkopainting/rothkopainting.html"
+      data-width="" data-numposts="100"></div>
+
+
     <p>No Copyright © por <a href="https://fullstackdevelopment.tk/">fullstackdevelopment.tk</a></p>
   </footer>
 </body>
+<!-- Messenger Plugin de chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin de chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "111695451923985");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      xfbml: true,
+      version: 'v16.0'
+    });
+  };
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
 </html>
