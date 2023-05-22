@@ -14,10 +14,19 @@
   <style>
     footer,
     h1,
+    h5,
     h3 {
       text-align: center;
     }
 
+    img,
+    iframe {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ol,
     ul {
       margin-left: 20px
     }
@@ -25,6 +34,7 @@
     p,
     ul,
     h3,
+    h5,
     h1 {
       margin-bottom: 20px;
     }
@@ -32,7 +42,7 @@
     .editor-container {
       position: relative;
       width: 100%;
-      height: 400px;
+      height: 100px;
       border: 1px solid #ccc;
     }
 
@@ -67,6 +77,21 @@
       padding: 10px;
       box-sizing: border-box;
     }
+
+    .series-frame {
+      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      border: 2px solid #EEE;
+      margin: 30px;
+      padding: 10px;
+      background-color: #111;
+      color: #EEE;
+      font-family: 'Roboto Slab', serif;
+
+    }
   </style>
 </head>
 
@@ -87,36 +112,69 @@
     <article>
       <br>
       <h1>Variables en JavaScript</h1>
-      <p>Las variables son contenedores que pueden tener un valor o no, para poder ser usadas luego en alguna operación.
+      <p>El objetivo de un programa es hacer algo con los datos que se le ingresan. El programa usa variables para
+        almacenar y manipular esos datos. Una variable es una contenedor que almacena datos que el programa necesita
+        para funcionar. Un nombre de usuario, la cantidad de boletos disponibles que
+        quedan para un vuelo, el stock de un determinado producto, todos estos datos se almacenan en
+        variables.</p>
+      <img src="./imagenes/container.jpg" width="50%">
+      <h5>Una variable es un contenedor</h5>
+      <p>Un dato colocado en una variable se denomina valor. Usando la analogía de "box-in-a-warehouse", diferentes
+        cajas pueden almacenar diferentes valores. Se puede usar una caja para almacenar dinero para gastos continuos y
+        otra para ahorrar para una ocasión específica, como ir de viaje. También se puede vaciar las cajas o cambiar su
+        contenido, como agregar algo de dinero o sacar algo.</p>
+      <p>Las variables pueden tener un valor o no, para poder ser usadas luego en alguna operación.
         Pueden cambiar su valor según vayamos modificando nuestro código. Las variables contienen valores, pero no
-        representan los valores en si. Primero debemos crearlas, lo que se denomina DECLARAR una variable. Luego de eso
+        representan los valores en si.
+      </p>
+      <h3>Creación de variables</h3>
+      <p>Antes de usar una variable hay que crearla, lo que se denomina DECLARAR una variable. Luego de eso
         la tenemos que INICIAR utilizando el signo =.</p>
+      <img src="./imagenes/crearvar.jpg" width="50%">
+      <h5>La creación de una variable se denomina declaración de la variable</h5>
+
       <p>En JavaScript, las variables se utilizan para almacenar diferentes tipos de datos, como números, cadenas de
         texto, booleanos, objetos, etc. y se pueden declarar utilizando las palabras clave var, let y const.</p>
       <p>
         La <b>palabra clave var</b> se usaba antes para declarar variables en JavaScript, pero a partir de ES6, se
         recomienda
         utilizar let y const.</p>
-      <p>
-      </p>
-
-
-      <div class="editor-container">
-        <div class="line-numbers">1<br>2<br></div>
-        <pre id="edit">
-sds<br>asdasdasd<br>dasddf
-        </pre>
-
-      </div>
-
-
-
 
       <p>
         La <b>palabra clave let</b> se utiliza para declarar variables mutables, que pueden cambiar de valor más tarde
         en el
         código.
       </p>
+      <iframe src="https://player.vimeo.com/video/326848508" width="540" height="310">
+      </iframe>
+      <p>Ejemplo:</p>
+      <p>Estamos creando una web sobre programas de televisión, y cada programa de televisión necesita una variable para
+        la cantidad de temporadas
+        que
+        tiene el programa, y otra para la cantidad de episodios que hay en cada temporada. Se nos pide nombrar estas
+        variables
+        numberOfSeasons y numberOfEpisodes para que sean compatibles con el código.
+      <ol>
+        <li>Se crea una variable llamada numberOfSeasons y se le asigna el valor 6.
+        </li>
+        <li>Se crea una variable llamada numberOfEpisodes y se le asigna el valor 12.
+        </li>
+      </ol>
+      </p>
+
+      <div class="editor-container">
+        <div class="line-numbers">1<br>2<br></div>
+        <pre id="edit">
+let numberOfSeasons = 6;
+let numberOfEpisodes = 12;
+              </pre>
+      </div>
+
+      <div class="series-frame">
+        <h2>The Story of Tau</h2>
+        <p id="info"></p>
+      </div>
+
       <p>
         La <b>palabra clave const</b> se utiliza para declarar variables inmutables, que no pueden cambiar de valor
         después de
@@ -133,7 +191,6 @@ const z = 3.14;
 y = 7;
 // Esto dará un error, ya que no se puede cambiar el valor de una variable inmutable
 // z = 2.71;
-
 // Se pueden declarar múltiples variables en una sola línea separándolas con comas.
 let a = 1, b = 2, c = 3;
         </textarea>
@@ -145,7 +202,7 @@ let a = 1, b = 2, c = 3;
           autoCloseTags: true
         })
           ;
-        editor.setSize("100%", "280");
+        editor.setSize("100%", "240");
       </script>
       <br>
       <h3>Reglas generales para nombrar variables en JavaScript:</h3>
@@ -223,6 +280,12 @@ let a = 1, b = 2, c = 3;
     js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+  let numberOfSeasons = 6;
+  let numberOfEpisodes = 12;
+  let paragraph = document.querySelector('#info');
+  paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season`
 </script>
 
 </html>
