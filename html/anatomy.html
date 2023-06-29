@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML | Elemento HTML</title>
+  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <style>
+    p,
+    ol,
+    ul,
+    h5,
+    h1,
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      background-color: rgb(219, 219, 223);
+      width: 500px;
+      display: inline;
+      padding: 5px;
+    }
+
+    h5,
+    h1,
+    footer,
+    h3 {
+      text-align: center;
+    }
+
+    ol,
+    ul {
+      margin-left: 20px;
+    }
+
+    img,
+    iframe {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .editor-container {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      border: 1px solid #ccc;
+    }
+
+    .line-numbers {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      background-color: #f7f7f7;
+      border-right: 1px solid #ccc;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #0e0e0e;
+      padding: 10px 5px;
+      box-sizing: border-box;
+    }
+
+    #edit {
+      position: absolute;
+      left: 40px;
+      top: 0;
+      width: calc(100% - 40px);
+      height: 100%;
+      border: none;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../codemirror/theme/dracula.css">
+  <script src="../codemirror/lib/codemirror.js"></script>
+  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/addon/edit/closetag.js"></script>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0"
+    nonce="AWRezCcB"></script>
+  <header>
+    <section>
+      <img src="./imagenes/html.jpg" width="970px" height="200px">
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="cursodehtml.html">Curso de HTML</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <br>
+      <h1>Anatomía de un elemento HTML</h1>
+      <h3>¿Qué es una etiqueta?</h3>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/GucaPbn9Cf8"
+        title="🛑 #02 QUÉ SON LAS ETIQUETAS 🖥️ - Curso HTML" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <br>
+      <h3>¿Qué es un Elemento HTML?</h3>
+      <p>Un elemento HTML está definido por una una etiqueta de inicio, algún contenido, y una etiqueta de cierre:</p>
+      <img src="./imagenes/element.jpg" alt="">
+      <br>
+      <h4>¿Qué es un elemento HTML?</h4>
+      <a href="./preguntas/element.htm" target="_blank"
+        onClick="window.open(this.href, this.target, 'width=500,height=300'); return false;">Respuesta</a>
+      <p> </p>
+      <h3>Explicación del ejemplo:</h3>
+      <ul>
+        <li>La etiqueta de apertura <code>&lt;!DOCTYPE html&gt;</code> define que este es un documento es HTML5.
+        </li>
+        <li>El elemento <code>&lt;html&gt;</code> es el elemento raíz de una página HTML.</li>
+        <li>El elemento <code>&lt;head&gt;</code> contiene meta información acerca de la página
+          HTML.</li>
+        <li>El elemento <code>&lt;title&gt;</code> especifica un título para la página HTML.</li>
+        <li>El elemento <code>&lt;body&gt;</code> define el cuerpo del documento, y contiene todos
+          los elementos visibles, tales como encabezados, párrafos, imágenes, hyperlinks, tablas, listas, etc.</li>
+        <li>El elemento <code>&lt;h1&gt;</code> define el encabezado principal.</li>
+        <li>El elemento <code>&lt;p&gt;</code> define un párrafo.</li>
+      </ul>
+      <br>
+
+
+
+
+
+
+      <p>El <b>lenguaje de marcado de hipertexto, o HTML (HyperText Markup Language)</b> por sus siglas en inglés , es
+        el
+        estándar para
+        armar documentos que serán desplegados en un sitio web en el navegador. HTML es el
+        lenguaje utilizado para crear la estructura de un sitio web. Para crear este
+        sitio, se empieza creando un documento en formato HTML. </p>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/QwMlgfMK6fQ"
+        title="🛑Curso HTML - #01 INTRODUCCIÓN 🖥️" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+      <p>Un documento HTML simple se ve así:</p>
+      <textarea id="editor">
+<!DOCTYPE html>
+<html>
+   
+<head>
+      <title>Mi primera web</title>
+</head>
+    
+<body>
+      <h1>¡Hola Mundo!</h1>
+      <p>Esta es mi primera web</p>
+</body>
+   
+</html>
+</textarea>
+      <p></p>
+      <p>Al abrir este mismo documento HTML en un navegador (como Chrome), se ve lo siguiente:</p>
+      <img src="./imagenes/holamundo.jpg">
+      <p></p>
+      <p>El navegador "lee" el archivo HTML (el texto y las etiquetas que están adentro) y las presenta según las reglas
+        del
+        lenguaje. Por ejemplo, los textos que están dentro de las etiquetas <code>&lt;h1&gt;</code> son
+        considerados
+        encabezados o titulares,
+        mientras que los textos dentro de las etiquetas <code>&lt;p&gt;</code> son considerados párrafos. Por eso, el
+        texto <i>¡Hola Mundo!</i> se
+        visualiza mucho más grande que el texto <i>Esta es mi primera web</i>.</p>
+
+      <h3>Estructura de una página HTML</h3>
+      <p></p>
+      <div class="ws-grey" style="width:99%;border:1px solid grey;padding:3px;margin:0;">&lt;html&gt;
+        <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
+          <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;Título de la
+            página&lt;/title&gt;
+          </div>
+          &lt;/head&gt;
+        </div>
+        <div class="ws-grey" style="width:90%;border:1px solid grey;padding:3px;margin:20px;">&lt;body&gt;
+          <div class="w3-white" style="width:90%;border:1px solid grey;padding:3px;margin:20px;">
+            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;Esto es un
+              encabezado&lt;/h1&gt;
+            </div>
+            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es un párrafo.&lt;/p&gt;
+            </div>
+            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es otro
+              párrafo.&lt;/p&gt;</div>
+          </div>
+          &lt;/body&gt;
+        </div>
+        &lt;/html&gt;
+      </div>
+
+      <p></p>
+      <p> El contenido dentro de la sección &lt;body&gt; se muestra en el browser. El contenido dentro del elemento
+        &lt;title&gt; se muestra en la barra de título del browser.</p>
+      <p></p>
+
+
+
+
+
+
+      <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br></div>
+        <pre id="edit">
+
+
+        </pre><br>
+    </article><br>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+        mode: "java",
+        theme: "dracula",
+        lineNumbers: true,
+        autoCloseTags: true
+      })
+        ;
+      editor.setSize("100%", "280");
+    </script>
+    <br>
+
+
+
+
+
+
+  </main>
+  <footer>
+    <div class="fb-comments" data-href="https://fullstackdevelopment.tk/html/queeshtml.html" data-width=""
+      data-numposts="100"></div>
+    <p>No Copyright © por <a href="https://danypreisz.github.io/fullstackdevelopment/">fullstackdevelopment</a></p>
+  </footer>
+</body>
+<!-- Messenger Plugin de chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin de chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "111695451923985");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      xfbml: true,
+      version: 'v16.0'
+    });
+  };
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</html>

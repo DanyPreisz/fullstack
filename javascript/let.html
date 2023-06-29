@@ -2,14 +2,25 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <title>JavaScript | let</title>
   <link rel="stylesheet" type="text/css" href="../estilos.css">
   <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="../codemirror/theme/dracula.css">
   <script src="../codemirror/lib/codemirror.js"></script>
-  <script src="../codemirror/mode/xml/xml.js"></script>
+  <script src="../codemirror/mode/css/css.js"></script>
   <script src="../codemirror/addon/edit/closetag.js"></script>
+  <style>
+    h5,
+    h1,
+    footer,
+    h3 {
+      text-align: center;
+    }
+  </style>
+  
+  
 </head>
 
 <body>
@@ -25,11 +36,13 @@
     </ul>
   </nav>
   <main>
-    <article>
+    <article><br>
       <h1>Declaración de variables con "var" y con "let"</h1>
       <br>
+	  <h3>Scope o ámbito de una variable</h3>
+	  <p></p>
       <p>En <b>JavaScript</b> hay dos formas de declarar variables: con <strong>"var"</strong> y con
-        <strong>"let"</strong>.
+        <b>"let"</b>.
         La principal diferencia entre <strong>"var"</strong> y <strong>"let"</strong> es el alcance de la variable. Una
         variable declarada con <strong>"var"</strong> tiene un alcance global o de función, mientras que una variable
         declarada con <strong>"let"</strong> tiene un alcance de bloque. Esto significa que una variable declarada con

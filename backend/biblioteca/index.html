@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta>
+  <meta charset="utf-8">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <h1>Biblioteca</h1>
+  <form id="formulario-agregar-libro">
+    <h2>Agregar Libro</h2>
+    <input type="text" id="titulo" placeholder="Título" required>
+    <input type="text" id="autor" placeholder="Autor" required>
+    <input type="text" id="genero" placeholder="Género" required>
+    <input type="number" id="anio-publicacion" placeholder="Año de Publicación" required>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <div id="filtros-container">
+    <h2>Filtros</h2>
+    <input type="text" id="filtro-autor" placeholder="Autor">
+    <input type="text" id="filtro-genero" placeholder="Género">
+    <button id="filtro-boton">Filtrar</button>
+  </div>
+
+  <div id="librosContainer">
+
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
