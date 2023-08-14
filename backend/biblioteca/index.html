@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta>
-  <meta charset="utf-8">
-  <title>Biblioteca</title>
+  <title>Gestión de Libros</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-  <h1>Biblioteca</h1>
-  <form id="formulario-agregar-libro">
-    <h2>Agregar Libro</h2>
-    <input type="text" id="titulo" placeholder="Título" required>
-    <input type="text" id="autor" placeholder="Autor" required>
-    <input type="text" id="genero" placeholder="Género" required>
-    <input type="number" id="anio-publicacion" placeholder="Año de Publicación" required>
+  <h1>Gestión de Libros</h1>
+
+  <form id="book-form">
+    <input type="text" id="title" placeholder="Título" required>
+    <input type="text" id="author" placeholder="Autor" required>
+    <input type="number" id="year" placeholder="Año" required>
     <button type="submit">Agregar</button>
   </form>
 
-  <div id="filtros-container">
-    <h2>Filtros</h2>
-    <input type="text" id="filtro-autor" placeholder="Autor">
-    <input type="text" id="filtro-genero" placeholder="Género">
-    <button id="filtro-boton">Filtrar</button>
+  <div id="search-delete">
+    <input type="text" id="search-input" placeholder="Buscar libro">
+    <button id="search-btn">Buscar</button>
+    <button id="delete-btn">Eliminar</button>
   </div>
 
-  <div id="librosContainer">
+  <table id="book-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Año</th>
+      </tr>
+    </thead>
+    <tbody id="book-list">
+    </tbody>
+  </table>
 
-  </div>
-
-  <script src="main.js"></script>
-
+  <script src="app.js"></script>
 </body>
-
 </html>
