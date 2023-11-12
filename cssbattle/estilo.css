@@ -1,0 +1,32 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: white;
+	height: 100vh;
+	font-size:20px;
+	
+}
+
+body{
+	background-color: #273746;
+}
+
+.texto_ingresado{
+	width:45%;
+	border: 4px solid black;
+	margin-top: 2px;
+	text-decoration: none;
+	margin-left: 10px;
+	background-color: #273746;
+	outline:none;
+}
+
+
+.editor{
+	width:50%;
+	margin-left:18px;
+	margin-top:10px;
+	border: 4px solid black;
+	background-color: #273746;	
+}
