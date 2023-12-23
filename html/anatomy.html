@@ -120,38 +120,12 @@
       <a href="./preguntas/element.htm" target="_blank"
         onClick="window.open(this.href, this.target, 'width=500,height=300'); return false;">Respuesta</a>
       <p> </p>
-      <h3>Explicación del ejemplo:</h3>
-      <ul>
-        <li>La etiqueta de apertura <code>&lt;!DOCTYPE html&gt;</code> define que este es un documento es HTML5.
-        </li>
-        <li>El elemento <code>&lt;html&gt;</code> es el elemento raíz de una página HTML.</li>
-        <li>El elemento <code>&lt;head&gt;</code> contiene meta información acerca de la página
-          HTML.</li>
-        <li>El elemento <code>&lt;title&gt;</code> especifica un título para la página HTML.</li>
-        <li>El elemento <code>&lt;body&gt;</code> define el cuerpo del documento, y contiene todos
-          los elementos visibles, tales como encabezados, párrafos, imágenes, hyperlinks, tablas, listas, etc.</li>
-        <li>El elemento <code>&lt;h1&gt;</code> define el encabezado principal.</li>
-        <li>El elemento <code>&lt;p&gt;</code> define un párrafo.</li>
-      </ul>
-      <br>
+      <p>Los elementos <code>&lt;h1&gt;</code> hasta el <code>&lt;h6&gt;</code> se usan para mostrar la importancia del
+        contenido. Como el número menor tiene mayor importancia, <code>&lt;h2&gt;</code> tiene menor importancia que
+        <code>&lt;h1&gt;</code>. Sólo debe usarse un elemento <code>&lt;h1&gt;</code> por página y ubicar elementos
+        "heading" de menor importancia debajo de los de mayor importancia.
+      </p>
 
-
-
-
-
-
-      <p>El <b>lenguaje de marcado de hipertexto, o HTML (HyperText Markup Language)</b> por sus siglas en inglés , es
-        el
-        estándar para
-        armar documentos que serán desplegados en un sitio web en el navegador. HTML es el
-        lenguaje utilizado para crear la estructura de un sitio web. Para crear este
-        sitio, se empieza creando un documento en formato HTML. </p>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/QwMlgfMK6fQ"
-        title="🛑Curso HTML - #01 INTRODUCCIÓN 🖥️" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-
-      <p>Un documento HTML simple se ve así:</p>
       <textarea id="editor">
 <!DOCTYPE html>
 <html>
@@ -161,58 +135,34 @@
 </head>
     
 <body>
-      <h1>¡Hola Mundo!</h1>
-      <p>Esta es mi primera web</p>
+	<h1>CatPhotoApp</h1>
+    <h2>Cat Photos</h2>
+	<!-- Los comentarios no se muestran en pantalla y permiten explicar el código o volverlo inactivo. -->
+	<p>See more cat photos in our gallery.</p>
 </body>
    
 </html>
 </textarea>
       <p></p>
       <p>Al abrir este mismo documento HTML en un navegador (como Chrome), se ve lo siguiente:</p>
-      <img src="./imagenes/holamundo.jpg">
       <p></p>
+      <iframe src="catphotoapp1.htm"></iframe>
+      <p></p>
+
       <p>El navegador "lee" el archivo HTML (el texto y las etiquetas que están adentro) y las presenta según las reglas
         del
-        lenguaje. Por ejemplo, los textos que están dentro de las etiquetas <code>&lt;h1&gt;</code> son
+        lenguaje. Por ejemplo, los textos que están dentro de las etiquetas <code>&lt;h1&gt;</code>,
+        <code>&lt;h2&gt;</code> son
         considerados
         encabezados o titulares,
         mientras que los textos dentro de las etiquetas <code>&lt;p&gt;</code> son considerados párrafos. Por eso, el
-        texto <i>¡Hola Mundo!</i> se
-        visualiza mucho más grande que el texto <i>Esta es mi primera web</i>.</p>
-
-      <h3>Estructura de una página HTML</h3>
-      <p></p>
-      <div class="ws-grey" style="width:99%;border:1px solid grey;padding:3px;margin:0;">&lt;html&gt;
-        <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
-          <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;Título de la
-            página&lt;/title&gt;
-          </div>
-          &lt;/head&gt;
-        </div>
-        <div class="ws-grey" style="width:90%;border:1px solid grey;padding:3px;margin:20px;">&lt;body&gt;
-          <div class="w3-white" style="width:90%;border:1px solid grey;padding:3px;margin:20px;">
-            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;Esto es un
-              encabezado&lt;/h1&gt;
-            </div>
-            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es un párrafo.&lt;/p&gt;
-            </div>
-            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es otro
-              párrafo.&lt;/p&gt;</div>
-          </div>
-          &lt;/body&gt;
-        </div>
-        &lt;/html&gt;
-      </div>
-
+        texto <i>CatPhotoApp</i> se
+        visualiza mucho más grande que el texto <i>See more cat photos in our gallery</i>.
+      </p>
       <p></p>
       <p> El contenido dentro de la sección &lt;body&gt; se muestra en el browser. El contenido dentro del elemento
         &lt;title&gt; se muestra en la barra de título del browser.</p>
       <p></p>
-
-
-
-
-
 
       <div class="editor-container">
         <div class="line-numbers">1<br>2<br>3<br>4<br></div>

@@ -3,9 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>HTML | ¿Qué es HTML?</title>
+  <title>HTML y CSS | ¿Qué es HTML?¿Qué es CSS?</title>
   <link rel="stylesheet" type="text/css" href="../estilos.css">
   <style>
+    section {
+      display: flex;
+    }
+
     p,
     ol,
     ul,
@@ -93,25 +97,29 @@
     nonce="AWRezCcB"></script>
   <header>
     <section>
-      <img src="./imagenes/html.jpg" width="970px" height="200px">
+      <img src="./imagenes/html.jpg" width=50% height="200px"><img src="./imagenes/css.jpg" width=50% height="200px">
     </section>
   </header>
   <nav>
     <ul>
       <li><a href="../index.html">INICIO</a></li>
-      <li><a href="cursodehtml.html">Curso de HTML</a></li>
+      <li><a href="cursodehtmlycss.html">Curso de HTML</a></li>
     </ul>
   </nav>
   <main>
     <article>
       <br>
       <h1>¿Qué es HTML?</h1>
+      <section>
+        <img src="./imagenes/html2.jpg" width=25% height=25%><img src="./imagenes/html3.jpg" width=50% height=50%>
+      </section><br>
       <p>El <b>lenguaje de marcado de hipertexto, o HTML (HyperText Markup Language)</b> por sus siglas en inglés , es
         el
         estándar para
         armar documentos que serán desplegados en un sitio web en el navegador. HTML es el
         lenguaje utilizado para crear la estructura de un sitio web. Para crear este
-        sitio, se empieza creando un documento en formato HTML. </p>
+        sitio, se empieza creando un documento en formato HTML. </p><img src="./imagenes/html4.jpg" width=50%
+        height=50%><br>
       <iframe width="640" height="360" src="https://www.youtube.com/embed/QwMlgfMK6fQ"
         title="🛑Curso HTML - #01 INTRODUCCIÓN 🖥️" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -191,6 +199,52 @@
       <p></p>
       <p> El contenido dentro de la sección &lt;body&gt; se muestra en el browser. El contenido dentro del elemento
         &lt;title&gt; se muestra en la barra de título del browser.</p>
+
+      <br>
+      <h1>¿Qué es CSS?</h1>
+      <section>
+        <img src="./imagenes/css2.jpg" width=30% height=30%><img src="./imagenes/css3.jpg" width=50% height=50%>
+      </section><br>
+      <p>Las <b>hojas de estilo en cascada, o CSS (Cascading Style Sheets)</b> por sus siglas en inglés, se usan para
+        la presentación de un sitio web. Permiten darle estilo a una página web: colores, formas, fondos, etc.</p>
+
+      <h4>Pregunta: ¿Qué es CSS?</h4>
+      <a href="https://youtube.com/shorts/edF0Nyvy3iY?si=aUuEsX1ownsFn2In" target="_blank"
+        onClick="window.open(this.href, this.target, 'width=300,height=550'); return false;">Respuesta</a>
+      <p></p>
+      <p>Se llaman en cascada por la forma en que se aplican los estilos. Ejemplo: si programas que el color de las
+        letras sea rosado, eso se aplica al texto. Si líneas más abajo le indicas que sea azul, se cambia el color del
+        texto. Y si más abajo vuelves a cambiar a verde, éste será el color definitivo del texto, creando un efecto de
+        cascada en la forma de realizar los cambios.</p>
+
+      <img src="./imagenes/css5.jpg" width=50% height=50%><br>
+      <p>El código necesario se
+        escribe en un archivo con extensión .css.</p>
+      <p>Cuando tenemos un sitio web con varias páginas podemos utilizar un solo archivo .css que contenga el código a
+        aplicar en todas las páginas del sitio.</p>
+      <section><img src="./imagenes/css4.jpg" width=40% height=40%><img src="./imagenes/css6.jpg" width=40% height=40%>
+      </section><br>
+      <p>Existen tres formas de aplicar estilos CSS:</p>
+      <ol>
+        <li><b>Inline:</b> dentro de la etiqueta en la que quiero hacer el cambio uso el atributo
+          style con su respectivo valor.</li>
+        <li><b>Usando la etiqueta style</b> dentro dentro del head de la página y especificando el elemento que queremos
+          modificar.</li>
+        <li><b>A través de un archivo .css externo</b> al que se llama desde la página que se quiere modificar. Ésta es
+          la
+          mejor forma de hacerlo.</li>
+      </ol>
+      <p>Las dos primeras formas no son consideradas buenas prácticas y sólo deben utilizarse cuando se está probando
+        código o cuando el sitio web es muy pequeño y no hay muchos estilos que aplicar.</p>
+      <img src="./imagenes/css7.jpg" width=65% height=65%>
+      </section><br>
+      <iframe width="640" height="360"
+        src="https://www.youtube.com/embed/I_RG3bNjTfQ?list=PLJubkp8BnTJt1u6z_voRiYtwskmP0VVzw"
+        title="▶️ #01 INTRODUCCIÓN 💻 Curso CSS" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <p> </p>
+
 
       <!--
       <div class="editor-container">

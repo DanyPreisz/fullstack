@@ -36,6 +36,34 @@ header {
   align-content: center;
 }
 
+.editor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.frame {
+    margin: auto;
+	display: flex;
+}
+
+
+
+.code {
+    width: 80%;
+    height: 100vh;
+    padding: 10px;
+    font-size: 16px;
+color: white;
+background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
 /* menu */
 /* selectores generales*/
 nav {
