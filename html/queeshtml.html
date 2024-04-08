@@ -113,6 +113,9 @@
       <section>
         <img src="./imagenes/html2.jpg" width=25% height=25%><img src="./imagenes/html3.jpg" width=50% height=50%>
       </section><br>
+      <a href="https://www.youtube.com/watch?v=-oK6zL01fNM&t=1337s" target="_blank">
+        <h3>Introducción a HTML y su documentación</h3>
+      </a>
       <p>El <b>lenguaje de marcado de hipertexto, o HTML (HyperText Markup Language)</b> por sus siglas en inglés , es
         el
         estándar para
@@ -129,10 +132,13 @@
       <a href="https://youtube.com/shorts/YvO6WdGM9bs?feature=share" target="_blank"
         onClick="window.open(this.href, this.target, 'width=300,height=550'); return false;">Respuesta</a>
       <p> </p>
+      <a href="https://www.youtube.com/watch?v=-oK6zL01fNM&t=2077s" target="_blank">
+        <h3>Estructura básica de un documento HTML</h3>
+      </a>
       <p>Un documento HTML simple se ve así:</p>
       <textarea id="editor">
 <!DOCTYPE html>
-<html>
+<html lang="es">
    
 <head>
       <title>Mi primera web</title>
@@ -141,15 +147,33 @@
 <body>
       <h1>¡Hola Mundo!</h1>
       <p>Esta es mi primera web</p>
+<!-- Éste es un comentario. No se vé al cargar la página. -->
+<!-- El  comentario
+puede ser de varias
+líneas -->
 </body>
    
 </html>
 </textarea>
       <p></p>
+      <a href="https://www.youtube.com/watch?v=-oK6zL01fNM&t=2833s" target="_blank">
+        <h3>Comentarios en HTML</h3>
+      </a>
+
+      <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br></div>
+        <textarea id="edit">
+<!-- Éste es un comentario.  No se vé al cargar la página. -->
+<!-- El  comentario
+puede ser de varias
+líneas -->
+        </textarea>
+      </div><br>
       <p>Al abrir este mismo documento HTML en un navegador (como Chrome), se ve lo siguiente:</p>
       <img src="./imagenes/holamundo.jpg">
       <p></p>
-      <p>El navegador "lee" el archivo HTML (el texto y las etiquetas que están adentro) y las presenta según las reglas
+      <p>El navegador "lee" el archivo HTML (el texto y las etiquetas que están adentro) y las presenta según las
+        reglas
         del
         lenguaje. Por ejemplo, los textos que están dentro de las etiquetas <code>&lt;h1&gt;</code> son
         considerados
@@ -186,7 +210,8 @@
             <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;Esto es un
               encabezado&lt;/h1&gt;
             </div>
-            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es un párrafo.&lt;/p&gt;
+            <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es un
+              párrafo.&lt;/p&gt;
             </div>
             <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es otro
               párrafo.&lt;/p&gt;</div>
@@ -228,9 +253,11 @@
       <ol>
         <li><b>Inline:</b> dentro de la etiqueta en la que quiero hacer el cambio uso el atributo
           style con su respectivo valor.</li>
-        <li><b>Usando la etiqueta style</b> dentro dentro del head de la página y especificando el elemento que queremos
+        <li><b>Usando la etiqueta style</b> dentro dentro del head de la página y especificando el elemento que
+          queremos
           modificar.</li>
-        <li><b>A través de un archivo .css externo</b> al que se llama desde la página que se quiere modificar. Ésta es
+        <li><b>A través de un archivo .css externo</b> al que se llama desde la página que se quiere modificar. Ésta
+          es
           la
           mejor forma de hacerlo.</li>
       </ol>
@@ -244,13 +271,6 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
       <p> </p>
-
-
-      <!--
-      <div class="editor-container">
-        <div class="line-numbers">1<br>2<br>3<br>4<br></div>
-        <pre id="edit">
-        </pre>-->
     </article><br>
     <script>
       var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
@@ -260,7 +280,7 @@
         autoCloseTags: true
       })
         ;
-      editor.setSize("100%", "280");
+      editor.setSize("100%", "320");
     </script>
     <br>
 

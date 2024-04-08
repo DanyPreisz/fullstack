@@ -1,78 +1,18 @@
-// Obtener referencia al elemento de la lista de libros
-var bookList = document.getElementById('book-list');
+// Esta función se encarga de cargar el archivo JSON y mostrar su contenido en la página
+async function mostrarJSON() {
+  try {
+    const response = await fetch(
+      "C:UsersUsuario/fullstack/frontend/biblioteca/libros.json"
+    ); // Cambia 'libros.json' por la ruta de tu archivo JSON
+    const libros = await response.json();
 
-// Agregar libro al almacenamiento local
-function addBook() {
-  var title = document.getElementById('title').value;
-  var author = document.getElementById('author').value;
+    const jsonDiv = document.getElementById("json");
 
-  if (title && author) {
-    var book = { title: title, author: author };
-    var books = JSON.parse(localStorage.getItem('books')) || [];
-
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-
-    displayBooks();
+    jsonDiv.innerHTML = `<pre>${JSON.stringify(libros, null, 2)}</pre>`;
+  } catch (error) {
+    console.error("Error al cargar y mostrar el JSON:", error);
   }
 }
 
-// Mostrar libros en el elemento de la lista de libros
-function displayBooks() {
-  var books = JSON.parse(localStorage.getItem('books')) || [];
-
-  bookList.innerHTML = '';
-
-  for (var i = 0; i < books.length; i++) {
-    var book = books[i];
-    var listItem = document.createElement('div');
-    listItem.innerHTML = '<strong>Título:</strong> ' + book.title + ' <strong>Autor:</strong> ' + book.author;
-    bookList.appendChild(listItem);
-  }
-}
-
-// Buscar libro en el almacenamiento local
-function searchBook() {
-  var searchTerm = document.getElementById('title').value;
-  var books = JSON.parse(localStorage.getItem('books')) || [];
-  var searchResults = [];
-
-  for (var i = 0; i < books.length; i++) {
-    var book = books[i];
-
-    if (book.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-      searchResults.push(book);
-    }
-  }
-
-  bookList.innerHTML = '';
-
-  for (var i = 0; i < searchResults.length; i++) {
-    var book = searchResults[i];
-    var listItem = document.createElement('div');
-    listItem.innerHTML = '<strong>Título:</strong> ' + book.title + ' <strong>Autor:</strong> ' + book.author;
-    bookList.appendChild(listItem);
-  }
-}
-
-// Eliminar libro del almacenamiento local
-function deleteBook() {
-  var searchTerm = document.getElementById('title').value;
-  var books = JSON.parse(localStorage.getItem('books')) || [];
-  var updatedBooks = [];
-
-  for (var i = 0; i < books.length; i++) {
-    var book = books[i];
-
-    if (!book.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-      updatedBooks.push(book);
-    }
-  }
-
-  localStorage.setItem('books', JSON.stringify(updatedBooks));
-  displayBooks();
-}
-
-
-// Mostrar los libros almacenados al cargar la página
-displayBooks();
+// Llama a la función mostrarJSON cuando la página está completamente cargada
+document.addEventListener("DOMContentLoaded", mostrarJSON);
