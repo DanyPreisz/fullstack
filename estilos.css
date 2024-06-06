@@ -1,3 +1,13 @@
+h1, h3{
+  text-align: center;
+  padding: 10px;   
+}
+p{
+  padding: 10px;
+}
+li{
+  margin-left: 20px;
+}
 body {
   margin: auto;
   width: 1024px;
