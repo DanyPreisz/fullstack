@@ -18,10 +18,11 @@
       <img src="./imagenes/basesdedatos.jpg" width=50% height="200px">
     </section>
 	<nav>
-		<ul>
-	
-		</ul>	
-	</nav>		
+	<ul>
+      <li><a href="../../../../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Curso de Java Script</a></li>
+    </ul>
+  	</nav>	
 </header>
 <main>
 	<article>
@@ -29,6 +30,7 @@
 <h3><u>¿Qué es una base de datos?</u></h3>
 <p>Es un conjunto de datos pertenecientes a un mismo contexto organizados para un propósito específico.</p>
 <p>Una base de datos nos permite acceso, gestión y actualización de manera estructurada y eficiente.</p>
+<p>Las <b>bases de datos</b> son sistemas esenciales que nos permiten guardar, organizar y recuperar información de manera eficiente. Son cruciales para operar y entender numerosas aplicaciones digitales en la vida cotidiana y de negocios. Aprender sobre ellas es fundamental porque facilitan la toma de decisiones basadas en datos y mejoran nuestra interacción con la tecnología</p>
 <p>Las bases de datos permiten:</p>
 <ul>
 	<li>Almacenar datos.</li>
@@ -50,10 +52,57 @@
 <div style="text-align: center;"><img src="./imagenes/componentes.jpg" alt="" width=75%></div>
 <p>Una base de datos relacional está compuesta por un conjunto de <b>tablas</b>. Cada una de estas tablas almacena <b>registros de datos en filas</b>. Cada fila representa un único conjunto de información relacionada. Los <b>campos o columnas</b> categorizan esta información en tipos específicos, como textos, números o fechas. Los registros son las unidades individuales de información.</p>
 <p>Por ejemplo: si tenemos una tabla de Alumnos, cada fila de la tabla se va a corresponder con los datos de un alumno determinado. Cada una de las columnas será un dato que nos interesa registrar de los alumnos, como fecha de nacimiento, dirección, etc. </p>
-<p>El <b>motor de bases de datos</b> es el corazón del sistema. Es el software que permite interactuar con la base de datos mediante consultas, actualizaciones y gestión de la seguridad.</p>
+<p>El <b>motor de bases de datos</b> es el corazón del sistema. Es el componente central del sistema de base de datos que realiza las operaciones fundamentales como la creación, lectura, actualización y eliminación de datos (CRUD). Es responsable de:
+</p>
+<ul><li>La ejecución de consultas SQL.</li>
+<li>La gestión del almacenamiento y recuperación de datos.
+</li>
+<li>La aplicación de restricciones de integridad.
+</li>
+<li>El control de transacciones y el manejo de la concurrencia.
+</li>
+</ul>
 <h3><u>Gestión de bases de datos</u></h3>
-<p>Los <b>Sistemas de Gestión de Bases de Datos o DBMS</b></p>
+<div style="text-align: center;"><img src="./imagenes/dbms.jpg" alt="" width=75%></div><p>Los <b>Sistemas de Gestión de Bases de Datos o DBMS</b> permiten a los administradores o usuarios crear, editar y manipular datos dentro de una base de datos de manera segura y eficiente. Aseguran la integridad de los datos mediante el control del acceso, la gestión de las transacciones, el respaldo y la recuperación de la información, protegiendo los datos contra pérdidas o daños. Proporcionan seguridad, integridad y disponibilidad, que son características necesarias dentro de una base de datos.</b></p>
+<p>El <b>DBMS</b> es un conjunto completo de software que incluye el motor de base de datos y otras herramientas y servicios necesarios para gestionar la base de datos. Un <b>DBMS</b> proporciona:
+<ul><li>Herramientas de administración y configuración.
+</li>
+<li>Interfaces para usuarios y administradores.
+</li>
+<li>Mecanismos de seguridad y control de acceso.
+</li>
+<li>Funcionalidades de backup y recuperación.
+</li>
+<li>Soporte para lenguajes de programación y APIs.
+</li><li>Funciones avanzadas de optimización y tuning.</li></ul>
+</p>
+<p> Un motor de base de datos (database engine) y un sistema de gestión de bases de datos (DBMS, Database Management System) no son exactamente lo mismo, aunque están estrechamente relacionados.</p>
+<p>El motor de base de datos es el núcleo que se encarga de las operaciones de manejo de datos. El DBMS incluye el motor de base de datos y otras herramientas y servicios para facilitar la administración y el uso de la base de datos. Ejemplos de DBMS: MySQL, PostgreSQL, Oracle, Microsoft SQL Server, todos los cuales contienen un motor de base de datos como componente central.
+</p>
 	</article>
 </main>
+<footer>
+    <div class="fb-comments" data-href="https://danypreisz.github.io/fullstackdevelopment/webdev/backend/basesdedatos/sql/sql1.html" data-width=""
+      data-numposts="100"></div>
+    <p>No Copyright © por <a href="https://danypreisz.github.io/fullstackdevelopment/">fullstackdevelopment</a></p>
+  </footer>
+
 </body>
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      xfbml: true,
+      version: 'v16.0'
+    });
+  };
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 </html>
