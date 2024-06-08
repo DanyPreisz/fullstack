@@ -9,6 +9,10 @@
 		  	text-align: center;
 		  	background-color: rgb(64, 64, 227);
 		  }
+		  div{
+		  background-color: lightgray;
+		  padding: 10px;		  
+		  }
 	</style>	
 	<title>Bases de datos | Introducción</title>
 </head>
@@ -20,17 +24,53 @@
 	<nav>
 	<ul>
       <li><a href="../../../../index.html">INICIO</a></li>
-      <li><a href="cursodejavascript.html">Curso de Java Script</a></li>
+      <li><a href="cursodejavascript.html">Bases de datos</a></li>
     </ul>
   	</nav>	
 </header>
 <main>
-	<article>
+	<article><br><br><br>
 		<h1><u>Introducción a las bases de datos</u></h1>
+<h3><u>Datos e Información</u></h3>
+
+<div>
+	<p>Los <b>datos</b> son hechos o valores sin procesar que no tienen un significado específico por sí mismos. Son elementos básicos y sin interpretación, que pueden ser números, palabras, mediciones, observaciones, descripciones, etc. Los datos pueden ser recolectados y almacenados, pero no proporcionan contexto o entendimiento.
+</p>
+</div>
+<p>Ejemplos de datos:</p>
+<ul>
+<li>Números: 42, 7.89, 1001</li>
+<li>Palabras: "rojo", "grande", "rápido"
+</li>
+<li>Fechas: "2024-06-07"
+</li>
+<li>Valores medidos: 25°C, 5m/s
+</li></ul>
+<p>
+<div>	
+La <b>información</b> es el resultado de procesar, organizar o estructurar datos de una manera que les confiere significado y contexto. La información es útil porque responde a preguntas y es comprensible, proporcionando conocimientos sobre un tema o fenómeno. Es el producto de analizar y contextualizar los datos.
+</p></div>
+<p>Ejemplos de información:
+</p>
+<ul><li>	
+"La temperatura actual es de 25°C" (contextualiza un dato de temperatura)
+</li>
+<li>"El promedio de ventas mensuales en el último trimestre fue de 10,000 unidades" (analiza datos de ventas)
+</li>
+<li>"El próximo examen es el 7 de junio de 2024" (proporciona contexto a una fecha)
+</li>
+<li>"El color más popular entre los encuestados fue el rojo" (da significado a una colección de datos sobre preferencias de color)
+</li></ul>	
+<p>La <b>diferencia entre datos e información</b> radica en el contexto y el procesamiento:
+Los datos son insumos crudos que necesitan ser procesados o analizados.
+la información es el resultado del procesamiento de los datos, lo que les otorga significado y utilidad para la toma de decisiones.
+Los datos se convierten en información cuando se procesan y organizan de una manera que es significativa y útil para quienes la reciben.
+</p>
+
 <h3><u>¿Qué es una base de datos?</u></h3>
 <p>Es un conjunto de datos pertenecientes a un mismo contexto organizados para un propósito específico.</p>
 <p>Una base de datos nos permite acceso, gestión y actualización de manera estructurada y eficiente.</p>
-<p>Las <b>bases de datos</b> son sistemas esenciales que nos permiten guardar, organizar y recuperar información de manera eficiente. Son cruciales para operar y entender numerosas aplicaciones digitales en la vida cotidiana y de negocios. Aprender sobre ellas es fundamental porque facilitan la toma de decisiones basadas en datos y mejoran nuestra interacción con la tecnología</p>
+<div><p>Las <b>bases de datos</b> son sistemas esenciales que nos permiten guardar, organizar y recuperar información de manera eficiente. Son cruciales para operar y entender numerosas aplicaciones digitales en la vida cotidiana y de negocios. Aprender sobre ellas es fundamental porque facilitan la toma de decisiones basadas en datos y mejoran nuestra interacción con la tecnología.</p></div>
 <p>Las bases de datos permiten:</p>
 <ul>
 	<li>Almacenar datos.</li>
@@ -38,22 +78,30 @@
 	<li>Agregar, modificar y eliminar datos.</li>
 	<li>Analizar datos.</li>
 </ul>	
+<h3><u>Bases de datos o archivos planos</u></h3>
+<p>La simplicidad de tener un archivo de Excel, un archivo de texto txt o csv o de Google Sheets al alcance de la mano nos puede llevar a elegirlo para guardar los datos. Pero el uso de archivos tiene algunos inconvenientes.</p>
+<p>Las bases de datos realizan chequeos de integridad, coherencia de los datos y redundancia que los archivos planos no realizan.</p>
+<div style="text-align: center; background-color: white;"><img src="./imagenes/archivosplanos.jpg" alt="" width=75%></div>
 
 <h3><u>Tipos de bases de datos</u></h3>
-<div style="text-align: center;"><img src="./imagenes/tiposdebd.jpg" alt="" width=75%></div>
+<div style="text-align: center; background-color: white;"><img src="./imagenes/tiposdebd.jpg" alt="" width=75%></div>
 <p>Diferentes necesidades requieren diferentes tipos de bases de datos.</p>
 <p></p>
 <p>Hay bases de datos relacionales y no relacionales. Las <b>bases de datos relacionales</b> organizan los datos en tablas interconectadas permitiendo relaciones complejas entre ellas. Dentro del mundo de las bases de datos relacionales existen varias opciones, como Oracle, SQL Server o MySQL, que es una de las bases de datos más populares a nivel mundial y también es sencilla en su uso.</p>
 <p>Las <b>bases de datos no relacionales o NoSQL</b>, como MongoDB, son ideales para datos no estructurados, como imágenes, audios o archivos. Ofrecen flexibilidad en el almacenamiento y consulta de datos.</p>
 <p>También existen las <b>bases de datos cloud o en la nube</b>, como la de Amazon o la de Google, que ofrecen escalabilidad, es decir que pueden aumentar fácilmente su tamaño, y también accesibilidad, permitiendo a los usuarios acceder a la información en cualquier lugar y en cualquier momento.</p>
 <h3><u>Base de datos relacional</u></h3>
-<p>Es un sistema sofisticado y organizado de almacenamiento de datos que utiliza tablas para organizar la información en filas y columnas permitiendo búsquedas rápidas y análisis complejos.</p>
+<div><p>Es un sistema sofisticado y organizado de almacenamiento de datos que utiliza tablas para organizar la información en filas y columnas permitiendo búsquedas rápidas y análisis complejos.</p></div>
 <h3><u>Componentes de una base de datos relacional</u></h3>
-<div style="text-align: center;"><img src="./imagenes/componentes.jpg" alt="" width=75%></div>
+<div style="text-align: center; background-color: white;"><img src="./imagenes/componentes.jpg" alt="" width=75%></div>
 <p>Una base de datos relacional está compuesta por un conjunto de <b>tablas</b>. Cada una de estas tablas almacena <b>registros de datos en filas</b>. Cada fila representa un único conjunto de información relacionada. Los <b>campos o columnas</b> categorizan esta información en tipos específicos, como textos, números o fechas. Los registros son las unidades individuales de información.</p>
 <p>Por ejemplo: si tenemos una tabla de Alumnos, cada fila de la tabla se va a corresponder con los datos de un alumno determinado. Cada una de las columnas será un dato que nos interesa registrar de los alumnos, como fecha de nacimiento, dirección, etc. </p>
-<p>El <b>motor de bases de datos</b> es el corazón del sistema. Es el componente central del sistema de base de datos que realiza las operaciones fundamentales como la creación, lectura, actualización y eliminación de datos (CRUD). Es responsable de:
-</p>
+<h3><u>Motor de bases de datos</u></h3>
+<div style="text-align: center; background-color: white;  
+"><img src="./imagenes/motores.jpg" alt="" width=75%></div>
+<div><p>El <b>motor de bases de datos</b> es el corazón del sistema. Es el componente central del sistema de base de datos que realiza las operaciones fundamentales como la creación, lectura, actualización y eliminación de datos (CRUD). 
+</p></div>
+<p>Es responsable de:</p>
 <ul><li>La ejecución de consultas SQL.</li>
 <li>La gestión del almacenamiento y recuperación de datos.
 </li>
@@ -63,7 +111,9 @@
 </li>
 </ul>
 <h3><u>Gestión de bases de datos</u></h3>
-<div style="text-align: center;"><img src="./imagenes/dbms.jpg" alt="" width=75%></div><p>Los <b>Sistemas de Gestión de Bases de Datos o DBMS</b> permiten a los administradores o usuarios crear, editar y manipular datos dentro de una base de datos de manera segura y eficiente. Aseguran la integridad de los datos mediante el control del acceso, la gestión de las transacciones, el respaldo y la recuperación de la información, protegiendo los datos contra pérdidas o daños. Proporcionan seguridad, integridad y disponibilidad, que son características necesarias dentro de una base de datos.</b></p>
+<div style="text-align: center; background-color: white;  
+"><img src="./imagenes/dbms.jpg" alt="" width=75%></div>
+<div><p>Los <b>Sistemas de Gestión de Bases de Datos o DBMS</b> permiten a los administradores o usuarios crear, editar y manipular datos dentro de una base de datos de manera segura y eficiente. Aseguran la integridad de los datos mediante el control del acceso, la gestión de las transacciones, el respaldo y la recuperación de la información, protegiendo los datos contra pérdidas o daños. Proporcionan seguridad, integridad y disponibilidad, que son características necesarias dentro de una base de datos.</b></p></div>
 <p>El <b>DBMS</b> es un conjunto completo de software que incluye el motor de base de datos y otras herramientas y servicios necesarios para gestionar la base de datos. Un <b>DBMS</b> proporciona:
 <ul><li>Herramientas de administración y configuración.
 </li>
