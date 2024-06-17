@@ -13,6 +13,34 @@
 		  background-color: lightgray;
 		  padding: 10px;		  
 		  }
+		  .container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          .column {
+            width: 45%;
+          }
+          .column h2 {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+          }
+          .column ul {
+            list-style-type: none;
+            padding: 0;
+          }
+          .column ul li {
+            padding: 5px 0;
+          }
+          .highlight {
+            color: red;
+          }
 	</style>	
 	<title>Bases de datos | Introducción</title>
 </head>
@@ -68,9 +96,9 @@ Los datos se convierten en información cuando se procesan y organizan de una ma
 </p>
 
 <h3><u>¿Qué es una base de datos?</u></h3>
-<p>Es un conjunto de datos pertenecientes a un mismo contexto organizados para un propósito específico.</p>
-<p>Una base de datos nos permite acceso, gestión y actualización de manera estructurada y eficiente.</p>
-<div><p>Las <b>bases de datos</b> son sistemas esenciales que nos permiten guardar, organizar y recuperar información de manera eficiente. Son cruciales para operar y entender numerosas aplicaciones digitales en la vida cotidiana y de negocios. Aprender sobre ellas es fundamental porque facilitan la toma de decisiones basadas en datos y mejoran nuestra interacción con la tecnología.</p></div>
+<div><p>Una base de datos es una colección de datos interrelacionados almacenados en conjunto, sin redundancias perjudiciales e innecesarias, con la finalidad de servir a una aplicación o más, de la mejor manera posible. Los datos se almacenan de forma independiente de los programas que los usan. Se emplean métodos bien determinados para incluir nuevos datos y para modificar o extraer los datos almacenados.</p></div>
+<p>Es un conjunto de datos pertenecientes a un mismo contexto organizados para un propósito específico que. Una base de datos nos permite acceso, gestión y actualización de manera estructurada y eficiente.</p>
+<p>Las bases de datos son sistemas esenciales que nos permiten guardar, organizar y recuperar información de manera eficiente. Son cruciales para operar y entender numerosas aplicaciones digitales en la vida cotidiana y de negocios. Aprender sobre ellas es fundamental porque facilitan la toma de decisiones basadas en datos y mejoran nuestra interacción con la tecnología.</p>
 <p>Las bases de datos permiten:</p>
 <ul>
 	<li>Almacenar datos.</li>
@@ -82,20 +110,67 @@ Los datos se convierten en información cuando se procesan y organizan de una ma
 <p>La simplicidad de tener un archivo de Excel, un archivo de texto txt o csv o de Google Sheets al alcance de la mano nos puede llevar a elegirlo para guardar los datos. Pero el uso de archivos tiene algunos inconvenientes.</p>
 <p>Las bases de datos realizan chequeos de integridad, coherencia de los datos y redundancia que los archivos planos no realizan.</p>
 <div style="text-align: center; background-color: white;"><img src="./imagenes/archivosplanos.jpg" alt="" width=75%></div>
+<div class="container">
+       <div class="column">
+            <h2>Sistemas de archivos planos o ficheros</h2>
+            <ul>
+                <li>Sist. orientados a los procesos</li>
+                <li>Ficheros específicos para aplicaciones</li>
+                <li>Redundancia de datos</li>
+                <li>Inconsistencia de datos</li>
+                <li>Pérdida de espacio físico</li>
+                <li>Dependencia física de datos</li>
+                <li>Dependencia lógica de datos</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Sistemas de bases de datos</h2>
+            <ul>
+                <li>Sist. orientados a los datos (uso racional)</li>
+                <li>No son diseñados para una aplicación</li>
+                <li>Disminuir redundancia</li>
+                <li>Evitar inconsistencia</li>
+                <li>Mantener formato de datos</li>
+                <li>Independencia física</li>
+                <li>Independencia lógica</li>
+                <li>Compartir los datos</li>
+                <li>Aplicar restricciones de seguridad</li>
+                <li>Mantener la integridad</li>
+                <li class="highlight">Instalación costosa</li>
+                <li class="highlight">Baja estandarización</li>
+                <li class="highlight">Personal especializado</li>
+            </ul>
+        </div>
+    </div>
 
-<h3><u>Tipos de bases de datos</u></h3>
-<div style="text-align: center; background-color: white;"><img src="./imagenes/tiposdebd.jpg" alt="" width=75%></div>
-<p>Diferentes necesidades requieren diferentes tipos de bases de datos.</p>
-<p></p>
-<p>Hay bases de datos relacionales y no relacionales. Las <b>bases de datos relacionales</b> organizan los datos en tablas interconectadas permitiendo relaciones complejas entre ellas. Dentro del mundo de las bases de datos relacionales existen varias opciones, como Oracle, SQL Server o MySQL, que es una de las bases de datos más populares a nivel mundial y también es sencilla en su uso.</p>
-<p>Las <b>bases de datos no relacionales o NoSQL</b>, como MongoDB, son ideales para datos no estructurados, como imágenes, audios o archivos. Ofrecen flexibilidad en el almacenamiento y consulta de datos.</p>
-<p>También existen las <b>bases de datos cloud o en la nube</b>, como la de Amazon o la de Google, que ofrecen escalabilidad, es decir que pueden aumentar fácilmente su tamaño, y también accesibilidad, permitiendo a los usuarios acceder a la información en cualquier lugar y en cualquier momento.</p>
-<h3><u>Base de datos relacional</u></h3>
-<div><p>Es un sistema sofisticado y organizado de almacenamiento de datos que utiliza tablas para organizar la información en filas y columnas permitiendo búsquedas rápidas y análisis complejos.</p></div>
-<h3><u>Componentes de una base de datos relacional</u></h3>
-<div style="text-align: center; background-color: white;"><img src="./imagenes/componentes.jpg" alt="" width=75%></div>
-<p>Una base de datos relacional está compuesta por un conjunto de <b>tablas</b>. Cada una de estas tablas almacena <b>registros de datos en filas</b>. Cada fila representa un único conjunto de información relacionada. Los <b>campos o columnas</b> categorizan esta información en tipos específicos, como textos, números o fechas. Los registros son las unidades individuales de información.</p>
-<p>Por ejemplo: si tenemos una tabla de Alumnos, cada fila de la tabla se va a corresponder con los datos de un alumno determinado. Cada una de las columnas será un dato que nos interesa registrar de los alumnos, como fecha de nacimiento, dirección, etc. </p>
+        
+<div class="container">
+        <h3><u>Componentes de un Sistema de Base de Datos:</u></h3><br>
+        <ol>
+            <li>Hardware – equipos físicos</li>
+            <li>Usuarios
+                <ul>
+                    <li>Diseñadores de BD</li>
+                    <li>DBA-DataBase Administrator</li>
+                    <li>Programador de Aplicaciones</li>
+                    <li>Usuarios Finales</li>
+                </ul>
+            </li>
+            <li>Software
+                <ul>
+                    <li>Aplicaciones desarrolladas (Front End)</li>
+                    <li>DBMS (Back End)</li>
+                </ul>
+            </li>
+            <li>Datos</li>
+        </ol>
+    </div>
+
+<p>Un <b>sistema de bases de datos</b> es la combinación de base de datos y software DBMS.</p>
+
+<div style="text-align: center; background-color: white;"><img src="./imagenes/sbd.jpg" alt="" width=75%></div>
+
+
 <h3><u>Motor de bases de datos</u></h3>
 <div style="text-align: center; background-color: white;  
 "><img src="./imagenes/motores.jpg" alt="" width=75%></div>
@@ -116,19 +191,111 @@ Los datos se convierten en información cuando se procesan y organizan de una ma
 <div><p>Los <b>Sistemas de Gestión de Bases de Datos o DBMS</b> permiten a los administradores o usuarios crear, editar y manipular datos dentro de una base de datos de manera segura y eficiente. Aseguran la integridad de los datos mediante el control del acceso, la gestión de las transacciones, el respaldo y la recuperación de la información, protegiendo los datos contra pérdidas o daños. Proporcionan seguridad, integridad y disponibilidad, que son características necesarias dentro de una base de datos.</b></p></div>
 <p>El <b>DBMS</b> es un conjunto completo de software que incluye el motor de base de datos y otras herramientas y servicios necesarios para gestionar la base de datos. Un <b>DBMS</b> proporciona:
 <ul><li>Herramientas de administración y configuración.
+<ul>
+	<li>Definición de bases de datos usando DDL.</li>
+	<li>Manipulación de bases de datos usando DML.</li>	
+</ul>
 </li>
+<li>Integridad de datos.</li>
+<li>Permite transacciones: conjuntos de sentencias que se ejecutan como unidad.</li>
 <li>Interfaces para usuarios y administradores.
 </li>
-<li>Mecanismos de seguridad y control de acceso.
+<li>Mecanismos de seguridad y control de acceso - DCL.
 </li>
 <li>Funcionalidades de backup y recuperación.
 </li>
 <li>Soporte para lenguajes de programación y APIs.
 </li><li>Funciones avanzadas de optimización y tuning.</li></ul>
 </p>
+
+<p>El DBMS es un sistema de software
+de propósito general que facilita los procesos de definición, construcción, manipulación y compartición de
+bases de datos entre varios usuarios y aplicaciones.</p> 
+<p>Definir una base de datos implica especificar los tipos de
+datos, estructuras y restricciones de los datos que se almacenarán en la base de datos. La definición o información descriptiva de una base de datos se almacena en forma de catálogo o diccionario de la base de datos; es lo que se conoce como metadatos. </p>
+<p>La construcción de la base de datos es el proceso consistente en almacenar los datos en algún medio de almacenamiento controlado por el DBMS. La
+manipulación de una base de datos incluye funciones como la consulta de la base de datos para recuperar
+datos específicos, actualizar la base de datos para reflejar los cambios introducidos y generar informes a partir de los datos. Compartir una base de datos permite que varios usuarios y programas accedan a la base de datos de forma simultánea.</p>
+<p>Una aplicación accede a la base de datos enviando consultas o solicitudes de datos al DBMS. Una consulta
+normalmente provoca la recuperación de algunos datos; una transacción puede provocar la lectura o la escritura de algunos datos en la base de datos.</p>
+
+<p>Otras funciones importantes ofrecidas por el DBMS son la protección de la base de datos y su mantenimiento durante un largo periodo de tiempo. La protección incluye la protección del sistema contra el funcionamiento defectuoso del hardware o el software (caídas) y la protección de la seguridad contra el acceso no
+autorizado o malintencionado. Una gran base de datos típica puede tener un ciclo de vida de muchos años, por
+lo que el DBMS debe ser capaz de mantener el sistema de bases de datos permitiendo que el sistema evolucione según cambian los requisitos con el tiempo.</p>
+<p>No es necesario utilizar software DBMS de propósito general para implementar una base de datos. Podríamos escribir nuestro propio conjunto de programas para crear y mantener la base de datos; podríamos crear nuestro propio software DBMS de propósito especial. En cualquier caso (utilicemos o no un DBMS de propósito general), normalmente tenemos que implantar una cantidad considerable de
+software complejo. La mayoría de los DBMS son sistemas de software muy complejos.</p>
+
+
+
 <p> Un motor de base de datos (database engine) y un sistema de gestión de bases de datos (DBMS, Database Management System) no son exactamente lo mismo, aunque están estrechamente relacionados.</p>
 <p>El motor de base de datos es el núcleo que se encarga de las operaciones de manejo de datos. El DBMS incluye el motor de base de datos y otras herramientas y servicios para facilitar la administración y el uso de la base de datos. Ejemplos de DBMS: MySQL, PostgreSQL, Oracle, Microsoft SQL Server, todos los cuales contienen un motor de base de datos como componente central.
 </p>
+
+
+<h3><u>Tipos de bases de datos</u></h3>
+<div style="text-align: center; background-color: white;"><img src="./imagenes/tiposdebd.jpg" alt="" width=75%></div>
+<p>Diferentes necesidades requieren diferentes tipos de bases de datos.</p>
+<p></p>
+<p>Las <b>bases de datos relacionales</b> organizan los datos en tablas interconectadas permitiendo relaciones complejas entre ellas. Dentro del mundo de las bases de datos relacionales existen varias opciones, como Oracle, SQL Server o MySQL, que es una de las bases de datos más populares a nivel mundial y también es sencilla en su uso.</p>
+<p>Las <b>bases de datos no relacionales o NoSQL</b>, como MongoDB, son ideales para datos no estructurados, como imágenes, audios o archivos. Ofrecen flexibilidad en el almacenamiento y consulta de datos.</p>
+<p>También existen las <b>bases de datos cloud o en la nube</b>, como la de Amazon o la de Google, que ofrecen escalabilidad, es decir que pueden aumentar fácilmente su tamaño, y también accesibilidad, permitiendo a los usuarios acceder a la información en cualquier lugar y en cualquier momento.</p>
+<h3><u>Base de datos relacional</u></h3>
+<div><p>Es un sistema sofisticado y organizado de almacenamiento de datos que utiliza tablas para organizar la información en filas y columnas permitiendo búsquedas rápidas y análisis complejos.</p></div>
+<h3><u>Componentes de una base de datos relacional</u></h3>
+<div style="text-align: center; background-color: white;"><img src="./imagenes/componentes.jpg" alt="" width=75%></div>
+<p>Una base de datos relacional está compuesta por un conjunto de <b>tablas</b>. Cada una de estas tablas almacena <b>registros de datos en filas</b>. Cada fila representa un único conjunto de información relacionada. Los <b>campos o columnas</b> categorizan esta información en tipos específicos, como textos, números o fechas. Los registros son las unidades individuales de información.</p>
+<p>Por ejemplo: si tenemos una tabla de Alumnos, cada fila de la tabla se va a corresponder con los datos de un alumno determinado. Cada una de las columnas será un dato que nos interesa registrar de los alumnos, como fecha de nacimiento, dirección, etc. </p>
+<p><b>Las tablas se relacionan entre sí</b>. Para acceder a los datos, se usa el <b>Lenguaje de Consultas Estructuradas</b> o <b>SQL(Structured Query Language)</b>, que permite obtener y alterar datos de una forma organizada siempre y cuando tengamos en cuenta cuál es la estructura de la base de datos con la que estamos trabajando. Para ello se utilizan los distintos comandos que SQL pone a disposición.</p>
+
+<p>Las tablas de una bases de datos relacional se organizan a través de <b>identificadores</b>. Cada tabla tiene un identificador único que es el que va a establecer su relación con el resto de tablas. Estos identificadores hacen que sea más fácil organizar cada una de las tablas por separado.</p>
+
+<p>Los <b>DBMS relacionales</b> se caracterizan por modelar la información en tablas que se relacionan entre sí. Ejemplos son MySQL, MariaDB, PostgreSQL, SQLServer, Oracle, entre otros.</p>
+<h3><u>Base de datos no relacional</u></h3>
+<div><p>Las bases de datos no relacionales están diseñadas para modelos de datos con estructuras más específicas y que no necesitan ser relacionados con otros. Cada entidad funciona de forma independiente y son mucho más sencillas que las relacionales.</p></div>
+
+<p>La sencillez de acceso y ordenación las hace útiles para Big Data, ya que al no tener una estructura definida como las relacionales, se puede tener redundancia de datos, es decir, podemos tener datos repetidos.</p>
+
+<p>Se permite la redundancia porque se prioriza el acceso rápido por sobre la normalización e integridad de los datos. En este tipo de modelos se requiere ahorrar poder computo para poder procesar la mayor cantidad de datos en el menor tiempo posible.</p>
+
+<p>Las bases de datos no relacionales pueden tener identificador único, aunque no sea necesario para relacionar unos registros con otros. La información se organiza normalmente mediante documentos y es muy útil cuando no tenemos un esquema exacto de lo que se va a almacenar.</p>
+
+<p>El formato más utilizado en las bases de datos no relacionales es el de un documento, que es un objeto con una clave y un valor para que el acceso a la información se pueda realizar de forma sencilla.</p>
+
+<p>A todo este conjunto de bases de datos no relacionales, también se les dice NoSQL o Not Only SQL, para hacer referencia a que la información de un sistema no sólo puede almacenarse en modelos relacionales.</p>
+
+<p>Los DBMS no relacionales modelan la información de diferentes formas: documentos, llave-valor, grafos, entre otras. Ejemplos de DBMS no relacionales son MongoDB, Redis, Apache Cassandra, Firebase entre otras.</p>
+
+<h3><u>¿Cuándo utilizar SQL o NoSQL?</u></h3>
+<p>Ambos tipos de bases de datos son útiles y dependerá del tipo de aplicación que queramos realizar la elección de una u otra base de datos.</p>
+
+<p>Si queremos desarrollar una aplicación de tipo contable, de inventario o de información de clientes, es probable que el modelo relacional se adapte mejor a nuestras necesidades. En este tipo de aplicaciones, normalmente habrá más de una tabla que tenga relación con el resto, por lo que una base de datos relacional será más útil y podrá representar mejor nuestra aplicación.</p>
+
+<p>Si nuestra aplicación necesita de un sistema en el que los datos que se vayan a almacenar no necesitan relacionarse unos con otros, y además no tenemos certeza de que todos los datos tengan la misma estructura, entonces usaremos una base de datos no relacional. Por ejemplo puede ser una base de datos en la que solo queramos almacenar las estadísticas de comportamiento de un usuario al visitar un sitio, o una base para recolectar sus datos biométricos, esta información puede cambiar de una persona a otra, dependiendo de sus dinámicas con el sitio o de su estado de salud y condición física para los biométricos. Otro ejemplo sería la creación de una galería de fotos en Facebook o Instagram, cada usuario puede subir la cantidad de fotos que guste sin que exista una estructura determinada. Las estadísticas de progreso de un videojuego también serían un buen ejemplo de modelo no relacional, ya que la información de un jugador a otro puede variar.</p>
+
+<p>Todos estos ejemplos almacenan la información y no la relacionan entre sí.</p>
+
+<p>La elección del tipo de base de datos es algo muy importante y que no hay que tomarlo a la ligera. La elección de un DBMS erróneo puede traer consecuencias fatales en el desarrollo de un proyecto, por lo que es muy importante dedicarle tiempo y ver qué tipo se adapta mejor con el modelo de nuestro proyecto.</p>
+
+<p>La principal diferencia entre las bases de datos SQL y NoSQL es su estructura de almacenamiento de datos.</p>
+
+<p>Las bases de datos SQL utilizan una estructura organizada y relacional, mientras que las bases de datos NoSQL utilizan una estructura más flexible y escalable. Ambas tienen sus propias fortalezas y debilidades, y la elección de una depende de las necesidades específicas de la aplicación y el tipo de datos que deben almacenarse.</p>
+<div style="text-align: center; background-color: white;"><img src="./imagenes/db-table-vs-doc.jpg" alt="" width=75%></div>
+<p>Consideraciones a tener en cuenta al elegir entre un modelo de base de datos SQL y NoSQL:</p>
+<ul><b>SQL</b>
+	<li><b>Relaciones estructuradas:</b> Si la aplicación depende de relaciones estructuradas y complejas entre los datos, conviene considerar una base de datos SQL ya que permiten modelar relaciones complejas entre tablas y utilizar lenguajes de consulta estandarizados para realizar consultas complejas.
+</li>
+	<li><b>Datos estructurados:</b> Si los datos tienen una estructura bien definida y es poco probable que cambie con frecuencia, una base de datos SQL es una buena opción, ya que permite definir esquemas rigurosos que garantizan la integridad de los datos y evita la introducción de datos erróneos o inconsistentes.
+</li>
+</ul>
+<ul><b>NoSQL</b>
+<li><b>Escalabilidad:</b> Si la aplicación está destinada a crecer rápidamente y manejar una gran cantidad de datos, conviene considerar una base de datos NoSQL, que son más escalables que las bases de datos SQL y se adaptan mejor a grandes cantidades de datos no estructurados.
+</li>
+<li><b>Datos no estructurados:</b> Si los datos no tienen una estructura bien definida o cambian con frecuencia, conviene considerar una base de datos NoSQL, que son más flexibles que las bases de datos SQL y permiten modelar datos de manera más natural.
+</li>
+<li><b>Aplicaciones en tiempo real:</b> Si la aplicación requiere una respuesta rápida y en tiempo real, conviene considerar una base de datos NoSQL, que suelen ser más eficientes que las bases de datos SQL en términos de rendimiento y escalabilidad en aplicaciones en tiempo real.
+</li>
+</ul>
+<p>La elección entre un modelo de base de datos SQL o NoSQL depende de las necesidades específicas de la aplicación y de la naturaleza de los datos. Es importante evaluar cuidadosamente los requisitos y considerar las fortalezas y debilidades de cada opción antes de tomar una decisión.</p>
 	</article>
 </main>
 <footer>

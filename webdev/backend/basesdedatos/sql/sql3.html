@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../../../estilos.css">  
+	<style>
+		  section{
+		  	text-align: center;
+		  	background-color: rgb(64, 64, 227);
+		  }
+		  div{
+		  background-color: lightgray;
+		  padding: 10px;		  
+		  }
+		  .container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box {
+            width: 30%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .box h3 {
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+            margin: 0 -15px 15px -15px;
+        }
+        .box2 {
+            width: 50%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .box2 h3 {
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+            margin: 0 -15px 15px -15px;
+        }
+
+        
+	</style>	
+	<title>Bases de datos | Modelado de datos</title>
+</head>
+<body>
+<header>
+	<section>
+      <img src="./imagenes/basesdedatos.jpg" width=50% height="200px">
+    </section>
+	<nav>
+	<ul>
+      <li><a href="../../../../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Bases de datos</a></li>
+    </ul>
+  	</nav>	
+</header>
+<main>
+	<article><br><br><br>
+		<h1><u>Modelado de datos</u></h1>
+<h3><u>Modelos de bases de datos</u></h3>
+<p>El desarrollo de una base de datos se inicia con un requerimiento o necesidad de una aplicación o sistema.</p>
+<p>
+Lo importante es tener en claro qué es lo que se tiene que almacenar, y es por ello que este requerimiento tiene que estar lo más detallado posible.</p>
+
+<p>Una vez que tenemos el requerimiento, se inicia la etapa de modelado, que nos permite validar que entendimos el requerimiento y empezar a pensar cómo lo vamos a implementar.</p>
+<p>Una vez implementada la base de datos, el modelado nos sirve de documento para volver a consultar y entender el porqué se implementó la base de datos de una determinada forma.</p>
+<h3><u>Modelado de datos</u></h3>
+<div>
+	<p>Un <b>modelo</b> es un conjunto de herramientas conceptuales para describir datos, sus relaciones, su significado y sus restricciones de consistencia. El <b>modelado de datos</b> es una manera de estructurar y organizar los datos para que se puedan utilizar fácilmente por las bases de datos.
+</p>
+</div>
+<h3><u>Beneficios:</u></h3>
+<ul><li>Registrar los requerimientos de datos de un proceso de negocio.
+</li>
+<li>Se puede descomponer un proceso complejo en partes.
+</li>
+<li>Permite observar patrones.
+</li>
+<li>Sirve de plano para construir la base de datos física.
+</li>
+<li>Ayuda a las empresas a comunicarse dentro y entre las organizaciones.
+</li>
+<li>Proporciona soporte ante los cambios de requerimientos del negocio o aplicaciones.
+</li>
+</ul>
+
+<h3><u>Tipos de modelos</u></h3>
+
+<p>Existen tres tipos de modelos que podrían implementarse:</p>
+	<div class="container">
+        <div class="box">
+            <h3>Conceptual</h3>
+            <p>Es un modelo con un diseño muy general y abstracto, cuyo objetivo es explicar la visión general del negocio o sistema.</p>
+        </div>
+        <div class="box">
+            <h3>Lógico</h3>
+            <p>El modelo lógico es una versión completa que incluye todos los detalles acerca de los datos. Explica qué datos son importantes, su semántica, relaciones y restricciones. Explica el “qué”.</p>
+        </div>
+        <div class="box">
+            <h3>Físico</h3>
+            <p>Es un modelo que implementa el modelo lógico. Es un esquema que se va a implementar dentro de un sistema de gestión de bases de datos. Explica el “cómo”.</p>
+        </div>
+    </div>
+
+
+<h3><u>Modelo Lógico</u></h3>
+<p>Un modelo de datos lógico describe los datos con el mayor detalle posible, independientemente de cómo se implementarán físicamente en la base de datos. Describe los elementos importantes del negocio, qué significa cada objeto, su nivel de detalle, cómo se relacionan entre sí y sus restricciones.
+</p>
+
+<p><u>Características de un modelo lógico:</u></p>
+<ul>
+	<li>Se definen cuáles son los conceptos importantes sobre los que hay que almacenar información. Estos elementos se denominan entidades.
+</li>
+	<li>Se especifican todos los atributos para cada una de las entidades.
+</li>
+	<li>Se conectan las entidades mediante relaciones.
+</li>
+	<li>Se especifica la clave principal para cada entidad.
+</li>
+	<li>Se especifican las claves externas (claves que identifican la relación entre diferentes entidades).
+</li>
+	<li>La normalización ocurre en este nivel.
+</li>
+</ul>
+
+<h3><u>Modelo Físico</u></h3>
+<p>El modelo físico representa cómo se construirá el modelo en la base de datos. Un modelo físico de base de datos  muestra todas las estructuras de tablas, incluidos el nombre de columna, el tipo de datos de columna, las restricciones de columna, la clave principal, la clave externa y las relaciones entre las tablas.
+</p>
+
+<p><u>Características de un modelo físico:</u></p>
+<ul>
+	<li>Especificación de todas las tablas y columnas.
+</li>
+	<li>Las claves externas se usan para identificar relaciones entre tablas.
+</li>
+	<li>La desnormalización puede ocurrir según los requisitos del usuario.
+</li>
+	<li>Las consideraciones físicas pueden hacer que el modelo físico sea bastante diferente del modelo lógico.
+</li>
+</ul>
+
+<p>El modelo físico puede diferir de un motor de bases de datos a otro —no es lo mismo implementar en SQL Server que en MySQL—.</p>
+
+<p><u>Pasos para el diseño del modelo físico:</u></p>
+<ul>
+	<li>Convertir entidades en tablas.
+</li>
+	<li>Convertir relaciones en claves externas.
+</li>
+	<li>Convertir atributos en columnas.
+</li>
+	<li>Modificar el modelo de datos físicos en función de las restricciones / requisitos físicos.
+</li>
+</ul>
+
+
+<div class="container">
+        <div class="box2">
+            <h3>MODELO LÓGICO</h3>
+            <ul>
+                <li>Describe el “qué”.</li>
+                <li>Explica el negocio.</li>
+                <li>Es independiente de la implementación.</li>
+                <li>Responsable: el analista.</li>
+            </ul>
+        </div>
+        <div class="box2">
+            <h3>MODELO FÍSICO</h3>
+            <ul>
+                <li>Describe el “cómo”.</li>
+                <li>Explica el técnicamente cómo se van a almacenar los datos.</li>
+                <li>Explica la implementación en el sistema de gestión de bases de datos.</li>
+                <li>Responsable: administrador de bases de datos o simil.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+	</article>
+</main>
+<footer>
+    <p>No Copyright © por <a href="https://danypreisz.github.io/fullstackdevelopment/">fullstackdevelopment</a></p>
+ </footer>
+
+</body>
+
+</html>

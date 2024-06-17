@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../../../estilos.css">  
+	<style>
+		  section{
+		  	text-align: center;
+		  	background-color: rgb(64, 64, 227);
+		  }
+		  div{
+		  background-color: lightgray;
+		  padding: 10px;		  
+		  }
+	</style>	
+	<title>Bases de datos | Cliente-Servidor</title>
+</head>
+<body>
+<header>
+	<section>
+      <img src="./imagenes/basesdedatos.jpg" width=50% height="200px">
+    </section>
+	<nav>
+	<ul>
+      <li><a href="../../../../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Bases de datos</a></li>
+    </ul>
+  	</nav>	
+</header>
+<main>
+	<article><br><br><br>
+		<h1><u>Arquitectura Cliente - Servidor</u></h1>
+<div>
+	<p>Las bases de datos se implementan bajo una <b>arquitectura Cliente - Servidor</b>. Esta arquitectura tiene dos partes claramente diferenciadas, por un lado, la parte del <b>servidor</b> y, por otro, la parte de <b>cliente o grupo de clientes</b>.
+</p>
+</div>
+<p>Las tareas se reparten entre proveedores de recursos o servicios denominados <b>servidores</b> y solicitantes de esos servicios conocidos como <b>clientes</b>.</p>
+
+<div style="text-align: center; background-color: white;"><img src="./imagenes/clienteservidor.jpg" alt="" width=75%></div>
+
+<p>El servidor es una “máquina” bastante potente con un hardware y software específico que actúa de depósito de datos y funciona como un sistema gestor de base de datos o aplicaciones. En el servidor se aloja el motor de bases de datos, por ejemplo MySQL Server. El motor es un software que gestiona la base de datos. Espera y gestiona las solicitudes de los clientes que pueden ser aplicaciones o usuarios. El servidor de MySql almacena, procesa y protege los datos pero también se encarga de la autenticación, autorización y la gestión de sesiones de usuarios.
+</p>
+<p>
+Los clientes suelen ser estaciones de trabajo que solicitan varios servicios al servidor. Son los que necesitan los servicios del servidor. Físicamente se pueden ver como distintas computadoras, celulares y dispositivos que se conectan con el servidor. Nuestros clientes pueden ser las aplicaciones que consulten o almacenen los datos. Por ejemplo, MySQL Workbench, una aplicación de escritorio, una aplicación web o una aplicación que desarrollemos para interactuar con la base de datos. Un cliente de MySQL puede ser cualquier programa que envíe solicitudes al servidor de MySQL. Estas solicitudes pueden ser consultas o comandos SQL.  
+</p>
+
+<p>La comunicación entre cliente y servidor puede ser interna mediante una red propia de la empresa o externa a través de Internet. </p>
+<p>Cuando el cliente quiere realizar una operación en la base de datos, como leer o escribir datos, envía una solicitud al servidor de MySQL, el servidor procesa la solicitud, interactúa con la base de datos y devuelve una respuesta al cliente. Esta separación de responsabilidades ofrece varias ventajas, por ejemplo, centraliza el manejo de datos y de lógica de negocio en el servidor, facilitando la gestión y el mantenimiento de los datos. Permite que múltiples clientes conecten con la misma base de datos de manera eficiente y segura.</p>
+<p>En el contexto de MySQL, las actualizaciones y mantenimiento del servidor se pueden hacer de manera aislada de los clientes. Además, los clientes pueden ser desarrollados y actualizados en forma independiente uno del otro.</p>
+
+	</article>
+</main>
+<footer>
+    <p>No Copyright © por <a href="https://danypreisz.github.io/fullstackdevelopment/">fullstackdevelopment</a></p>
+ </footer>
+
+</body>
+
+</html>
