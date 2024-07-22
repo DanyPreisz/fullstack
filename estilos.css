@@ -247,7 +247,7 @@ nav ul ul ul {
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-9 */
 
-  color: red;
+  color: black;
 }
 
 .Tarjeta a {
