@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML y CSS | ¿Qué es HTML?¿Qué es CSS?</title>
-  <link rel="stylesheet" type="text/css" href="../estilos.css">
+  <link rel="stylesheet" type="text/css" href="../../../estilos.css">
   <style>
     section {
       display: flex;
@@ -110,68 +110,14 @@
     <article>
       <br>
       <h1>¿Qué es HTML?</h1>
-      <section>
-        <img src="./imagenes/html2.jpg" width=25% height=25%><img src="./imagenes/html3.jpg" width=50% height=50%>
-      </section><br>
-      <a href="https://www.youtube.com/watch?v=-oK6zL01fNM&t=1337s" target="_blank">
-        <h3>Introducción a HTML y su documentación</h3>
-      </a>
       <p>El <b>lenguaje de marcado de hipertexto, o HTML (HyperText Markup Language)</b> por sus siglas en inglés , es
         el
         estándar para
         armar documentos que serán desplegados en un sitio web en el navegador. HTML es el
         lenguaje utilizado para crear la estructura de un sitio web. Para crear este
-        sitio, se empieza creando un documento en formato HTML. </p><img src="./imagenes/html4.jpg" width=50%
-        height=50%><br>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/QwMlgfMK6fQ"
-        title="🛑Curso HTML - #01 INTRODUCCIÓN 🖥️" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-      <br>
-      <h4>Pregunta: ¿Qué es HTML?</h4>
-      <a href="https://youtube.com/shorts/YvO6WdGM9bs?feature=share" target="_blank"
-        onClick="window.open(this.href, this.target, 'width=300,height=550'); return false;">Respuesta</a>
-      <p> </p>
-      <a href="https://www.youtube.com/watch?v=-oK6zL01fNM&t=2077s" target="_blank">
-        <h3>Estructura básica de un documento HTML</h3>
-      </a>
-      <p>Un documento HTML simple se ve así:</p>
-      <textarea id="editor">
-<!DOCTYPE html>
-<html lang="es">
-   
-<head>
-      <title>Mi primera web</title>
-</head>
-    
-<body>
-      <h1>¡Hola Mundo!</h1>
-      <p>Esta es mi primera web</p>
-<!-- Éste es un comentario. No se vé al cargar la página. -->
-<!-- El  comentario
-puede ser de varias
-líneas -->
-</body>
-   
-</html>
-</textarea>
-      <p></p>
-      <a href="https://www.youtube.com/watch?v=-oK6zL01fNM&t=2833s" target="_blank">
-        <h3>Comentarios en HTML</h3>
-      </a>
+        sitio, se empieza creando un documento en formato HTML. </p>
+      
 
-      <div class="editor-container">
-        <div class="line-numbers">1<br>2<br>3<br>4<br></div>
-        <textarea id="edit">
-<!-- Éste es un comentario.  No se vé al cargar la página. -->
-<!-- El  comentario
-puede ser de varias
-líneas -->
-        </textarea>
-      </div><br>
-      <p>Al abrir este mismo documento HTML en un navegador (como Chrome), se ve lo siguiente:</p>
-      <img src="./imagenes/holamundo.jpg">
-      <p></p>
       <p>El navegador "lee" el archivo HTML (el texto y las etiquetas que están adentro) y las presenta según las
         reglas
         del
@@ -182,10 +128,9 @@ líneas -->
         texto <i>¡Hola Mundo!</i> se
         visualiza mucho más grande que el texto <i>Esta es mi primera web</i>.</p>
 
-      <h3>Explicación del ejemplo:</h3>
+      <h3>Estructura de una página HTML</h3>
+      
       <ul>
-        <li>La etiqueta <code>&lt;!DOCTYPE html&gt;</code> define que este es un documento es HTML5.
-        </li>
         <li>El elemento <code>&lt;html&gt;</code> es el elemento raíz de una página HTML.</li>
         <li>El elemento <code>&lt;head&gt;</code> contiene meta información acerca de la página
           HTML.</li>
@@ -196,8 +141,6 @@ líneas -->
         <li>El elemento <code>&lt;p&gt;</code> define un párrafo.</li>
       </ul>
       <br>
-      <h3>Estructura de una página HTML</h3>
-      <p></p>
       <div class="ws-grey" style="width:99%;border:1px solid grey;padding:3px;margin:0;">&lt;html&gt;
         <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
           <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;Título de la
@@ -224,30 +167,32 @@ líneas -->
       <p></p>
       <p> El contenido dentro de la sección &lt;body&gt; se muestra en el browser. El contenido dentro del elemento
         &lt;title&gt; se muestra en la barra de título del browser.</p>
-
+        <h3>Comentarios en HTML</h3>
+      
+      <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br></div>
+        <textarea id="edit">
+<!-- Éste es un comentario.  No se vé al cargar la página. -->
+<!-- El  comentario
+puede ser de varias
+líneas -->
+        </textarea>
+      </div><br>
       <br>
       <h1>¿Qué es CSS?</h1>
-      <section>
-        <img src="./imagenes/css2.jpg" width=30% height=30%><img src="./imagenes/css3.jpg" width=50% height=50%>
-      </section><br>
       <p>Las <b>hojas de estilo en cascada, o CSS (Cascading Style Sheets)</b> por sus siglas en inglés, se usan para
         la presentación de un sitio web. Permiten darle estilo a una página web: colores, formas, fondos, etc.</p>
 
-      <h4>Pregunta: ¿Qué es CSS?</h4>
-      <a href="https://youtube.com/shorts/edF0Nyvy3iY?si=aUuEsX1ownsFn2In" target="_blank"
-        onClick="window.open(this.href, this.target, 'width=300,height=550'); return false;">Respuesta</a>
-      <p></p>
       <p>Se llaman en cascada por la forma en que se aplican los estilos. Ejemplo: si programas que el color de las
         letras sea rosado, eso se aplica al texto. Si líneas más abajo le indicas que sea azul, se cambia el color del
         texto. Y si más abajo vuelves a cambiar a verde, éste será el color definitivo del texto, creando un efecto de
         cascada en la forma de realizar los cambios.</p>
 
-      <img src="./imagenes/css5.jpg" width=50% height=50%><br>
       <p>El código necesario se
         escribe en un archivo con extensión .css.</p>
       <p>Cuando tenemos un sitio web con varias páginas podemos utilizar un solo archivo .css que contenga el código a
         aplicar en todas las páginas del sitio.</p>
-      <section><img src="./imagenes/css4.jpg" width=40% height=40%><img src="./imagenes/css6.jpg" width=40% height=40%>
+      <section><img src="./imagenes/css6.jpg" width=40% height=40%>
       </section><br>
       <p>Existen tres formas de aplicar estilos CSS:</p>
       <ol>
@@ -265,28 +210,8 @@ líneas -->
         código o cuando el sitio web es muy pequeño y no hay muchos estilos que aplicar.</p>
       <img src="./imagenes/css7.jpg" width=65% height=65%>
       </section><br>
-      <iframe width="640" height="360"
-        src="https://www.youtube.com/embed/I_RG3bNjTfQ?list=PLJubkp8BnTJt1u6z_voRiYtwskmP0VVzw"
-        title="▶️ #01 INTRODUCCIÓN 💻 Curso CSS" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-      <p> </p>
     </article><br>
-    <script>
-      var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
-        mode: "java",
-        theme: "dracula",
-        lineNumbers: true,
-        autoCloseTags: true
-      })
-        ;
-      editor.setSize("100%", "320");
-    </script>
-    <br>
-
-
-
-  </main>
+   </main>
   <footer>
     <div class="fb-comments" data-href="https://fullstackdevelopment.tk/html/queeshtml.html" data-width=""
       data-numposts="100"></div>
