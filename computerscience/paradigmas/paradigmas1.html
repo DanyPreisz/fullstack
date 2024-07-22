@@ -3,9 +3,134 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../estilos.css">  
+	<style>
+		  section{
+		  	text-align: center;
+		  	background-color: darkgreen;
+		  }
+		  div{
+		  background-color: lightgray;
+		  padding: 10px;		  
+		  }
+		  .container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box {
+            width: 30%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .box h3 {
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+            margin: 0 -15px 15px -15px;
+        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+        
+	</style>	
+	<title>Paradigmas de Programación | Pensamiento computacional</title>
 </head>
 <body>
-	
+<header>
+	<section>
+      <img src="./imagenes/paradigmas.jpg" width=50% height="200px">
+    </section>
+	<nav>
+	<ul>
+      <li><a href="../../../../index.html">INICIO</a></li>
+      <li><a href="cursodejavascript.html">Paradigmas de Programación</a></li>
+    </ul>
+  	</nav>	
+</header>
+<main>
+	<article><br><br><br>
+		<h1><u>Pensamiento Computacional</u></h1>
+<div><p>El <b>pensamiento computacional</b> es un enfoque mental y estratégico que nos sirve para resolver problemas difíciles, basándonos en los principios fundamentales de la informática: descomponer problemas en partes más pequeñas, identificar cuestiones que se repiten, abstraer información esencial y definir un paso a paso detallado que nos lleve a una solución efectiva.</p></div>
+<p>Es un marco de pensamiento que se se asemeja a la forma en que las computadoras procesan la información, lo que ayuda a las personas a resolver problemas de manera lógica y estructurada, independientemente de la tecnología o componentes específicos involucrados. </p>
+<p><u>Esta metodología tiene cuatro componentes que trabajan en conjunto:</u></p>
+<ul><li><u>Descomposición:</u> implica dividir un problema en partes más pequeñas y manejables. Por ejemplo, para la creación de un sitio web se dividen las tareas en front-end, back-end, etc., para abordar cada aspecto de manera detallada y eficiente.</li>
+<li><u>Reconocimiento de patrones:</u> es la capacidad de identificar similitudes o regularidades en datos o situaciones. Por ejemplo: al leer un texto reconocemos patrones en las letras que nos ayudan a formar palabras y frases. Al reconocer patrones en problemas anteriores podemos aplicarlos para resolver problemas nuevos.</li>
+<li><u>Abstracción:</u> consiste en simplificar una situación enfocándose en los detalles relevantes y omitiendo información innecesaria. Por ejemplo: para realizar cálculos no necesitamos saber el funcionamiento interno de una calculadora, sólo necesitamos ingresarle los datos.</li>
+<li style="background-color: lightgray; padding: 10px;"><b><u>Algoritmos:</u></b> son un conjunto de pasos precisos, detallados y secuenciales que debemos seguir para resolver un problema o realizar una tarea específica, por ejemplo una receta de cocina que aplica un algoritmo para preparar una comida en particular.</li>
+</ul>
+<p>En informática, los algoritmos se utilizan constantemente. Son esenciales para todo tipo de tareas como ordenar datos, buscar información en bases de datos o realizar cálculos complejos.</p>
+
+
+<div style="text-align: center; background-color: white;"><img src="./imagenes/componentes.jpg" alt="" width=55%></div>
+
+
+<p><u>Ejemplo:</u> Viajar en subterráneo</p>
+   <table>
+        <thead>
+            <tr>
+                <th>Patrones</th>
+                <th>Descomponer</th>
+                <th>Abstracciones</th>
+                <th>Algoritmos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Vagones y personas</td>
+                <td>Entrada y salida del vagón</td>
+                <td>Ubicación para entrar o salir. Vidrios en puertas para comunicar qué sucede de cada lado.</td>
+                <td>Colocarse a la derecha cuando sea posible. Salida del vagón como prioridad antes de entrar.</td>
+            </tr>
+            <tr>
+                <td>Puertas</td>
+                <td>Momentos de apertura, cierre, problemas al quedar partes del cuerpo atrapadas. Personas con discapacidad.</td>
+                <td>Sensibilidad del sistema de apertura, velocidad, anuncio de activación.</td>
+                <td>Guarda es responsable de activar mecanismo pero se deshabilita si el tren está en movimiento y además las puertas deben permanecer cerradas.</td>
+            </tr>
+            <tr>
+                <td>Cantidad de pasajeros</td>
+                <td>Ubicación de personas, de pie, con movilidad reducida.</td>
+                <td>Personas con equipaje, de pie, agarres.</td>
+                <td>Reglas en carteles.</td>
+            </tr>
+            <tr>
+                <td>Dos carriles</td>
+                <td>Ida y vuelta.</td>
+                <td>Información sobre por dónde ir en los túneles con iconografía particular distinta a publicidades</td>
+                <td>Separar pasajeros</td>
+            </tr>
+        </tbody>
+    </table>
+<p>Los elementos del pensamiento computacional no son etapas secuenciales, no hay prioridades, no está uno antes que el otro. Los componentes pueden estar involucrados entre ellos. Mientras detecto patrones puedo encontrar un dato que me permita realizar una abstracción o mientras estamos abstrayendo datos podemos encontrar un patrón que se repita. Podemos ver patrones al abstraer o abstraer mientras descomponemos.</p>
+<p>El pensamiento computacional es una habilidad fundamental en la sociedad digital actual. Al comprender y aplicar los cuatro componentes podemos resolver problemas de forma efectiva, tomar decisiones fundamentadas y diseñar soluciones innovadoras en una amplia gama de campos.</p>
+
+
+
+	</article>
+</main>
+<footer>
+    <p>No Copyright © por <a href="https://danypreisz.github.io/fullstackdevelopment/">fullstackdevelopment</a></p>
+ </footer>
+
 </body>
+
 </html>

@@ -38,17 +38,20 @@
 <p>Las tareas se reparten entre proveedores de recursos o servicios denominados <b>servidores</b> y solicitantes de esos servicios conocidos como <b>clientes</b>.</p>
 
 <div style="text-align: center; background-color: white;"><img src="./imagenes/clienteservidor.jpg" alt="" width=75%></div>
-
-<p>El servidor es una “máquina” bastante potente con un hardware y software específico que actúa de depósito de datos y funciona como un sistema gestor de base de datos o aplicaciones. En el servidor se aloja el motor de bases de datos, por ejemplo MySQL Server. El motor es un software que gestiona la base de datos. Espera y gestiona las solicitudes de los clientes que pueden ser aplicaciones o usuarios. El servidor de MySql almacena, procesa y protege los datos pero también se encarga de la autenticación, autorización y la gestión de sesiones de usuarios.
+<div>
+<p>El <b>servidor</b> es una “máquina” bastante potente con un hardware y software específico que actúa de depósito de datos y funciona como un sistema gestor de base de datos o aplicaciones.</p></div> 
+	<p>En el servidor se aloja el motor de bases de datos, por ejemplo MySQL Server. El motor es un software que gestiona la base de datos. Espera y gestiona las solicitudes de los clientes que pueden ser aplicaciones o usuarios. El servidor de MySql almacena, procesa y protege los datos pero también se encarga de la autenticación, autorización y la gestión de sesiones de usuarios.
 </p>
-<p>
-Los clientes suelen ser estaciones de trabajo que solicitan varios servicios al servidor. Son los que necesitan los servicios del servidor. Físicamente se pueden ver como distintas computadoras, celulares y dispositivos que se conectan con el servidor. Nuestros clientes pueden ser las aplicaciones que consulten o almacenen los datos. Por ejemplo, MySQL Workbench, una aplicación de escritorio, una aplicación web o una aplicación que desarrollemos para interactuar con la base de datos. Un cliente de MySQL puede ser cualquier programa que envíe solicitudes al servidor de MySQL. Estas solicitudes pueden ser consultas o comandos SQL.  
+<div><p>
+Los <b>clientes</b> suelen ser estaciones de trabajo que solicitan varios servicios al servidor. Son los que necesitan los servicios del servidor. Físicamente se pueden ver como distintas computadoras, celulares y dispositivos que se conectan con el servidor. </p></div>
+<p>Nuestros clientes pueden ser las aplicaciones que consulten o almacenen los datos. Por ejemplo, MySQL Workbench, una aplicación de escritorio, una aplicación web o una aplicación que desarrollemos para interactuar con la base de datos. Un cliente de MySQL puede ser cualquier programa que envíe solicitudes al servidor de MySQL. Estas solicitudes pueden ser consultas o comandos SQL.  
 </p>
 
 <p>La comunicación entre cliente y servidor puede ser interna mediante una red propia de la empresa o externa a través de Internet. </p>
 <p>Cuando el cliente quiere realizar una operación en la base de datos, como leer o escribir datos, envía una solicitud al servidor de MySQL, el servidor procesa la solicitud, interactúa con la base de datos y devuelve una respuesta al cliente. Esta separación de responsabilidades ofrece varias ventajas, por ejemplo, centraliza el manejo de datos y de lógica de negocio en el servidor, facilitando la gestión y el mantenimiento de los datos. Permite que múltiples clientes conecten con la misma base de datos de manera eficiente y segura.</p>
-<p>En el contexto de MySQL, las actualizaciones y mantenimiento del servidor se pueden hacer de manera aislada de los clientes. Además, los clientes pueden ser desarrollados y actualizados en forma independiente uno del otro.</p>
-
+<p>En el contexto de MySQL, las actualizaciones y mantenimiento del servidor se pueden hacer de manera aislada de los clientes. Además, los clientes pueden ser desarrollados y actualizados en forma independiente uno del otro, mientras mantengan compatibilidad con el servidor.</p>
+<p>A modo de ejemplo, pensemos en una aplicación web que utiliza MySQL como base de datos. La aplicación web actúa como cliente. Realiza las consultas al servidor de MySQL para obtener datos que luego presenta a los usuarios. El servidor de MySQL procesa estas consultas, recupera los datos y los envía a la aplicación</p>
+<p>La arquitectura cliente - servidor proporciona un marco robusto pero flexible para el manejo de los datos y operaciones en las bases de datos, permitiendo que los usuarios puedan operar de manera eficiente con grandes volúmenes de datos.</p>
 	</article>
 </main>
 <footer>
