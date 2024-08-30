@@ -1,37 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Gestión de Libros</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Libros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .filters {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .filters input {
+            padding: 10px;
+            width: 200px;
+            margin: 0 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .book-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .book-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .book-item h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #555;
+        }
+        .book-item p {
+            margin: 5px 0;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-  <h1>Gestión de Libros</h1>
+    <h1>Lista de Libros</h1>
+    <div class="filters">
+        <input type="text" id="authorFilter" placeholder="Filtrar por autor">
+        <input type="text" id="titleFilter" placeholder="Filtrar por título">
+    </div>
+    <ul class="book-list" id="book-list"></ul>
+    <script>
+        const books = [
+            {
+                "title": "El Señor de los Anillos",
+                "author": "J.R.R. Tolkien",
+                "year": 1954
+            },
+            {
+                "title": "Cien Años de Soledad",
+                "author": "Gabriel García Márquez",
+                "year": 1967
+            },
+            {
+                "title": "El canto del cisne - Swan Song",
+                "author": "Robert R. McCammon",
+                "year": 1987,
+                "genre": "Terror, Ficción Postapocalíptica",
+                "subgenre": "Horror apocalíptico, Fantasía oscura",
+                "review": "El canto del cisne es una épica historia que narra las consecuencias devastadoras de una guerra nuclear global y el viaje de varios supervivientes en un mundo postapocalíptico. La novela sigue dos tramas principales: la de Swan, una niña con poderes extraordinarios, y la de Sister Creep, una mujer sin hogar que descubre un misterioso objeto con propiedades sobrenaturales. A medida que estos personajes y otros más se enfrentan a las nuevas realidades de su entorno destruido, se encuentran con lo mejor y lo peor de la naturaleza humana. La narrativa explora temas como la lucha entre el bien y el mal, la supervivencia, la redención, y el poder de la esperanza en medio de la desesperación. La historia está impregnada de un tono oscuro y sombrío, característico del horror apocalíptico, pero también tiene elementos de fantasía que le añaden un nivel adicional de complejidad. El conflicto entre Swan, que representa la esperanza y la renovación, y un antagonista que encarna el mal absoluto, es central en la novela. Este duelo espiritual y físico es lo que impulsa gran parte de la trama. Comparada a menudo con The Stand (Apocalipsis) de Stephen King, El canto del cisne ha sido elogiada por su desarrollo de personajes, la construcción del mundo postapocalíptico y su capacidad para mezclar el horror con la fantasía en una narrativa épica y emotiva. Aunque la novela es extensa, su ritmo es constante y logra mantener el interés del lector hasta el final."
+            },
+            {
+                "title": "1984",
+                "author": "George Orwell",
+                "year": 1949
+            }
+        ];
 
-  <form id="book-form">
-    <input type="text" id="title" placeholder="Título" required>
-    <input type="text" id="author" placeholder="Autor" required>
-    <input type="number" id="year" placeholder="Año" required>
-    <button type="submit">Agregar</button>
-  </form>
+        const bookList = document.getElementById('book-list');
+        const authorFilter = document.getElementById('authorFilter');
+        const titleFilter = document.getElementById('titleFilter');
 
-  <div id="search-delete">
-    <input type="text" id="search-input" placeholder="Buscar libro">
-    <button id="search-btn">Buscar</button>
-    <button id="delete-btn">Eliminar</button>
-  </div>
+        function displayBooks(filteredBooks) {
+            bookList.innerHTML = '';
+            filteredBooks.forEach(book => {
+                const li = document.createElement('li');
+                li.className = 'book-item';
+                
+                li.innerHTML = `
+                    <h2>${book.title}</h2>
+                    <p><b>Autor:</b> ${book.author} - <b>Género:</b> ${book.genre}</p>
+                    <p><b>Reseña:</b> ${book.review}</p>
+                `;
+                
+                bookList.appendChild(li);
+            });
+        }
 
-  <table id="book-table">
-    <thead>
-      <tr>
-        <th>Título</th>
-        <th>Autor</th>
-        <th>Año</th>
-      </tr>
-    </thead>
-    <tbody id="book-list">
-    </tbody>
-  </table>
+        function filterBooks() {
+            const authorText = authorFilter.value.toLowerCase();
+            const titleText = titleFilter.value.toLowerCase();
 
-  <script src="app.js"></script>
+            const filteredBooks = books.filter(book => 
+                book.author.toLowerCase().includes(authorText) && 
+                book.title.toLowerCase().includes(titleText)
+            );
+
+            displayBooks(filteredBooks);
+        }
+
+        authorFilter.addEventListener('input', filterBooks);
+        titleFilter.addEventListener('input', filterBooks);
+
+        // Mostrar todos los libros inicialmente
+        displayBooks(books);
+    </script>
 </body>
 </html>

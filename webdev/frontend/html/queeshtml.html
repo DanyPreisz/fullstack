@@ -30,7 +30,7 @@
     h1,
     footer,
     h3 {
-      text-align: center;
+      text-align: center;text-decoration: underline;
     }
 
     ol,
@@ -48,7 +48,7 @@
     .editor-container {
       position: relative;
       width: 100%;
-      height: 100px;
+      height: 200px;
       border: 1px solid #ccc;
     }
 
@@ -167,17 +167,147 @@
       <p></p>
       <p> El contenido dentro de la sección &lt;body&gt; se muestra en el browser. El contenido dentro del elemento
         &lt;title&gt; se muestra en la barra de título del browser.</p>
-        <h3>Comentarios en HTML</h3>
-      
-      <div class="editor-container">
-        <div class="line-numbers">1<br>2<br>3<br>4<br></div>
+        <h3>Ejemplo: "Hello World"</h3>
+
+<div class="tabs">
+  <div class="tab-container">
+    <!--<div id="tab3" class="tab"> 
+      <a href="#tab3">JavaScript</a>
+      <div class="tab-content">
+     <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br></div>
         <textarea id="edit">
+        </textarea>
+      </div>
+      </div>
+    </div> -->
+    <div id="tab2" class="tab">
+      <a href="#tab2">Resultado</a>
+      <div class="tab-content">
+     <div class="editor-container">
 <!-- Éste es un comentario.  No se vé al cargar la página. -->
 <!-- El  comentario
 puede ser de varias
 líneas -->
+<h1 style="text-align: left ;">Hello World</h1>
+      </div>
+      </div>
+    </div>
+    <div id="tab1" class="tab">
+      <a href="#tab1">HTML</a>
+      <div class="tab-content">
+     <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></div>
+        <textarea id="edit">
+<html>
+  <body>
+<!-- Éste es un comentario.  No se vé al cargar la página. -->
+<!-- El  comentario
+puede ser de varias
+líneas -->
+<h1>Hello World</h1>
+  </body>
+</html>
         </textarea>
-      </div><br>
+      </div>
+      </div> 
+    </div> 
+  </div>
+</div>
+<style>
+/* funcionamiento básico del sistema de pestañas */
+.tab-content {
+  display: none;
+}
+
+.tab:target .tab-content, .tab:last-of-type .tab-content {
+  display: block;
+}
+
+.tab:target ~ .tab:last-of-type .tab-content {
+  display: none;
+}
+/* parámetros para configurar las pestañas */
+:root {
+  --tabs-border-color: #ABCDEF;
+  --tabs-border-size: 3px;
+  --tabs-text-color: white;
+  --tabs-dark-color: #012345;
+  --tabs-lite-color: #345678;
+  --tabs-width: 120px;
+  --tabs-height: 40px;
+}
+
+/* aspecto básico */
+body {
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+h2, p {
+  margin: 0;
+} 
+a {
+  color: inherit;
+  text-decoration: none;
+} 
+.tabs * {
+  box-sizing: border-box;
+
+}
+/* esto es para posicionar las pestañas correctamente */
+.tab-container {
+  position: relative;
+  padding-top: var(--tabs-height); /* en esta zona colocaremos las pestañas */
+} 
+#tab1>a { --tabs-position: 0; }
+#tab2>a { --tabs-position: 1; }
+#tab3>a { --tabs-position: 2; }
+#tab4>a { --tabs-position: 3; }
+#tab5>a { --tabs-position: 4; }
+#tab6>a { --tabs-position: 5; }
+#tab7>a { --tabs-position: 6; }
+#tab8>a { --tabs-position: 7; }
+#tab9>a { --tabs-position: 8; }
+.tab>a {
+  text-align: center;
+  position: absolute;
+  width: calc(var(--tabs-width));
+  height: calc(var(--tabs-height) + var(--tabs-border-size)); 
+  top: 0;
+  left: calc(var(--tabs-width) * var(--tabs-position)); /* posición de cada pestaña */
+  color: white;  
+  background-color: black;
+}  
+</style>
+<h3>Etiquetas, atributos y elementos</h3>
+<div style="background-color: lightgray; padding: 10px;">
+  <ul>
+    <li><b>Etiquetas: </b>Especifican cómo el browser debe mostrar un contenido. El browser puede diferenciar entre un texto simple y un texto contenido dentro de etiquetas.</li>
+    <li>Atributos:</li>
+    <li>Elementos:</li>
+  </ul>
+
+<div class="tabs">
+  <div class="tab-container">
+    <div id="tab1" class="tab">
+      <a href="#tab1">HTML</a>
+      <div class="tab-content">
+     <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></div>
+        <textarea id="edit">
+<EtiquetaDeApertura> Contenido </EtiquetaDeCierre>
+
+<!-- Un elemento HTML está formado por una etiqueta de apertura, una etiqueta de cierre 
+y el contenido entre ellas.-->
+        </textarea>
+      </div>
+      </div> 
+    </div> 
+  </div>
+</div>
+
+
+</div>    
       <br>
       <h1>¿Qué es CSS?</h1>
       <p>Las <b>hojas de estilo en cascada, o CSS (Cascading Style Sheets)</b> por sus siglas en inglés, se usan para
@@ -208,7 +338,35 @@ líneas -->
       </ol>
       <p>Las dos primeras formas no son consideradas buenas prácticas y sólo deben utilizarse cuando se está probando
         código o cuando el sitio web es muy pequeño y no hay muchos estilos que aplicar.</p>
-      <img src="./imagenes/css7.jpg" width=65% height=65%>
+      
+<div class="tabs">
+  <div class="tab-container">
+    <div id="tab1" class="tab">
+      <a href="#tab1">HTML</a>
+      <div class="tab-content">
+     <div class="editor-container">
+        <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></div>
+        <textarea id="edit">
+<div style="width:90%;margin:20px;"></div> 
+
+<style>
+    section {
+      display: flex;
+    }  
+</style>
+
+<link rel="stylesheet" href="./estilos.css">
+        </textarea>
+      </div>
+      </div> 
+    </div> 
+  </div>
+</div>
+
+
+
+
+
       </section><br>
     </article><br>
    </main>
